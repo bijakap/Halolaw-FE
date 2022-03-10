@@ -7,6 +7,11 @@ function Kategori(){
         console.log('You clicked submit.');
     }
 
+    function onClickKategori(e) {
+        e.preventDefault();
+        console.log('You clicked submit.');
+    }
+
     const Kategori = [
         {
             logo : "properti.svg",
@@ -57,7 +62,7 @@ function Kategori(){
                 </div>
                 <div class="">
                     <div class="flex h-[48px]">
-                        <div className="h-full bg-white flex items-center justify-center rounded-[4px] rounded-r-none" onClick={DummySearch}>
+                        <div className="h-full bg-white flex items-center justify-center rounded-[4px] rounded-r-none pl-[20px] pr-[16px]" onClick={DummySearch}>
                             <SearchIcon className="text-[#6982F1]"/>
                         </div>
                         <input type="search" className="
