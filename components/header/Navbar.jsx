@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Navbar(){
     const nama = "Farizi"
-    const ulr_img = "/avatardummy.png"
+    const url_img = "/avatardummy.png"
 
     return(
         <>
@@ -20,7 +20,7 @@ function Navbar(){
                     <div className="flex self-center">
                         <img src="./Notification.svg" className="mr-[32px]"></img>
                         <div className="w-[40px] h-[40px] bg-black rounded-full">
-                            <img src={ulr_img} className="object-cover w-full"></img>
+                            <img src={url_img} className="object-cover w-full"></img>
                         </div>
                         <span className="self-center ml-[8px]">{nama}</span>
                     </div>
