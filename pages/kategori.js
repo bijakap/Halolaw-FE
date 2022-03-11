@@ -4,7 +4,7 @@ import Footer from "../components/footer/Footer"
 import Kategori from "../components/katalog/kategori";
 import Head from "next/head";
 
-function homepage(){
+function kategori(){
     return(
         <div>
              <Head>
@@ -19,4 +19,4 @@ function homepage(){
     )
 }
 
-export default homepage;
+export default kategori;
