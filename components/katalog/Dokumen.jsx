@@ -86,11 +86,11 @@ function Dokumen(){
                 </div>
             </div>
             <div className="mx-[100px]">
-                <div className="grid grid-cols-4 gap-[24px]">
+                <div className="grid grid-cols-4 gap-[24px] mt-[48px]">
                     {dokumen.map((data,index) => {
                         return (
                             <div className="flex justify-center">
-                                <div className="rounded-[8px] border w-[291px] h-[304px] bg-white p-[16px] flex flex-col justify-between">
+                                <div className="rounded-[8px] border hover:border-2 hover:border-blue-600 w-[291px] h-[304px] bg-white p-[16px] flex flex-col justify-between">
                                 <div className="w-[259px] h-[200px]">
                                     <img
                                     className="object-cover h-full border rounded-[8px]" 

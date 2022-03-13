@@ -78,7 +78,7 @@ function Kategori(){
                 {Kategori.map((index) => {
                     return(
                         <div className="flex justify-center">
-                            <div className="flex flex-col justify-between bg-[#FCFCFC] border shadow-[0_4px_10px_0px_rgba(0,0,0,0.1)] w-[420px] h-[236px] p-[24px]">
+                            <div className="flex flex-col justify-between bg-[#FCFCFC] border hover:border-2 hover:border-blue-600 shadow-[0_4px_10px_0px_rgba(0,0,0,0.1)] w-[420px] h-[236px] p-[24px]">
                                 <div className="w-[56px] h-[56px]">
                                     <img src={`./icon/${index.logo}`} alt=""></img>
                                 </div>
