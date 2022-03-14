@@ -56,7 +56,6 @@ function Kategori(){
                 <div className="absolute -z-10">
                     <img src="./kategori/Header.svg" className="w-[250vh] object-fill"></img>
                 </div>
-                
             </div>
             <div className="mx-[25px] lg:mx-[100px] pt-3 lg:pt-[48px] pb-3 lg:pb-[40px]">
                 <div className="font-['Inter'] text-white space-y-[2px] lg:space-y-[12px] mb-3 lg:mb-[48px]">
