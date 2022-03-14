@@ -70,11 +70,13 @@ function Dokumen(){
     return(
         <div className="pb-[48px]">
             <div className="relative">
-                <img src="./kategori/Header.svg" className="w-full absolute -z-10"></img>
+                <div className="absolute -z-10">
+                    <img src="./kategori/Header.svg" className="w-[250vh] object-fill"></img>
+                </div>
             </div>
-            <div className="text-white mx-[100px] space-y-[24px] pt-[32px]">
+            <div className="text-white mx-[25px] lg:mx-[100px] space-y-[0px] lg:space-y-[24px] pt-[12px] lg:pt-[32px]">
                 <div className="">
-                    <p className="font-[400] text-[14px] leading-[20px] tracking-[0.25px]">
+                    <p className="font-[400] text-[8px] lg:text-[14px] leading-0 lg:leading-[20px] tracking-[0.25px]">
                     <a href="#" className=""><HomeIcon className="mb-1 scale-[0.7]"/>Home</a>
                     /
                     <a href="#">Pembuatan Dokumen</a>
@@ -82,28 +84,28 @@ function Dokumen(){
                     </p>
                 </div>
                 <div>
-                    <p className="font-[700] text-[33px] leading-[40px] tracking-[0.25px] text-center">Pembuatan Dokumen - {tipeDokumen}</p>
+                    <p className="font-[700] text-[14px] lg:text-[33px] leading-0 lg:leading-[40px] tracking-[0.25px] text-center">Pembuatan Dokumen - {tipeDokumen}</p>
                 </div>
             </div>
-            <div className="mx-[100px]">
-                <div className="grid grid-cols-4 gap-[24px] mt-[48px]">
+            <div className="mx-[25px] lg:mx-[100px]">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-[24px] mt-[24px] lg:mt-[48px]">
                     {dokumen.map((data,index) => {
                         return (
                             <div className="flex justify-center">
-                                <div className="rounded-[8px] border hover:border-2 hover:border-blue-600 w-[291px] h-[304px] bg-white p-[16px] flex flex-col justify-between">
-                                <div className="w-[259px] h-[200px]">
-                                    <img
-                                    className="object-cover h-full border rounded-[8px]" 
-                                    src={`./dokumen${data.img}`}
-                                    ></img>
-                                </div>
+                                <div className="rounded-[8px] border hover:border-2 hover:border-blue-600 w-auto lg:w-[291px] h-auto lg:h-[304px] bg-white p-[8px] lg:p-[16px] flex flex-col justify-between">
+                                    <div className="w-[130px] h-[100px] lg:w-[259px] lg:h-[200px]">
+                                        <img
+                                        className="object-cover h-full  rounded-[8px]" 
+                                        src={`./dokumen${data.img}`}
+                                        ></img>
+                                    </div>
                                 
-                                <div className="space-y-[16px]">
-                                    <p className="font-[700] text-[14px] leading-[20px] tracking-[0.25px] text-[#344054]">{data.judul}</p>
-                                    <p className="font-[400] text-[12px] leading-[18px] tracking-[0.4px] font-[#252A31]">mulai dari <span className="font-[700] text-[#121F86]">{data.harga}</span></p>
+                                    <div className="space-y-[16px]">
+                                        <p className="font-[700] text-[10px] lg:text-[14px] leading-0 lg:leading-[20px] tracking-[0.25px] text-[#344054]">{data.judul}</p>
+                                        <p className="font-[400] text-[8px] lg:text-[12px] leading-0 lg:leading-[18px] tracking-[0.4px] font-[#252A31]">mulai dari <span className="font-[700] text-[#121F86]">{data.harga}</span></p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>   
+                            </div>   
                         )
                     }
 

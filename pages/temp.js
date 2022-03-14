@@ -1,10 +1,10 @@
 import react from "react";
-import Navbar from "../components/header/Navbar";
+import Footer from "../components/footer/Footer";
 
 function temp(){
     return (
         <div>
-            <Navbar/>
+            <Footer/>
         </div>
     )
 }
