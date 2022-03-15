@@ -44,8 +44,8 @@ function Navbar(){
                             leaveFrom="transform opacity-100 scale-100"
                             leaveTo="transform opacity-0 scale-95"
                         >
-                            <Menu.Items className="z-50 w-[228px] border absolute rounded-[8px] bg-white mt-6 -right-10 lg:right-auto">
-                                <div className="p-[16px] space-y-[16px] ">
+                            <Menu.Items className="z-50 w-[228px] border absolute rounded-[8px] bg-white mt-3 lg:mt-6 -right-2 lg:right-auto">
+                                <div className="p-[8px] lg:p-[16px] space-y-[16px] ">
                                 <Menu.Item>
                                 {({ active }) => (
                                     <a

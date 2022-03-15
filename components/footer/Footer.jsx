@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Footer(){
     return(
-        <div className="bg-[#1D2939] first-letter:font-sans text-[8px] lg:text-[14px]">
+        <div className="bg-[#1D2939] first-letter:font-sans text-[10px] lg:text-[14px]">
             <div className="grid grid-cols-4 gap-3 lg:gap-0 lg:flex mx-[25px] lg:mx-[100px] pt-[64px] pb-[40px] text-white">
                 <div className="w-full col-span-2 lg:w-[314px] mr-[120px]">
                     <img src="./logoFooter@2x.png" className="lg:h-[64px] h-[21px] mb-[20px] lg:mb-[40px]" alt="Logo Footer"></img>

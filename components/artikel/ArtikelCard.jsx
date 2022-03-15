@@ -5,21 +5,19 @@ function ArtikelCard(props){
     const data = props.data;
 
 
-    // const kategori_temp = ["Pengadilan", "Perdata"]
-
     return(
         <>
-            <div className="w-[292px]">
+            <div className="w-auto lg:w-[292px]">
                 <a href="#">
-                    <div className="w-[292px]">
-                        <img src={data.img} className="h-full"></img>
+                    <div className="w-auto lg:w-[292px]">
+                        <img src={data.img} className="object-cover h-full"></img>
                     </div>
                     <div className="flex justify-center">
-                        <div className="w-[260px]">
-                            <p className="text-[#121F86] text-[12px] font-bold my-[16px]">{data.penulis} . {data.tgl_up}</p>
-                            <h6 className="font-['inter'] text-[16px] font-semibold mb-[8px]">{data.judul}</h6>
-                            <div className="h-[60px] font-sans font-thin mb-[24px]">
-                                <p className="line-clamp-2">{data.content}</p>
+                        <div className="w-auto lg:w-[260px]">
+                            <p className="text-[#121F86] text-[8px] lg:text-[12px] font-bold my-[16px]">{data.penulis} . {data.tgl_up}</p>
+                            <h6 className="font-['Inter'] text-[10px] lg:text-[16px] font-semibold mb-[8px]">{data.judul}</h6>
+                            <div className="h-[60px] text-[10px] lg:text-[16px] font-sans font-thin mb-0 lg:mb-[24px]">
+                                <p className="line-clamp-3 lg:line-clamp-2">{data.content}</p>
                             </div>
                             {data.kategori.map((data, idx) =>{
                                 let text_color
@@ -34,7 +32,7 @@ function ArtikelCard(props){
                                 }
                                 return (
                                         <div key={idx} className={`inline-block rounded-full bg-[#FAF4FF] font-sans mx-2 mb-2`}>
-                                            <p className={`px-2 py-1 text-[12px] ${text_color} font-[700]`}>{data}</p>
+                                            <p className={`px-2 py-1 text-[8px] lg:text-[12px] ${text_color} font-[700]`}>{data}</p>
                                         </div>
                                     ) 
                                 })
