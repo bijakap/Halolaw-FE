@@ -1,10 +1,13 @@
 import react from "react";
-import Footer from "../components/footer/Footer";
 
 function temp(){
     return (
         <div>
-            <Footer/>
+            <div className="relative">
+                <div className="absolute bg-[url('/kategori/Header.svg')] h-[300px] w-full bg-no-repeat bg-cover">
+                    {/* <img src="./kategori/Header.svg" className="w-[250vh] object-fill"></img> */}
+                </div>
+            </div>
         </div>
     )
 }

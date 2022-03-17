@@ -1,22 +1,23 @@
-import react from "react";
-import Navbar from "../components/header/Navbar";
-import Footer from "../components/footer/Footer"
-import Dokumen from "../components/katalog/Dokumen";
+import React from "react";
 import Head from "next/head";
 
-function dokumen(){
+/* Page Component */
+import DetailProduk from "../components/katalog/DetailProduk";
+import Navbar from "../components/header/Navbar";
+import Footer from "../components/footer/Footer"
+
+function detailproduk(){
     return(
         <div>
             <Head>
-            <title>Homepage</title>
+            <title>Detail Produk</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
             <Navbar/>
-            <Dokumen/>
+            <DetailProduk/>
             <Footer/>
         </div>
-       
     )
 }
 
-export default dokumen;
+export default detailproduk;

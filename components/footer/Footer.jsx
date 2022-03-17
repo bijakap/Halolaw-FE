@@ -16,17 +16,17 @@ function Footer(){
                 <div className="w-full lg:w-[187px] mr-[24px] lg:mr-[24px]">
                     <h6 className="mb-[19px] font-bold leading-4">Site Map</h6>
                     <ul className="list-none space-y-[12px] font-[300]">
-                        <li><a href="#">Pembuatan Dokumen</a></li>
-                        <li><a href="#">Tentang Kami</a></li>
-                        <li><a href="#">Artikel</a></li>
+                        <li><a href="#" className="hover:text-[#2A41C7]">Pembuatan Dokumen</a></li>
+                        <li><a href="#" className="hover:text-[#2A41C7]">Tentang Kami</a></li>
+                        <li><a href="#" className="hover:text-[#2A41C7]">Artikel</a></li>
                     </ul>
                 </div>
                 <div className="w-full lg:w-[187px]">
                     <h6 className="mb-[19px] font-bold leading-4">Informasi</h6>
                     <ul className="list-none space-y-[12px] font-[300]">
-                        <li><a href="#">FaQ</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Term & Conditon</a></li>
+                        <li><a href="#" className="hover:text-[#2A41C7]">FaQ</a></li>
+                        <li><a href="#" className="hover:text-[#2A41C7]">Privacy Policy</a></li>
+                        <li><a href="#" className="hover:text-[#2A41C7]">Term & Conditon</a></li>
                     </ul>
                 </div>
             </div>
