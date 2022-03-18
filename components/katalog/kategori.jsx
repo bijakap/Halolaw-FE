@@ -48,6 +48,7 @@ function Kategori(){
             judul : "Pembuatan & Perubahan Akta",
             deksripsi : "Perubahan Akta Anggaran Dasar, Akta Jual Beli, Pengumuman Koran, dll",
         },
+        
     ]
 
     return(
@@ -65,7 +66,7 @@ function Kategori(){
                 <div class="">
                     <div class="flex h-[36px] lg:h-[48px]">
                         <div className="h-full bg-white flex items-center justify-center rounded-[4px] rounded-r-none pl-3 lg:pl-[20px] pr-3 lg:pr-[16px]" onClick={DummySearch}>
-                            <SearchIcon className="text-[#6982F1] text-[12px]"/>
+                            <SearchIcon className="text-[#6982F1] md:text-[22px] text-[12px]"/>
                         </div>
                         <input type="search" className="
                             form-control w-full px-2 lg:px-3 py-1 lg:py-[14px] text-gray-700 bg-white bg-clip-padding border-gray-300  rounded-[4px] rounded-l-none transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none placeholder:text-[400] placeholder:text-[10px] lg:placeholder:text-[14px] placeholder:leading-0 lg:placeholder:leading-[20px] placeholder:tracking-[0.25px] placeholder:text-[#8C8CA2]"
