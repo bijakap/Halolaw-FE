@@ -1,14 +1,14 @@
 import react from "react";
-import Navbar from "../components/header/Navbar";
-import Footer from "../components/footer/Footer"
-import Kategori from "../components/katalog/kategori";
+import Navbar from "../../components/header/Navbar";
+import Footer from "../../components/footer/Footer"
+import Kategori from "../../components/katalog/kategori";
 import Head from "next/head";
 
 function kategori(){
     return(
         <div>
              <Head>
-            <title>Homepage</title>
+            <title>Pilih Kategori</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
             <Navbar/>

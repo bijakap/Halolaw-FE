@@ -1,7 +1,15 @@
 import React from "react";
 import Image from "next/image";
+import { useRouter } from 'next/router';
+import Link from "next/link";
 
 function Login(){
+    const router = useRouter()
+    const handleLogin = (e) => {
+        e.preventDefault()
+        router.push('/')
+    }
+
     return(
         <div className="flex w-screen h-auto font-['Inter']">
             <div className="w-full md:w-1/2 mx-[25px] md:mx-0 flex justify-center items-center h-auto md:h-screen">
@@ -25,13 +33,13 @@ function Login(){
                             
                         </div>
                         <div className="pt-[40px] pb-4">
-                            <button type="submit" class="w-full flex justify-center bg-[#3A57E8] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer">
-                            Daftar
+                            <button type="submit" class="w-full flex justify-center bg-[#3A57E8] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer" onClick={(e) => {handleLogin(e)}}>
+                            Masuk
                             </button>
                         </div>
                     </form>
                     <button className="bg-white border-2 rounded-[8px] w-full py-[12px] flex justify-center font-[700] text-[#475467]"><img src="/google.svg" className="flex self-center h-auto pr-2"></img>Sign up with Google</button>
-                    <p className="text-sm mt-[40px]">Belum memiliki akun? <a href="#" className="text-[#2A41C7] font-[600]">Daftar</a></p>
+                    <p className="text-sm mt-[40px]">Belum memiliki akun? <Link href="/daftar"><span className="text-[#2A41C7] font-[600] cursor-pointer">Daftar</span></Link></p>
                 </div>
             </div>
             <div className="hidden lg:block w-1/2 h-screen bg-[url('/login.png')] bg-cover">

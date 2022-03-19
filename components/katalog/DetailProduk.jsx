@@ -64,9 +64,9 @@ export default function DetailProduk() {
                         <div>
                             <h5 className="text-[23px] font-bold text-[#1D2939]">Gambar/foto</h5>
                             <div className="w-auto h-[100px] gap-2 flex overflow-auto">
-                                <img src="./Dokumen/Properti/Pemasukan.jpg" className=""/>
-                                <img src="./Dokumen/Properti/Hibah.jpg" />
-                                <img src="./Dokumen/Properti/Jual_Beli.jpg" />
+                                <img src="/Dokumen/Properti/Pemasukan.jpg" className=""/>
+                                <img src="/Dokumen/Properti/Hibah.jpg" />
+                                <img src="/Dokumen/Properti/Jual_Beli.jpg" />
                             </div>
                         </div><br/>
                         <h5 className="text-[23px] font-bold text-[#1D2939]">Pertanyaan</h5>
