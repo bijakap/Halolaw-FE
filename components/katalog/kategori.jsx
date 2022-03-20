@@ -1,6 +1,6 @@
 import react, {useState} from "react";
 import SearchIcon from '@mui/icons-material/Search';
-import Link from "next/Link"
+import Link from "next/link"
 
 function Kategori(){
     function DummySearch(e) {
@@ -82,8 +82,8 @@ function Kategori(){
                     <h4 className="text-[11px] lg:text-[33px] leading-0 lg:leading-[40px] font-[700]">Pembuatan Dokumen Hukum</h4>
                     <p className="text-[8px] lg:text-[14px] leading-0 lg:leading-[140%] font-[500]">Tersedia pembuatan dokumen hukum yang lengkap dan terpercaya</p>
                 </div>
-                <div class="">
-                    <div class="flex h-[36px] lg:h-[48px]">
+                <div className="">
+                    <div className="flex h-[36px] lg:h-[48px]">
                         <div className="h-full bg-white flex items-center justify-center rounded-[4px] rounded-r-none pl-3 lg:pl-[20px] pr-3 lg:pr-[16px]" onClick={DummySearch}>
                             <SearchIcon className="text-[#6982F1] md:text-[22px] text-[12px]"/>
                         </div>
@@ -98,18 +98,18 @@ function Kategori(){
             </div>
             <div className="mb-[36px] lg:mb-[72px]">
                 <div className="grid grid-cols-2 lg:grid-cols-3 mx-[25px] lg:mx-[100px] gap-3 lg:gap-[32px]">
-                {Kategori.map((index) => {
+                {Kategori.map((data, index) => {
                     return(
-                       <Link href={"/kategori/" + index.judul}>
+                       <Link href={"/kategori/" + data.judul} key={index}>
                             <div className="flex justify-center">
                                 <div className="flex flex-col justify-around lg:justify-between bg-[#FCFCFC] border hover:border-1 lg:hover:border-2 hover:border-blue-600 shadow-[0_4px_10px_0px_rgba(0,0,0,0.1)] w-full lg:w-[420px] h-full lg:h-[236px] p-3 lg:p-[24px]">
                                     <div className="w-[28px] h-[28px] lg:w-[56px] lg:h-[56px]">
-                                        <img src={`./icon/${index.logo}`} alt=""></img>
+                                        <img src={`./icon/${data.logo}`} alt=""></img>
                                     </div>
                                     <div>
                                         <h4 className="text-[12px] lg:text-[22px] font-semibold tracking-[0.5px] text-[#344054] mb-0 lg:mb-[16px]">{index.judul}</h4>
                                         <p className="text-[10px] lg:text-[16px] text-[#475467]">
-                                            {index.deksripsi}
+                                            {data.deksripsi}
                                         </p>
                                     </div>
                                 </div>
