@@ -2,16 +2,16 @@ import react from "react";
 
 import Navbar from "../components/header/Navbar"
 import Footer from "../components/footer/Footer"
-import GantiPassword from "../components/profile/GantiPassword";
+import Profile from "../components/profile/Profile";
 
-function temp(){
+function profile(){
     return (
         <div>
         <Navbar/>
-        <GantiPassword/>
+        <Profile/>
         <Footer />
         </div> 
     )
 }
 
-export default temp;
+export default profile;
