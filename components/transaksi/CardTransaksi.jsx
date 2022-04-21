@@ -1,7 +1,6 @@
 import PrintIcon from '@mui/icons-material/Print';
 
 function CardTransaksi({props}){
-    console.log(props)
     return (
         <>
         <div className='border rounded-lg drop-shadow-sm mb-4'>

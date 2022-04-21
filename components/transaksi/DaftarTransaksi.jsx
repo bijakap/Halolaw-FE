@@ -49,6 +49,14 @@ function DaftarTransaski(){
             praktisi : "Ronald Richards",
             img : "/Dokumen/Properti/Hak_Guna_Bangunan.jpg",
         },
+        {
+            invoice : "INV/20220419/002",
+            status : "Aktif",
+            judul : "Pendirian PT - Pendirian Perusahaan",
+            harga : "Rp700.000",
+            praktisi : "Ronald Richards",
+            img : "/Dokumen/Properti/Hak_Guna_Bangunan.jpg",
+        },
     ]
 
     return(
