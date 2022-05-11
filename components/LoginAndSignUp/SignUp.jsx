@@ -38,7 +38,7 @@ function SignUp(){
                         </div>
                     </form>
                     <button className="bg-white border-2 rounded-[8px] w-full py-[12px] flex justify-center font-[700] text-[#475467]"><img src="/google.svg" className="flex self-center h-auto pr-2"/>Sign up with Google</button>
-                    <p className="text-sm mt-[40px]">Sudah memiliki akun? <Link href="/masuk"><span className="text-[#2A41C7] font-[600] cursor-pointer">Daftar</span></Link></p>
+                    <p className="text-sm mt-[40px]">Sudah memiliki akun? <Link href="/masuk"><span className="text-[#2A41C7] font-[600] cursor-pointer">Login</span></Link></p>
                 </div>
             </div>
             <div className="hidden lg:block w-1/2 h-screen bg-[url('/Login.png')] bg-cover">

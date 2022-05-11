@@ -20,8 +20,9 @@ function Navbar(){
                         <Link href="/"><img src="/logo.svg" className="mr-[48px] w-[128px] cursor-pointer"></img></Link>
                         <ul className="hidden lg:flex list-none self-center space-x-[32px]">
                             <Link href="/kategori"><li className="hover:text-[#3D87DE] py-1"><a href="#">Pembuatan Dokumen</a></li></Link>
-                            <li className="hover:text-[#3D87DE] py-1"><a href="#">Tentang Kami</a></li>
-                            <li className="hover:text-[#3D87DE] py-1"><a href="#">Artikel</a></li>
+                            <Link href="/TentangKami"><li className="hover:text-[#3D87DE] py-1"><a href="#">Tentang Kami</a></li></Link>
+                            <Link href="/artikel"><li className="hover:text-[#3D87DE] py-1"><a href="#">Artikel</a></li></Link>
+                            <Link href="/FAQ"><li className="hover:text-[#3D87DE] py-1"><a href="#">FAQ</a></li></Link>
                         </ul>
                     </div>
                     <Menu as="div" className="relative self-center font-['Inter']">
@@ -65,7 +66,7 @@ function Navbar(){
                                 </Menu.Item>
                                 <Menu.Item>
                                 {({ active }) => (
-                                    <a
+                                    <Link href={"/TentangKami"}><a
                                     href="#"
                                     className={(
                                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
@@ -73,20 +74,33 @@ function Navbar(){
                                     )}
                                     >
                                     Tentang Kami
-                                    </a>
+                                    </a></Link>
                                 )}
                                 </Menu.Item>
                                 <Menu.Item>
                                 {({ active }) => (
-                                    <a
+                                    <Link href={"/artikel"}><a
+                                    href="#"
+                                    className={(
+                                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                        'lg:hidden block px-4 py-1 lg:py-2 hover:text-blue-500'
+                                    )}
+                                    >
+                                    Artikel
+                                    </a></Link>
+                                )}
+                                </Menu.Item>
+                                <Menu.Item>
+                                {({ active }) => (
+                                    <Link href={"/FAQ"}><a
                                     href="#"
                                     className={(
                                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                         'lg:hidden block px-4 py-1 lg:py-2 hover:text-blue-500 border-b'
                                     )}
                                     >
-                                    Artikel
-                                    </a>
+                                    FAQ
+                                    </a></Link>
                                 )}
                                 </Menu.Item>
                                 <Menu.Item>
@@ -123,15 +137,15 @@ function Navbar(){
                                 </Menu.Item>
                                 <Menu.Item>
                                 {({ active }) => (
-                                    <a
+                                    <Link href={"/editpassword"}><a
                                     href="#"
                                     className={(
                                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                         'block px-4 py-1 lg:py-2 hover:text-blue-500'
                                     )}
                                     >
-                                    Support
-                                    </a>
+                                    Pengaturan
+                                    </a></Link>
                                 )}
                                 </Menu.Item>
                                 <form method="POST" action="#">
