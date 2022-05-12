@@ -25,17 +25,24 @@ function DaftarTransaski(){
 
     const optionKategori = [
         {value: 'Properti', label: 'Properti'},
+        {value: 'Pendirian Perusahaan', label: 'Pendirian Perusahaan'},
+        {value: 'Penutupan Perusahaan', label: 'Penutupan Perusahaan'},
+        {value: 'Haki', label: 'Haki'},
+        {value: 'Perizinan Usaha', label: 'Perizinan Usaha'},
+        {value: 'Kontrak Kerja', label: 'Kontrak Kerja'},
+        {value: 'Pembuatan & Perubahan Akta', label: 'Pembuatan & Perubahan Akta'}
     ]
 
     const optionStatus = [
         {value: 'Aktif', label: 'Aktif'},
-        {value: 'Selesai', label: 'Selesai'}
+        {value: 'Selesai', label: 'Selesai'},
+        {value: 'Pending', label: 'Pending'},
     ]
 
     const tempData = [
         {
             invoice : "INV/20220419/001",
-            status : "Aktif",
+            status : "Pending",
             judul : "Sertifikat Tanah - Properti",
             harga : "Rp700.000",
             praktisi : "Farizi Andira",
