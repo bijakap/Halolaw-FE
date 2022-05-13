@@ -3,7 +3,7 @@ import Link from "next/link";
 const FooterPraktisi = () => {
   return (
     <div className="hidden px-10 py-2.5 bg-white mt-6 md:flex justify-start ml-10 w-auto">
-      <div className="text-[#000] md:text-[12px] font-regular">
+      <div className="text-[#000] md:text-[12px] font-medium">
         <p>
           <Link href="/praktisi/PrivacyPolicy">
             <a href="#" className="mr-6">
