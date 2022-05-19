@@ -43,7 +43,7 @@ function ForgotPassword03(props) {
                         <label className="text-sm font-medium text-gray-700 tracking-wide">Konfirmasi Password <span className="text-[#3A57E8]">*</span></label>
                         <input className=" w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6" required type="password" name="KonfirmasiPassword" value={Password.KonfirmasiPassword} onChange={(e) => {setPassword({...Password, [e.target.name] : e.target.value})}} placeholder="********"/>
                         {Error === true ? <p className="text-red-500 text-center pb-2">Password Tidak Sama</p> : <p></p>}
-                        <input type="submit" value="Reset Password" className="w-full flex justify-center bg-[#3A57E8] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer"/>
+                        <input type="submit" value="Lanjutkan" className="w-full flex justify-center bg-[#3A57E8] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer"/>
                     </form>
                     
                 </div>

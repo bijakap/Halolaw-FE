@@ -1,7 +1,7 @@
-import TermCondition from "../../components/praktisi/TermCondition";
-import SidebarPraktisi from "../../components/sidebar/SidebarPraktisi";
-import FooterPraktisi from "../../components/footer/FooterPraktisi";
-import NavbarPraktisi from "../../components/header/NavbarPraktisi";
+import SidebarPraktisi from "../../../components/sidebar/SidebarPraktisi";
+import FooterPraktisi from "../../../components/footer/FooterPraktisi";
+import NavbarPraktisi from "../../../components/header/NavbarPraktisi";
+import TermCondition from "../../../components/praktisi/TermCondition"
 
 const termCondition = () => {
   return (

@@ -11,11 +11,11 @@ function ForgotPassword04() {
                 </div>
                 <div className="space-y-[16px] mb-10">
                     <h5 className="text-[23px] leading-[32px] font-semibold text-[#1D2939]">Password reset</h5>
-                    <p className="text-[14px] leading-[20px] font-[400] tracking-[0.25px] text-[#475467]">Kata sandi Anda telah berhasil diatur ulang. Klik di bawah ini untuk masuk secara ajaib</p>
+                    <p className="text-[14px] leading-[20px] font-[400] tracking-[0.25px] text-[#475467]">Kata sandi Anda telah berhasil diatur ulang. Klik di bawah ini untuk masuk secara otomatis</p>
                 </div>
                 <div className="text-left">
                     <button type="submit" className="w-full flex justify-center bg-[#3A57E8] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer" onClick={() => (router.push('/'))}>
-                    Reset Password
+                    Lanjutkan
                     </button>
                 </div>
                 

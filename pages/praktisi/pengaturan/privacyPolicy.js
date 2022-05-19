@@ -1,7 +1,7 @@
-import SidebarPraktisi from "../../components/sidebar/SidebarPraktisi";
-import NavbarPraktisi from "../../components/header/NavbarPraktisi";
-import PrivacyPolicy from "../../components/praktisi/PrivacyPolicy";
-import FooterPraktisi from "../../components/footer/FooterPraktisi";
+import SidebarPraktisi from "../../../components/sidebar/SidebarPraktisi";
+import NavbarPraktisi from "../../../components/header/NavbarPraktisi";
+import FooterPraktisi from "../../../components/footer/FooterPraktisi";
+import PrivacyPolicy from "../../../components/praktisi/PrivacyPolicy"
 
 const privacyPolicy = () => {
   return (
