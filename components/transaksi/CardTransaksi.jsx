@@ -54,7 +54,7 @@ function CardTransaksi({props}){
     }
     return (
         <>
-        <div className='border rounded-lg drop-shadow-sm mb-4'>
+        <div className='border rounded-lg bg-white drop-shadow-sm mb-4'>
             <div className='border-b'>
                 <div className='flex justify-between md:py-4 py-1 md:px-6 px-2'>
                     <div className='flex'>
