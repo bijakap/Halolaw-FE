@@ -1,5 +1,5 @@
-import SidebarPraktisi from "../../components/sidebar/SidebarPraktisi";
 import NavbarPraktisi from "../../components/header/NavbarPraktisi";
+import SidebarPraktisi from "../../components/sidebar/SidebarPraktisi"
 import FooterPraktisi from "../../components/footer/FooterPraktisi";
 import ProfilPraktisi from "../../components/praktisi/ProfilPraktisi";
 

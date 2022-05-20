@@ -11,7 +11,7 @@ function PrivacyPolicy() {
             <p>
               <Link href="/praktisi">
                 <a href="#" className="">
-                  Dashboard
+                  Dashboard{" "}
                 </a>
               </Link>
               /

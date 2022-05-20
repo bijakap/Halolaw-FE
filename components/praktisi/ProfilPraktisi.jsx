@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Select from "react-select";
 import { useState } from "react";
 
 function ProfilPraktisi() {
@@ -11,6 +12,33 @@ function ProfilPraktisi() {
   const [pekerjaan, setPekerjaan] = useState("Notaris");
   const [pengalaman, setPengalaman] = useState("10");
   const [rekening, setRekening] = useState("3110909987764");
+
+  const optionPekerjaan = [
+    { value: "Notaris", label: "Notaris" },
+    { value: "Notaris & PPAT", label: "Notaris & PPAT" },
+  ];
+
+  const customStyles = {
+    control: (base, state) => ({
+      ...base,
+      background: "white",
+      // Overwrittes the different states of border
+      borderColor: state.isFocused ? "#3A57E8" : "#D1D5DB",
+      // Removes weird border around container
+      boxShadow: state.isFocused ? null : null,
+      padding: "2px 8px",
+      borderRadius: "8px",
+      marginBottom: "24px"
+    }),
+    placeholder: (base) => ({
+      ...base,
+      color: "black",
+      paddingLeft: "10px",
+    }),
+    indicatorSeparator: state => ({
+      display: 'none',
+    }),
+  };
 
   return (
     <div className="flex justify-center mx-10 my-8 w-auto">
@@ -29,7 +57,6 @@ function ProfilPraktisi() {
                   className="h-full w-full object-cover rounded-lg"
                 />
               </div>
-              {/* <input type="file" className="block mx-auto border-2 bg-white text-[#2A41C7] p-3 rounded-[8px] tracking-wide font-[500]" /> */}
               <button className="w-[160px] flex justify-center mx-auto border-2 bg-white text-[#2A41C7] p-3 rounded-[8px] tracking-wide font-[500] cursor-pointer">
                 Upload
               </button>
@@ -140,12 +167,21 @@ function ProfilPraktisi() {
                     <label className="text-sm font-medium text-gray-700 tracking-wide">
                       Pekerjaan <span className="text-[#C4351A]">*</span>
                     </label>
-                    <input
+                    <div className="w-full mt-2">
+                      <Select
+                        options={optionPekerjaan}
+                        styles={customStyles}
+                        placeholder={"--Pilih--"}
+                        // maxMenuHeight={250}
+                        isSearchable={false}
+                      />
+                    </div>
+                    {/* <input
                       className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6"
                       type="dropdown"
                       value={pekerjaan}
                       onChange={(e) => setPekerjaan(e.target.value)}
-                    ></input>
+                    ></input> */}
                   </div>
                   <div className="flex flex-col">
                     <label className="text-sm font-medium text-gray-700 tracking-wide">
@@ -200,7 +236,7 @@ function ProfilPraktisi() {
           </div>
           {/* END: Form Section */}
           {/* START: Setting Section */}
-          <Link href={"/editpassword"}>
+          <Link href={'/praktisi/pengaturan/pengaturanAkun'} >
             <div className="flex p-4 gap-8 cursor-pointer items-center">
               <img src="/setting 1.svg" />
               <div>
