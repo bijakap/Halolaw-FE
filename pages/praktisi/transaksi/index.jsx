@@ -6,12 +6,13 @@ import { useState } from "react";
 
 const transaksi = () => {
   const [active, setActive] = useState(false)
+
   return(
     <div className="bg-[#F6F7FB]">
     {
-      active ? <></> : <SidebarPraktisi /> 
+      active ?  <></> : <SidebarPraktisi /> 
     }
-    <div className={active ? "ml-0" : "ml-[250px]"}>
+    <div className={active ? "ml-0 -z-10" : "ml-[250px]"}>
       <div>
         {/* content */}
         <NavbarPraktisi setClose={setActive} close={active}/>

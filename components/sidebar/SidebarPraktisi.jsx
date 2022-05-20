@@ -8,7 +8,7 @@ const SidebarPraktisi = () =>{
   const [ childActive, setChildActive ] = useState(0);
 
   return (
-    <div className="fixed">
+    <div className="fixed z-10">
       <div className="h-screen w-[250px] shadow-md bg-white">
         <div className="border-b py-6 mb-4 flex justify-center">
           <img src='/logoSidebar.svg' className='md:w-[148px]'/>
