@@ -4,7 +4,7 @@ import NavbarPraktisi from "../../components/header/NavbarPraktisi";
 import FooterPraktisi from "../../components/footer/FooterPraktisi";
 import { useState } from "react";
 
-const praktisi = () => {
+const Praktisi = () => {
   const [active, setActive] = useState(false)
 
   return(
@@ -24,4 +24,4 @@ const praktisi = () => {
   )
 }
 
-export default praktisi;
+export default Praktisi;
