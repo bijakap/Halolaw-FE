@@ -7,10 +7,10 @@ const NavbarPraktisi = () => {
       <button className='px-2'>
         <DensityMediumOutlinedIcon/>
       </button>
-      <div className="flex gap-6">
-        <NotificationsIcon className='text-gray-500'/>
-        <img src='/profiledummy.png'/>
-        <p>Aditya</p>
+      <div className="flex gap-6 mr-5">
+        <NotificationsIcon className='self-center text-[#232D42] text-[28px]'/>
+        <img src='/profiledummy.png' className='rounded-full h-8 w-8 object-cover'/>
+        <p className='self-center text-[#232D42] font-semibold text-sm leading-5 tracking-[0.25px]'>Aditya</p>
       </div>
     </div>
   )
