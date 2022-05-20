@@ -11,7 +11,7 @@ const SidebarPraktisi = () =>{
     <div className="fixed">
       <div className="h-screen w-[250px] shadow-md bg-white">
         <div className="border-b py-6 mb-4 flex justify-center">
-          <img src='/logo.svg' className=''/>
+          <img src='/logoSidebar.svg' className='md:w-[148px]'/>
         </div>
         <div className='flex flex-col gap-2'>
           <div onClick={() => setActive(0)} className={`${active === 0 ? "bg-[#3A57E8] text-white py-2" : "py-2 bg-white text-[#8A92A6]"} mx-4 px-6 rounded-lg cursor-pointer`}>
