@@ -1,8 +1,8 @@
 
-const NavbarPraktisi = () => {
+const NavbarPraktisi = ({close, setClose}) => {
   return(
     <div className="bg-white w-auto flex justify-between p-5 shadow-md">
-      <button><img src="/sidebar/menu.svg" alt="menu" /></button>
+      <button onClick={() => setClose(!close)}><img src="/sidebar/menu.svg" alt="menu" /></button>
       <div className="flex gap-6 mr-5">
         <img src="/sidebar/lonceng.svg" alt="lonceng" />
         <img src='/profiledummy.png' className='rounded-full h-8 w-8 object-cover'/>
