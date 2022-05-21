@@ -4,7 +4,7 @@ import FooterPraktisi from "../../../components/footer/FooterPraktisi";
 import TransaksiPraktisi from "../../../components/praktisi/TransaksiPraktisi";
 import { useState } from "react";
 
-const transaksi = () => {
+const Transaksi = () => {
   const [active, setActive] = useState(false)
 
   return(
@@ -24,4 +24,4 @@ const transaksi = () => {
   )
 }
 
-export default transaksi;
+export default Transaksi;
