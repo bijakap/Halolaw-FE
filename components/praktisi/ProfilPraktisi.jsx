@@ -14,6 +14,7 @@ function ProfilPraktisi() {
   const [rekening, setRekening] = useState("3110909987764");
 
   const optionPekerjaan = [
+    { value: "Pilih", label: "--Pilih--" },
     { value: "Notaris", label: "Notaris" },
     { value: "Notaris & PPAT", label: "Notaris & PPAT" },
   ];
@@ -220,7 +221,8 @@ function ProfilPraktisi() {
                       id="formFile"
                     ></input> */}
                     <input
-                      className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6"
+                      // className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6"
+                      className="w-full text-base border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6 file:py-2 file:px-4 file:border-0 file:mr-6"
                       type="file"
                     ></input>
                   </div>
