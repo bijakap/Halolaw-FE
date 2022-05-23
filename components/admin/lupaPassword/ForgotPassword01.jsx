@@ -19,7 +19,7 @@ function ForgotPassword01(props) {
                 </form>
                 </div>
                 
-                <Link href="/praktisi/masuk"><span className="text-[14px] leading-[20px] tracking-[0.25px] font-[600] text-[#344054] cursor-pointer mt-[32px]">← Kembali ke halaman login</span></Link>
+                <Link href="/admin/masuk"><span className="text-[14px] leading-[20px] tracking-[0.25px] font-[600] text-[#344054] cursor-pointer mt-[32px]">← Kembali ke halaman login</span></Link>
             </div>
         </div>
     )
