@@ -2,10 +2,12 @@ import PengaturanAkun from "../../../components/praktisi/pengaturanAkun";
 import SidebarPraktisi from "../../../components/sidebar/SidebarPraktisi";
 import NavbarPraktisi from "../../../components/header/NavbarPraktisi";
 import FooterPraktisi from "../../../components/footer/FooterPraktisi";
-import useStateNavSide from "../../../hooks/useStateNavSide";
+import useNavbarSidebar from "../../../hooks/useNavbarSidebar";
 
-const PengaturanAkun = () => {
-  const [active, {setIsMobile , setIsActive}] = useStateNavSide()
+const PengaturanAkunPage = () => {
+
+  const [active, {setIsMobile , setIsActive}] = useNavbarSidebar()
+  
   return (
     <div className="bg-[#F6F7FB]">
       {
@@ -25,5 +27,5 @@ const PengaturanAkun = () => {
     );
   };
   
-  export default PengaturanAkun;
+  export default PengaturanAkunPage;
   

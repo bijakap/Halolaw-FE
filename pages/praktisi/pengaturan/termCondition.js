@@ -2,10 +2,12 @@ import SidebarPraktisi from "../../../components/sidebar/SidebarPraktisi";
 import FooterPraktisi from "../../../components/footer/FooterPraktisi";
 import NavbarPraktisi from "../../../components/header/NavbarPraktisi";
 import TermCondition from "../../../components/praktisi/TermCondition";
-import useStateNavSide from "../../../hooks/useStateNavSide";
+import useNavbarSidebar from "../../../hooks/useNavbarSidebar";
 
-const TermCondition = () => {
-  const [active, {setIsMobile , setIsActive}] = useStateNavSide()
+const TermConditionPage = () => {
+
+  const [active, {setIsMobile , setIsActive}] = useNavbarSidebar()
+
   return (
     <div className="bg-[#F6F7FB]">
       {
@@ -25,4 +27,4 @@ const TermCondition = () => {
   );
 };
 
-export default TermCondition;
+export default TermConditionPage;

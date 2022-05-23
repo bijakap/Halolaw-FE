@@ -2,10 +2,12 @@ import SidebarPraktisi from "../../../components/sidebar/SidebarPraktisi";
 import NavbarPraktisi from "../../../components/header/NavbarPraktisi";
 import FooterPraktisi from "../../../components/footer/FooterPraktisi";
 import PrivacyPolicy from "../../../components/praktisi/PrivacyPolicy";
-import useStateNavSide from "../../../hooks/useStateNavSide";
+import useNavbarSidebar from "../../../hooks/useNavbarSidebar";
 
-const PrivacyPolicy = () => {
-  const [active, {setIsMobile , setIsActive}] = useStateNavSide()
+const PrivacyPolicyPage = () => {
+
+  const [active, {setIsMobile , setIsActive}] = useNavbarSidebar()
+
   return (
     <div className="bg-[#F6F7FB]">
       {
@@ -25,4 +27,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default PrivacyPolicyPage;

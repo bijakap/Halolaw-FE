@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import useWindowDimensions from './useWindowDimensions';
 
-const useStateNavSide = () => {
+const useNavbarSidebar = () => {
   const { height, width} = useWindowDimensions()
   const [active, setActive] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
@@ -39,4 +39,4 @@ const useStateNavSide = () => {
 
 }
 
-export default useStateNavSide;
+export default useNavbarSidebar;

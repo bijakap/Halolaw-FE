@@ -2,10 +2,10 @@ import NavbarPraktisi from "../../../components/header/NavbarPraktisi";
 import SidebarPraktisi from "../../../components/sidebar/SidebarPraktisi";
 import FooterPraktisi from "../../../components/footer/FooterPraktisi";
 import DetailTransaksi from "../../../components/praktisi/DetailTransaksi";
-import useStateNavSide from "../../../hooks/useStateNavSide";
+import useNavbarSidebar from "../../../hooks/useNavbarSidebar";
 
 const TransaksiDetail = () => {
-  const [active, {setIsMobile , setIsActive}] = useStateNavSide()
+  const [active, {setIsMobile , setIsActive}] = useNavbarSidebar()
     return (
     <div className="bg-[#F6F7FB]">
       {
