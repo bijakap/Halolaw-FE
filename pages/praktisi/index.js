@@ -2,20 +2,22 @@ import Dashboard from "../../components/praktisi/Dashboard";
 import SidebarPraktisi from "../../components/sidebar/SidebarPraktisi";
 import NavbarPraktisi from "../../components/header/NavbarPraktisi";
 import FooterPraktisi from "../../components/footer/FooterPraktisi";
-import { useState } from "react";
+import useStateNavSide from "../../hooks/useStateNavSide";
 
 const Praktisi = () => {
-  const [active, setActive] = useState(false)
+  const [active, {setIsMobile , setIsActive}] = useStateNavSide()
 
   return(
     <div className="bg-[#F6F7FB]">
     {
-      active ?  <></> : <SidebarPraktisi /> 
+      active ?  <></> : <SidebarPraktisi ActiveNumber={0}/> 
     }
-    <div className={active ? "ml-0 -z-10" : "ml-[250px]"}>
+    <div className={setIsMobile()}>
       <div>
         {/* content */}
-        <NavbarPraktisi setClose={setActive} close={active}/>
+        <div className={active ? "ml-0 -z-10" : "md:ml-0 ml-[250px]"}>
+          <NavbarPraktisi setClose={setIsActive} close={active}/>
+        </div>
         <Dashboard/>
       </div>
       <FooterPraktisi />

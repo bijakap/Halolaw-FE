@@ -35,7 +35,7 @@ const Dashboard = () => {
 
   return(
     <div className="px-10 py-6">
-      <div className="flex gap-6 pb-6">
+      <div className="lg:flex grid grid-cols-2 gap-6 pb-6">
         <CardInfo 
           Icons={PersonOutlineIcon} 
           text={"Client sedang ditangani"}

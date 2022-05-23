@@ -25,8 +25,8 @@ function CardTransaksi({props}){
                 <div className='flex justify-end py-2 md:py-4 px-2 md:px-6 gap-4'>
                     <p className='self-center hover:underline cursor-pointer text-xs lg:text-[14px]'><PrintIcon/> Invoice</p>
                     <Link href={'/DetailTransaksi'}>
-                        <button className={`bg-[#47BF37] hover:bg-[#40a932] text-white px-6 py-3 rounded-lg`}>
-                            <span className='text-xs leading-[20px] tracking-[0.15px] lg:text-[14px]'>Update Progress</span>
+                        <button className={`bg-[#47BF37] hover:bg-[#40a932] text-white md:px-6 px-3 md:py-3 py-1 rounded-lg`}>
+                            <span className='text-xs lg:leading-[20px] tracking-[0.15px] lg:text-[14px]'>Update Progress</span>
                         </button>
                     </Link>
                 </div>
@@ -36,8 +36,8 @@ function CardTransaksi({props}){
                 <div className='flex justify-end py-2 md:py-4 px-2 md:px-6 gap-4'>
                 <p className='self-center hover:underline cursor-pointer text-xs lg:text-[14px]'><PrintIcon/> Invoice</p>
                 <Link href={'/DetailTransaksi'}>
-                    <button className={`border bg-white text-[#3A57E8] hover:bg-[#2c48cf] hover:text-white px-6 py-3 rounded-lg`}>
-                        <span className='text-xs leading-[20px] tracking-[0.15px] lg:text-[14px]'>Lihat Detail</span>
+                    <button className={`border bg-white text-[#3A57E8] hover:bg-[#2c48cf] hover:text-white md:px-6 px-3 md:py-3 py-1 rounded-lg`}>
+                        <span className='text-xs lg:leading-[20px] tracking-[0.15px] lg:text-[14px]'>Lihat Detail</span>
                     </button>
                 </Link>
             </div>

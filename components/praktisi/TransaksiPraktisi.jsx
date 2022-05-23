@@ -71,7 +71,8 @@ const TransaksiPraktisi = () => {
       <div className='xl:flex block md:gap-[47px] gap-2'>
         <div className='flex justify-between gap-4 xl:mb-0 mb-4'>
           <div className='xl:w-[250px] w-full'>
-            <Select 
+            <Select
+                instanceId='Kategori'
                 options={optionKategori}
                 styles={customStyles}
                 placeholder={'--Pilih--'}
@@ -80,12 +81,12 @@ const TransaksiPraktisi = () => {
             /> 
           </div>
           <div className='xl:w-[250px] w-full'>
-            <Select 
+            <Select
+                instanceId='Status'
                 options={optionStatus}
                 styles={customStyles}
                 placeholder={'--Pilih--'}
                 maxMenuHeight={250}
-                
                 isSearchable={false}
             />
           </div>

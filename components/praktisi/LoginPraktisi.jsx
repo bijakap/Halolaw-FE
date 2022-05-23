@@ -32,7 +32,6 @@ function LoginPraktisi(){
                                 <label className="ml-2 block text-sm text-gray-800">Remember me</label>
                             </div>
                             <Link href="/praktisi/LupaPassword"><a className="font-[600] text-sm text-gray-800">Lupa Password ?</a></Link>
-                            
                         </div>
                         <div className="pt-[40px] pb-4">
                             <button type="submit" className="w-full flex justify-center bg-[#3A57E8] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer" onClick={(e) => {handleLoginPraktisi(e)}}>
