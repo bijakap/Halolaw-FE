@@ -4,7 +4,7 @@ import NavbarPraktisi from "../../../components/header/NavbarPraktisi";
 import TermCondition from "../../../components/praktisi/TermCondition";
 import useStateNavSide from "../../../hooks/useStateNavSide";
 
-const termCondition = () => {
+const TermCondition = () => {
   const [active, {setIsMobile , setIsActive}] = useStateNavSide()
   return (
     <div className="bg-[#F6F7FB]">
@@ -25,4 +25,4 @@ const termCondition = () => {
   );
 };
 
-export default termCondition;
+export default TermCondition;

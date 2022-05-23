@@ -4,7 +4,7 @@ import FooterPraktisi from "../../../components/footer/FooterPraktisi";
 import PrivacyPolicy from "../../../components/praktisi/PrivacyPolicy";
 import useStateNavSide from "../../../hooks/useStateNavSide";
 
-const privacyPolicy = () => {
+const PrivacyPolicy = () => {
   const [active, {setIsMobile , setIsActive}] = useStateNavSide()
   return (
     <div className="bg-[#F6F7FB]">
@@ -25,4 +25,4 @@ const privacyPolicy = () => {
   );
 };
 
-export default privacyPolicy;
+export default PrivacyPolicy;

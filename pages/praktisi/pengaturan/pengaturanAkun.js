@@ -4,7 +4,7 @@ import NavbarPraktisi from "../../../components/header/NavbarPraktisi";
 import FooterPraktisi from "../../../components/footer/FooterPraktisi";
 import useStateNavSide from "../../../hooks/useStateNavSide";
 
-const pengaturanAkun = () => {
+const PengaturanAkun = () => {
   const [active, {setIsMobile , setIsActive}] = useStateNavSide()
   return (
     <div className="bg-[#F6F7FB]">
@@ -25,5 +25,5 @@ const pengaturanAkun = () => {
     );
   };
   
-  export default pengaturanAkun;
+  export default PengaturanAkun;
   
