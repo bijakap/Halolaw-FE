@@ -7,7 +7,7 @@ function TermCondition() {
       <div className="w-full">
         {/* START: breadcrumbs */}
         <div className="py-8 pb-[10px] text-[#6C757D]">
-          <div className="text-[11px] md:text-[16px] md:leading-[175%]">
+          <div className="text-[14px] md:text-[16px] md:leading-[175%]">
             <p>
               <Link href="/praktisi">
                 <a href="#" className="">
@@ -23,7 +23,7 @@ function TermCondition() {
           </div>
         </div>
         {/* END: Breadcrumbs */}
-        <div className="md:p-8 bg-white mt-4 w-full md:mr-10 rounded-[2px] md:rounded-[8px]">
+        <div className="p-8 bg-white shadow-lg rounded-lg mb-6">
           <div className="flex justify-start mx-auto pb-10 md:pb-[56px]">
             <img src="/logoSidebar.svg" className="h-[70px] md:h-[100px]" />
           </div>

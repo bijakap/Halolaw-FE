@@ -44,7 +44,7 @@ function ProfilPraktisi() {
   return (
     <div className="flex justify-center mx-10 my-8 w-auto">
       <div className="w-full">
-        <div className="md:p-8 bg-white mt-4 w-full md:mr-10 rounded-[2px] md:rounded-[8px]">
+        <div className="p-8 bg-white shadow-lg rounded-lg ">
           {/* START: Form Section */}
           <div className="md:flex block gap-8 pb-[56px] border-b">
             {/* START: Head - avatar */}

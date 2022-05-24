@@ -14,7 +14,7 @@ const SidebarPraktisi = ({ActiveNumber, childActiveNumber}) =>{
     <div className="fixed z-10">
       <div className="h-screen w-[250px] shadow-md bg-white">
         <div className="border-b py-6 mb-4 flex justify-center cursor-pointer">
-          <Link href={"/"}>
+          <Link href={"/praktisi"}>
             <img src='/logoSidebar.svg' className='md:w-[148px]'/>
           </Link>
         </div>

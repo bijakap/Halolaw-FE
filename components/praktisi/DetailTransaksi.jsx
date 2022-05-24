@@ -70,7 +70,7 @@ function DetailTransaksi() {
       <div className="w-full">
         {/* START: breadcrumbs */}
         <div className="py-8 pb-[10px] text-[#6C757D]">
-          <div className="text-[11px] md:text-[16px] md:leading-[175%]">
+          <div className="text-[14px] md:text-[16px] md:leading-[175%]">
             <p>
               <Link href="/praktisi">
                 <a href="#" className="">
@@ -86,7 +86,7 @@ function DetailTransaksi() {
           </div>
         </div>
         {/* END: Breadcrumbs */}
-        <div className="md:p-8 bg-white mt-4 w-full md:mr-10 rounded-[2px] md:rounded-[8px]">
+        <div className="p-8 bg-white shadow-lg rounded-lg mb-6 ">
           {/* START: Heading */}
           <div className="mb-8">
             <h1 className="#text-[252A31] text-[28px] md:text-[33px] font-semibold leading-[40px] tracking-[0.25px] pb-6">
@@ -146,7 +146,7 @@ function DetailTransaksi() {
           <div className={`py-6 ${active == 0 ? "block" : "hidden"}`}>
             {/* START: update */}
             <div className="w-full bg-[#E8F5FF] p-2 md:p-6 rounded flex flex-col md:flex-row flex-wrap justify-between mb-6">
-              <p className="font-regular text-left leading-6 tracking-[0.25px] sm:w-3/5 text-[14px]">
+              <p className="font-regular text-left leading-6 tracking-[0.25px] md:w-3/5 text-[14px] sm:mb-4 md:mb-0">
                 Lakukan perbaruan progres yang telah anda kerjakan secara
                 berkala. Ini akan memberikan kepercayaan client pada anda{" "}
               </p>
@@ -157,7 +157,7 @@ function DetailTransaksi() {
                   className="w-4 invert"
                 />
                 <span className="self-center font-medium ml-2">
-                  Update Progres
+                  Tambah Progres
                 </span>
               </button>
             </div>

@@ -9,7 +9,7 @@ function PengaturanAkun() {
       <div className="w-full">
         {/* START: breadcrumbs */}
         <div className="py-8 pb-[10px] text-[#6C757D]">
-          <div className="text-[11px] md:text-[16px] md:leading-[175%]">
+          <div className="text-[14px] md:text-[16px] md:leading-[175%]">
             <p>
               <Link href="/praktisi">
                 <a href="#" className="">
@@ -26,7 +26,7 @@ function PengaturanAkun() {
         </div>
         {/* END: Breadcrumbs */}
         {/* START: Main-Content */}
-        <div className="md:p-8 bg-white mt-4 w-full md:mr-10 rounded-[2px] md:rounded-[8px]">
+        <div className="p-8 bg-white shadow-lg rounded-lg mb-6">
           <div className="flex md:flex-row flex-col md:gap-20 gap-6 border-b pb-10 mb-10">
             {/* START: kiri */}
             <div className="md:w-[484px] w-auto order-2 md:order-none">
@@ -80,8 +80,8 @@ function PengaturanAkun() {
             </div>
             {/* END: kiri */}
             {/* START: kanan */}
-            <div className="pt-4 md:pt-16 order-1 md:order-none">
-              <p className="md:hidden block text-[#252A31] text-[23px] font-semibold leading-[32px] pb-2 mb-8">
+            <div className="md:pt-16 order-1 md:order-none">
+              <p className="md:hidden block text-[#252A31] text-[23px] font-semibold leading-[32px] pb-2 mb-2 md:mb-8">
                 Ganti Password
               </p>
               <div className="p-4 w-auto md:w-[280px] border rounded">
