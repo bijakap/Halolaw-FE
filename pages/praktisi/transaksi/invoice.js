@@ -1,10 +1,9 @@
 import Invoice from "../../../components/praktisi/Invoice";
 import SidebarPraktisi from "../../../components/sidebar/SidebarPraktisi";
 import NavbarPraktisi from "../../../components/header/NavbarPraktisi";
-import FooterPraktisi from "../../../components/footer/FooterPraktisi";
 import useNavbarSidebar from "../../../hooks/useNavbarSidebar";
 
-const Praktisi = () => {
+const InvoicePraktisi = () => {
   const [active, {setIsMobile , setIsActive}] = useNavbarSidebar()
 
   return(
@@ -20,10 +19,9 @@ const Praktisi = () => {
         </div>
         <Invoice/>
       </div>
-      <FooterPraktisi />
     </div>
   </div>
   )
 }
 
-export default Praktisi;
+export default InvoicePraktisi;
