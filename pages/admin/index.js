@@ -12,12 +12,14 @@ const Admin = () => {
     }
     <div className={setIsMobile()}>
       <div>
-        {/* content */}
+        {/* Navbar */}
         <div className={active ? "ml-0 -z-10" : "md:ml-0 ml-[250px]"}>
           <NavbarPraktisi setClose={setIsActive} close={active}/>
         </div>
+        {/* content */}
         <p>Contentnya</p>
       </div>
+      {/* Footer */}
       <FooterPraktisi />
     </div>
   </div>
