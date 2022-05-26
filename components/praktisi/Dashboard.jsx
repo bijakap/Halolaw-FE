@@ -73,7 +73,7 @@ const Dashboard = () => {
         <table className='table-auto w-full mt-4'>
           <thead className='rounded-xl text-center text-white'>
           <tr className=''>
-            <td className='px-5 py-4 bg-[#3A57E8] rounded-tl-lg'>
+            <td className='md:px-5 px-3 py-4 bg-[#3A57E8] rounded-tl-lg'>
               <div className='flex justify-center'>
                 <p>No</p>
                 <button>
@@ -81,7 +81,7 @@ const Dashboard = () => {
                 </button>
               </div>              
             </td>
-            <td className='px-10 bg-[#3A57E8]'>
+            <td className='md:px-10 px-3 bg-[#3A57E8]'>
                 <div className='flex justify-center'>
                 <p>Tanggal</p>
                 <button className=''>
@@ -89,7 +89,7 @@ const Dashboard = () => {
                 </button>
               </div>          
             </td>
-            <td className='px-10 bg-[#3A57E8]'>
+            <td className='md:px-10 px-3 bg-[#3A57E8]'>
               <div className='flex justify-center'>
                 <p>Waktu</p>
                 <button>
@@ -97,7 +97,7 @@ const Dashboard = () => {
                 </button>
               </div>     
             </td>
-            <td className='w-[750px] bg-[#3A57E8] rounded-tr-lg'>
+            <td className='md:w-[750px] w-auto bg-[#3A57E8] rounded-tr-lg'>
             <div className='flex'>
                 <p>Aktivitas</p>
                 <button>
@@ -132,8 +132,8 @@ const Dashboard = () => {
         </div>
       </div>
       <div className='p-8 bg-white shadow-lg rounded-lg mb-6'>
-        <p className='font-medium text-[16px] leading-5'>Aktivitas Terakhir</p>
-        <p className='font-normal text-sm leading-6 text-[#8A92A6]'>32 aktivitas minggu ini</p>
+        <p className='font-medium text-[16px] leading-5'>Pendapatan</p>
+        <p className='font-normal text-sm leading-6 text-[#8A92A6]'>Semua pendapatan</p>
         <table className='table-auto w-full mt-4'>
           <thead className='rounded-xl text-center text-white'>
           <tr className=''>
