@@ -109,7 +109,7 @@ function DaftarTransaski(){
                 <div className='mt-8'>
                     {/* card */}
                     {tempData.map((data, index) => (
-                        <CardTransaksi props={data} key={index}/>
+                        <CardTransaksi props={data} key={index} href={["/DetailTransaksi", "/invoice"]}/>
                     ))}
                 </div>
                 <div className='inline-block mt-3'>

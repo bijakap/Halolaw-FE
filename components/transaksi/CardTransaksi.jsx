@@ -1,7 +1,7 @@
 import PrintIcon from '@mui/icons-material/Print';
 import Link from 'next/link';
 
-function CardTransaksi({props}){
+function CardTransaksi({props, href}){
 
     const showStatus = (status) => {
         if (status.toLowerCase() === "aktif" ){
@@ -24,7 +24,7 @@ function CardTransaksi({props}){
             return(
                 <div className='flex justify-end py-2 md:py-4 px-2 md:px-6 gap-4'>
                     <p className='self-center hover:underline cursor-pointer text-xs lg:text-[14px]'><PrintIcon/> Invoice</p>
-                    <Link href={'/DetailTransaksi'}>
+                    <Link href={href}>
                         <button className={`bg-[#47BF37] hover:bg-[#40a932] text-white md:px-6 px-3 md:py-3 py-1 rounded-lg`}>
                             <span className='text-xs lg:leading-[20px] tracking-[0.15px] lg:text-[14px]'>Update Progress</span>
                         </button>
@@ -35,7 +35,7 @@ function CardTransaksi({props}){
             return(
                 <div className='flex justify-end py-2 md:py-4 px-2 md:px-6 gap-4'>
                 <p className='self-center hover:underline cursor-pointer text-xs lg:text-[14px]'><PrintIcon/> Invoice</p>
-                <Link href={'/DetailTransaksi'}>
+                <Link href={href}>
                     <button className={`border bg-white text-[#3A57E8] hover:bg-[#2c48cf] hover:text-white md:px-6 px-3 md:py-3 py-1 rounded-lg`}>
                         <span className='text-xs lg:leading-[20px] tracking-[0.15px] lg:text-[14px]'>Lihat Detail</span>
                     </button>
