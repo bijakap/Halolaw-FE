@@ -2,75 +2,104 @@ import { useState } from "react";
 import Link from "next/link";
 import Pagination from "../pagination/Pagination";
 
-function Layanan() {
+function DetailLayanan() {
+  const PageName = "Properti";
   const [active, setActive] = useState(0);
 
   const sampleData = [
     {
-      cover: "properti.svg",
-      layanan: "Properti",
-      dokumen: "10",
+      cover: "Tanah.png",
+      dokumen: "Sertifikat Tanah",
+      harga: "700.000",
+      status: "Aktif",
       modifikasi: "11/03/2022",
     },
     {
-      cover: "haki.svg",
-      layanan: "Hak Kekayaan Intelektual",
-      dokumen: "7",
+      cover: "Hak_Guna_Bangunan.jpg",
+      dokumen: "Peningkatan Hak Guna Bangunan",
+      harga: "400.000",
+      status: "Aktif",
       modifikasi: "11/03/2022",
     },
     {
-      cover: "pendirianPerusahaan.svg",
-      layanan: "Pendirian Perusahaan",
-      dokumen: "8",
+      cover: "Balik_Nama.png",
+      dokumen: "Akta Balik Nama",
+      harga: "1.200.000",
+      status: "Aktif",
       modifikasi: "11/03/2022",
     },
     {
-      cover: "closedcompany.svg",
-      layanan: "Penutupan Perusahaan",
-      dokumen: "7",
+      cover: "Waris_Tanah.jpg",
+      dokumen: "Ahli Waris Tanah",
+      harga: "1.000.000",
+      status: "Aktif",
       modifikasi: "11/03/2022",
     },
     {
-      cover: "briefcase.svg",
-      layanan: "Perizinan Usaha",
-      dokumen: "4",
+      cover: "Tukar_Menukar.png",
+      dokumen: "Akta Tukar Menukar",
+      harga: "900.000",
+      status: "Aktif",
       modifikasi: "11/03/2022",
     },
     {
-      cover: "contract.svg",
-      layanan: "Kontrak Kerja",
-      dokumen: "6",
+      cover: "Jual_Beli.jpg",
+      dokumen: "Akta Jual Beli",
+      harga: "7.000.000",
+      status: "Draft",
       modifikasi: "11/03/2022",
     },
     {
-      cover: "documents.svg",
-      layanan: "Pembuatan & Perubahan Akta",
-      dokumen: "6",
+      cover: "Hibah.jpg",
+      dokumen: "Akta Hibah",
+      harga: "900.000",
+      status: "Aktif",
+      modifikasi: "11/03/2022",
+    },
+    {
+      cover: "Pemberian_Hak_Tanggung.png",
+      dokumen: "Akta Pemberian Hak Tanggungan",
+      harga: "1.600.000",
+      status: "Aktif",
+      modifikasi: "11/03/2022",
+    },
+    {
+      cover: "Pembagian_Hak_Bersama.png",
+      dokumen: "Akta Pembagian Hak Bersama",
+      harga: "3.200.000",
+      status: "Draft",
+      modifikasi: "11/03/2022",
+    },
+    {
+      cover: "Pemasukan.jpg",
+      dokumen: "Pemasukan ke dalam perusahaan",
+      harga: "3.000.000",
+      status: "Aktif",
       modifikasi: "11/03/2022",
     },
   ];
 
   return (
     <div className="flex justify-center mx-10 w-auto">
-      <div className="w-full pt-8">
-        {/* START: Card tambah layanan */}
-        <Link href={"/admin/layanan/tambahLayanan"}>
-          <div className="inline-block bg-white border rounded-lg p-6 mb-4 hover:shadow-[0px_4px_10px_rgba(0,0,0,0.05)] hover:cursor-pointer">
-            <div className="flex flex-row md:justify-between w-auto gap-8">
-              <div className="flex flex-row flex-nowrap gap-4">
-                <img src="/sidebar/layanan-hover.svg" alt="" className="w-8" />
-                <div className="flex flex-col">
-                  <p className="font-semibold text-base">Tambah layanan baru</p>
-                  <p className="font-regular text-xs">
-                    Layanan pengurusan legalitas
-                  </p>
-                </div>
-              </div>
-              <img src="/layanan-tambah.svg" alt="" />
-            </div>
+      <div className="w-full">
+        {/* START: breadcrumbs */}
+        <div className="py-8 pb-[10px] text-[#6C757D]">
+          <div className="text-[14px] md:text-[16px] md:leading-[175%]">
+            <p>
+              <Link href="/admin">
+                <a href="#" className="">
+                  Dashboard{" "}
+                </a>
+              </Link>
+              /
+              <Link href="/admin/layanan">
+                <a href="#"> Layanan </a>
+              </Link>
+              / <span className="text-[#2E46BA]">{PageName}</span>
+            </p>
           </div>
-        </Link>
-        {/* END: Card tambah layanan */}
+        </div>
+        {/* END: Breadcrumbs */}
 
         <div className="p-8 bg-white shadow-lg rounded-lg mb-6 ">
           {/* START: Search */}
@@ -93,11 +122,12 @@ function Layanan() {
               <tr>
                 <td className="px-3">No</td>
                 <td className="px-3 text-center hidden md:table-cell">Cover</td>
-                <td className="md:max-w-[520px] lg:w-[600px] text-left">
-                  Layanan
+                <td className="px-3 md:max-w-[600px] lg:w-[600px] text-left">
+                  Dokumen
                 </td>
-                <td className="px-3">Dokumen</td>
-                <td className="px-3">Modifikasi</td>
+                <td className="px-3">Harga</td>
+                <td className="px-3">Status</td>
+                <td className="px-3 hidden md:table-cell">Modifikasi</td>
                 <td className="px-3 py-4 text-left">Aksi</td>
               </tr>
             </thead>
@@ -113,15 +143,19 @@ function Layanan() {
                   <td className="py-2 hidden md:table-cell">
                     <div className="flex justify-center">
                       <img
-                        src={"/icon/" + data.cover}
+                        src={"/Dokumen/Properti/" + data.cover}
+                        // /Dokumen/Properti/Tanah.png
                         alt={data.cover}
-                        className="w-12"
+                        className="w-[72px]"
                       ></img>
                     </div>
                   </td>
-                  <td className="py-2 ">{data.layanan}</td>
-                  <td className="text-center py-2">{data.dokumen}</td>
-                  <td className="text-center py-2">{data.modifikasi}</td>
+                  <td className="py-2 px-2 md:px-3 ">{data.dokumen}</td>
+                  <td className="py-2 text-[#1B8920] font-bold">
+                    Rp.{data.harga}
+                  </td>
+                  <td className="text-center py-2">{data.status}</td>
+                  <td className="text-center py-2 hidden md:table-cell">{data.modifikasi}</td>
                   <td className="px-4 py-4 flex flex-row gap-6 flex-wrap ">
                     <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
                       <img
@@ -129,7 +163,7 @@ function Layanan() {
                         alt="add"
                         className="w-4"
                       />
-                      <Link href={"/admin/layanan/properti"}>
+                      <Link href={"/admin/layanan/detailLayanan"}>
                         <a className="self-center font-medium ml-2 cursor-pointer hover:underline">
                           Edit
                         </a>
@@ -171,4 +205,4 @@ function Layanan() {
   );
 }
 
-export default Layanan;
+export default DetailLayanan;
