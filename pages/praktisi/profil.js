@@ -6,7 +6,6 @@ import useNavbarSidebar from "../../hooks/useNavbarSidebar";
 
 const Profil = () => {
   const [active, { setIsMobile, setIsActive }] = useNavbarSidebar();
-
   return (
     <div className="bg-[#F6F7FB]">
       {active ? <></> : <SidebarPraktisi ActiveNumber={0} />}
