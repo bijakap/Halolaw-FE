@@ -14,7 +14,7 @@ const SidebarAdmin = ({ActiveNumber, childActiveNumber}) =>{
     <div className="fixed z-10">
       <div className="h-screen w-[250px] shadow-md bg-white">
         <div className="border-b py-6 mb-4 flex justify-center cursor-pointer">
-          <Link href={"/"}>
+          <Link href={"/admin"}>
             <img src='/logoSidebar.svg' className='md:w-[148px]'/>
           </Link>
         </div>
@@ -25,7 +25,7 @@ const SidebarAdmin = ({ActiveNumber, childActiveNumber}) =>{
               <p className='text-[16px] font-normal leading-7'>Dashboard</p>
             </div>
           </div>
-          <div onClick={() => {setActive(1); }} className={`${active === 1 ? "bg-[#3A57E8] text-white py-2" : "py-2 bg-white text-[#8A92A6]"} mx-4 px-6 rounded-lg cursor-pointer`}>
+          <div onClick={() => {setActive(1); router.push("/admin/layanan");}} className={`${active === 1 ? "bg-[#3A57E8] text-white py-2" : "py-2 bg-white text-[#8A92A6]"} mx-4 px-6 rounded-lg cursor-pointer`}>
             <div className="flex gap-4">
               <div className='self-center'><AddBoxIcon/></div>
               <p className='text-[16px] font-normal leading-7'>Layanan</p>

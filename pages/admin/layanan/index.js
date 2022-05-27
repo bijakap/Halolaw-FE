@@ -1,23 +1,24 @@
 import NavbarPraktisi from "../../../components/header/NavbarPraktisi";
-import SidebarPraktisi from "../../../components/sidebar/SidebarPraktisi";
+import SidebarAdmin from "../../../components/sidebar/SidebarAdmin";
 import FooterPraktisi from "../../../components/footer/FooterPraktisi";
 import useNavbarSidebar from "../../../hooks/useNavbarSidebar";
 import Layanan from "../../../components/admin/Layanan";
 
 const LayananAdmin = () => {
   const [active, { setIsMobile, setIsActive }] = useNavbarSidebar();
-
   return (
     <div className="bg-[#F6F7FB]">
-      {active ? <></> : <SidebarPraktisi ActiveNumber={0} />}
+      {active ? <></> : <SidebarAdmin ActiveNumber={0} />}
       <div className={setIsMobile()}>
         <div>
-          {/* content */}
+          {/* Navbar */}
           <div className={active ? "ml-0 -z-10" : "md:ml-0 ml-[250px]"}>
             <NavbarPraktisi setClose={setIsActive} close={active} />
           </div>
+          {/* content */}
           <Layanan />
         </div>
+        {/* Footer */}
         <FooterPraktisi />
       </div>
     </div>
