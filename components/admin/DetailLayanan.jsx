@@ -102,20 +102,34 @@ function DetailLayanan() {
         {/* END: Breadcrumbs */}
 
         <div className="p-8 bg-white shadow-lg rounded-lg mb-6 ">
-          {/* START: Search */}
-          <div className="flex gap-4 mb-8">
-            <div className="w-full md:w-auto">
-              <input
-                className="w-full xl:w-[475px] text-base px-4 py-[6px] border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8]"
-                type="search"
-                placeholder="Search...."
-              />
-            </div>
-            <button className="px-6 rounded-lg bg-[#3A57E8] text-white text-[16px] leading-[20px] tracking-[0.15px]">
-              Cari
-            </button>
+          {/* START: Heading */}
+          <div className="flex flex-col gap-3 md:gap-6 mb-4 md:mb-6">
+            <h4 className="font-semibold text-[#252A31] text-[33px] leading-10 tracking-[0.25px]">
+              Properti
+            </h4>
+            <p className="font-regular text-[14px] leading-5 tracking-[0.25px]">
+              Properti adalah penyebutan untuk bangunan atau tanah yang dimiliki
+              oleh seseorang. Bisa dikatakan bahwa properti tidak hanya sebatas
+              bangunan yang berdiri namun juga meliputi keterangan tanah beserta
+              gedung yang berdiri di atasnya.
+            </p>
           </div>
-          {/* END: Search */}
+          <Link
+            href={"/admin/layanan/properti/tambahLayanan"}
+            className=""
+          >
+            <button className="flex flex-row gap-2 px-6 py-[10px] rounded-lg border bg-white hover:bg-[#47BF37] text-[#116E1C] hover:text-white text-[14px] leading-[20px] tracking-[0.25px] items-center justify-center mb-4">
+              <img
+                src="/iconGoogle/add_circle.svg"
+                alt="add"
+                className="w-4"
+              />
+              <span className="self-center font-medium ml-2">
+                Tambah Dokumen
+              </span>
+            </button>
+          </Link>
+          {/* END: Heading */}
           {/* START: Table */}
           <table className="table-auto w-full lg:max-w-7xl">
             <thead className="border-collapse text-center bg-[#3A57E8] text-white">
@@ -155,7 +169,9 @@ function DetailLayanan() {
                     Rp.{data.harga}
                   </td>
                   <td className="text-center py-2">{data.status}</td>
-                  <td className="text-center py-2 hidden md:table-cell">{data.modifikasi}</td>
+                  <td className="text-center py-2 hidden md:table-cell">
+                    {data.modifikasi}
+                  </td>
                   <td className="px-4 py-4 flex flex-row gap-6 flex-wrap ">
                     <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
                       <img
