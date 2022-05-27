@@ -2,6 +2,7 @@ import useNavbarSidebar from "../../hooks/useNavbarSidebar";
 import FooterPraktisi from "../../components/footer/FooterPraktisi";
 import NavbarPraktisi from "../../components/header/NavbarPraktisi";
 import SidebarAdmin from "../../components/sidebar/SidebarAdmin";
+import DashboardAdmin from "../../components/admin/DashboardAdmin";
 
 const Admin = () => {
   const [active, {setIsMobile , setIsActive}] = useNavbarSidebar()
@@ -16,8 +17,7 @@ const Admin = () => {
         <div className={active ? "ml-0 -z-10" : "md:ml-0 ml-[250px]"}>
           <NavbarPraktisi setClose={setIsActive} close={active}/>
         </div>
-        {/* content */}
-        <p>Contentnya</p>
+        <DashboardAdmin/>
       </div>
       {/* Footer */}
       <FooterPraktisi />

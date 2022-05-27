@@ -21,19 +21,40 @@ const SidebarPraktisi = ({ActiveNumber, childActiveNumber}) =>{
         <div className='flex flex-col gap-2'>
           <div onClick={() => {setActive(0); router.push("/praktisi");}} className={`${active === 0 ? "bg-[#3A57E8] text-white py-2" : "py-2 bg-white text-[#8A92A6]"} mx-4 px-6 rounded-lg cursor-pointer`}>
             <div className="flex gap-4">
-              <div className='self-center'><DashboardIcon/></div>
+              <div className='self-center'>
+                {
+                  active === 0 ?
+                    <img src='/sidebar/dashboard-active.svg'/> 
+                    : 
+                    <img src='/sidebar/dashboard.svg'/>
+                }
+              </div>
               <p className='text-[16px] font-normal leading-7'>Dashboard</p>
             </div>
           </div>
           <div onClick={() => {setActive(1); router.push("/praktisi/transaksi");}} className={`${active === 1 ? "bg-[#3A57E8] text-white py-2" : "py-2 bg-white text-[#8A92A6]"} mx-4 px-6 rounded-lg cursor-pointer`}>
             <div className="flex gap-4">
-              <div className='self-center'><AddBoxIcon/></div>
+              <div className='self-center'>
+                {
+                  active === 1 ?
+                    <img src='/sidebar/transaksi-active.svg'/> 
+                    : 
+                    <img src='/sidebar/transaki.svg'/>
+                }
+              </div>
               <p className='text-[16px] font-normal leading-7'>Transaksi</p>
             </div>
           </div>
           <div onClick={() => setActive(2)} className={`${active === 2 ? "bg-[#3A57E8] text-white py-2" : "py-2 bg-white text-[#8A92A6]"} mx-4 px-6 rounded-lg cursor-pointer`}>
             <div className="flex gap-4">
-              <div className='self-center'><EditIcon/></div>
+              <div className='self-center'>
+              {
+                  active === 2 ?
+                    <img src='/sidebar/setting-active.svg'/> 
+                    : 
+                    <img src='/sidebar/setting.svg'/>
+                }
+              </div>
               <p className='text-[16px] font-normal leading-7'>Pengaturan</p>
             </div>
           </div>
