@@ -4,7 +4,7 @@ import NavbarPraktisi from "../../components/header/NavbarPraktisi";
 import FooterPraktisi from "../../components/footer/FooterPraktisi";
 import useNavbarSidebar from "../../hooks/useNavbarSidebar";
 
-const profil = () => {
+const Profil = () => {
   const [active, { setIsMobile, setIsActive }] = useNavbarSidebar();
 
   return (
@@ -24,4 +24,4 @@ const profil = () => {
   );
 };
 
-export default profil;
+export default Profil;
