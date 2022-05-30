@@ -7,7 +7,7 @@ const useNavbarSidebar = () => {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    if(width < 800){
+    if(width < 1024){
       if(active === false){
         setActive(true)
       }
