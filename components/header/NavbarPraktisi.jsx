@@ -4,7 +4,7 @@ const NavbarPraktisi = ({close, setClose}) => {
   return(
     <div className={`bg-white w-auto p-5 shadow-md`}>
       {/* Desktop */}
-      <div className="md:flex hidden justify-between">
+      <div className="lg:flex hidden justify-between">
         <button onClick={() => setClose(!close)}><img src="/sidebar/menu.svg" alt="menu" /></button>
         <div className="block">
           <div className="flex gap-6 mr-5">
@@ -21,7 +21,7 @@ const NavbarPraktisi = ({close, setClose}) => {
       {/* mobile */}
       {
         close ?
-        <div className="md:hidden flex justify-between">
+        <div className="lg:hidden flex justify-between">
           <button onClick={() => setClose(!close)}><img src="/sidebar/menu.svg" alt="menu" /></button>
           <div className="block">
             <div className="flex gap-6 mr-5">
@@ -36,7 +36,7 @@ const NavbarPraktisi = ({close, setClose}) => {
           </div>
         </div>
         :
-        <div className="md:hidden flex justify-start">
+        <div className="lg:hidden flex justify-start">
           <button onClick={() => setClose(!close)} className="my-1"><img src="/sidebar/menu.svg" alt="menu" /></button>
         </div>
       }
