@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Pagination from "../pagination/Pagination";
 
 const TransaksiKonsultasi = () => {
   const PageName = "Konsultasi";
@@ -54,7 +55,7 @@ const TransaksiKonsultasi = () => {
           {/* END: Search */}
           {/* START: Table */}
           <div className="overflow-x-auto">
-            <table className="table-auto w-full lg:max-w-7xl">
+            <table className="table-auto w-full">
               <thead className="border-collapse text-center bg-[#3A57E8] text-white">
               <tr className=''>
                 <td className='md:px-5 px-2 py-4 bg-[#3A57E8] rounded-tl-lg'>
@@ -137,6 +138,20 @@ const TransaksiKonsultasi = () => {
             </table>
           </div>
           {/* END: Table */}
+          <div className="flex justify-between pt-8">
+            <div className="flex gap-4">
+              <p className="text-[#454D59] text-sm leading-20 tracking-[0.25px] self-center">
+                Rows Per Page
+              </p>
+              <select className="border p-1 px-2">
+                <option>5</option>
+                <option>10</option>
+              </select>
+            </div>
+            <div>
+              <Pagination />
+            </div>
+          </div>
         </div>
         {/* END: Box Content Table */}
 
