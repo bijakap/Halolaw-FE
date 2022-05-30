@@ -80,7 +80,7 @@ function DetailLayanan() {
   ];
 
   return (
-    <div className="flex justify-center mx-10 w-auto">
+    <div className="flex justify-center mx-4 md:mx-10 w-auto">
       <div className="w-full">
         {/* START: breadcrumbs */}
         <div className="py-8 pb-[10px] text-[#6C757D]">

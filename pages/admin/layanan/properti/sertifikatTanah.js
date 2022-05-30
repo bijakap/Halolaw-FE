@@ -1,10 +1,10 @@
-import NavbarPraktisi from "../../../components/header/NavbarPraktisi";
-import SidebarAdmin from "../../../components/sidebar/SidebarAdmin";
-import FooterPraktisi from "../../../components/footer/FooterPraktisi";
-import useNavbarSidebar from "../../../hooks/useNavbarSidebar";
-import DetailLayanan from "../../../components/admin/DetailLayanan";
+import NavbarPraktisi from "../../../../components/header/NavbarPraktisi";
+import SidebarAdmin from "../../../../components/sidebar/SidebarAdmin";
+import useNavbarSidebar from "../../../../hooks/useNavbarSidebar";
+import FooterPraktisi from "../../../../components/footer/FooterPraktisi";
+import DetailDokumen from "../../../../components/admin/DetailDokumen";
 
-const Properti = () => {
+const SertifikatTanah = () => {
     const [active, { setIsMobile, setIsActive }] = useNavbarSidebar();
     return (
       <div className="bg-[#F6F7FB]">
@@ -16,7 +16,7 @@ const Properti = () => {
               <NavbarPraktisi setClose={setIsActive} close={active} />
             </div>
             {/* content */}
-            <DetailLayanan />
+            <DetailDokumen />
           </div>
           {/* Footer */}
           <FooterPraktisi />
@@ -25,4 +25,4 @@ const Properti = () => {
     );
   };
   
-  export default Properti;
+  export default SertifikatTanah;

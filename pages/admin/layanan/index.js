@@ -8,7 +8,7 @@ const LayananAdmin = () => {
   const [active, { setIsMobile, setIsActive }] = useNavbarSidebar();
   return (
     <div className="bg-[#F6F7FB]">
-      {active ? <></> : <SidebarAdmin ActiveNumber={0} />}
+      {active ? <></> : <SidebarAdmin ActiveNumber={1} />}
       <div className={setIsMobile()}>
         <div>
           {/* Navbar */}

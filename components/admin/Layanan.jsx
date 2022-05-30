@@ -51,7 +51,7 @@ function Layanan() {
   ];
 
   return (
-    <div className="flex justify-center mx-10 w-auto">
+    <div className="flex justify-center mx-4 md:mx-10 w-auto">
       <div className="w-full pt-8">
         {/* START: Card tambah layanan */}
         <Link href={"/admin/layanan/tambahLayanan"}>
