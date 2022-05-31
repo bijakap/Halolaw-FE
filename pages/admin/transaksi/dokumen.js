@@ -2,9 +2,9 @@ import NavbarPraktisi from "../../../components/header/NavbarPraktisi";
 import SidebarAdmin from "../../../components/sidebar/SidebarAdmin";
 import FooterPraktisi from "../../../components/footer/FooterPraktisi";
 import useNavbarSidebar from "../../../hooks/useNavbarSidebar";
-import TransaksiKonsultasi from "../../../components/admin/TransaksiKonsultasi";
+import TransaksiDokumen from "../../../components/admin/TransaksiDokumen";
 
-const PageTransaksiKonsultasi = () => {
+const PageTransaksiDokumen = () => {
   const [active, { setIsMobile, setIsActive }] = useNavbarSidebar();
   return(
     <div className="bg-[#F6F7FB]">
@@ -16,7 +16,7 @@ const PageTransaksiKonsultasi = () => {
             <NavbarPraktisi setClose={setIsActive} close={active} />
           </div>
           {/* content */}
-          <TransaksiKonsultasi/>
+          <TransaksiDokumen/>
         </div>
         {/* Footer */}
         <FooterPraktisi />
@@ -25,4 +25,4 @@ const PageTransaksiKonsultasi = () => {
   )
 }
 
-export default PageTransaksiKonsultasi;
+export default PageTransaksiDokumen;
