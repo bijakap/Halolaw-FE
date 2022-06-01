@@ -1,4 +1,3 @@
-import react from "react";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ArtikelCard from '../artikel/ArtikelCard';
 import Link from 'next/link'

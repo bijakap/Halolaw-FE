@@ -1,10 +1,5 @@
-import react from "react";
-import Image from "next/image";
-
 function ArtikelCard(props){
   const data = props.data;
-  console.log(data)
-
 
   return(
   <div className="w-full">
