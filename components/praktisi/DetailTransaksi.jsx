@@ -162,96 +162,103 @@ function DetailTransaksi() {
               </button>
             </div>
             {/* END: update */}
-            <table className="table-auto w-full lg:max-w-7xl">
-              <thead className="border-collapse text-center bg-[#3A57E8] text-white">
-                <tr>
-                  <td className="px-3 py-4">No</td>
-                  <td className="px-3">Tanggal</td>
-                  <td className="px-3">Waktu</td>
-                  <td className="w-[700px] text-left">Catatan</td>
-                  <td className="px-3 text-left">Aksi</td>
-                </tr>
-              </thead>
-              <tbody className="  ">
-                {sampleData2.reverse().map((data, index) => (
-                  <tr
-                    key={index}
-                    className={` align-top text-center text-[14px] leading-[24px] text-[#232D42] ${
-                      index % 2 != 0 ? "bg-[#F4FAFF]" : "bg-white"
-                    }`}
-                  >
-                    <td className="py-2">{sampleData2.length - index}</td>
-                    <td className="py-2">{data.tgl}</td>
-                    <td className="py-2">{data.waktu}</td>
-                    <td className="text-left py-2">{data.catatan}</td>
-                    <td className="px-4 py-4 flex flex-row gap-6 flex-wrap ">
-                      <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                        <img
-                          src="/iconGoogle/edit.svg"
-                          alt="add"
-                          className="w-4"
-                        />
-                        <a className="self-center font-medium ml-2 cursor-pointer hover:underline">
-                          Edit
-                        </a>
-                      </div>
-                      <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                        <img
-                          src="/iconGoogle/delete.svg"
-                          alt="add"
-                          className="w-4"
-                        />
-                        <a className="self-center font-medium ml-2 cursor-pointer hover:underline text-[#A41F12]">
-                          Hapus
-                        </a>
-                      </div>
-                    </td>
+            <div className="overflow-x-auto">
+              <table className="table-auto w-full">
+                <thead className="border-collapse text-center bg-[#3A57E8] text-white">
+                  <tr>
+                    <td className="px-3 hidden md:table-cell">No</td>
+                    <td className="px-3">Tanggal</td>
+                    <td className="px-3 hidden md:table-cell">Waktu</td>
+                    <td className="text-left">Catatan</td>
+                    <td className="px-3 text-left py-4">Aksi</td>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="  ">
+                  {sampleData2.reverse().map((data, index) => (
+                    <tr
+                      key={index}
+                      className={` align-top text-center text-[14px] leading-[24px] text-[#232D42] ${
+                        index % 2 != 0 ? "bg-[#F4FAFF]" : "bg-white"
+                      }`}
+                    >
+                      <td className="py-2 hidden md:table-cell">{sampleData2.length - index}</td>
+                      <td className="py-2 hidden md:table-cell">{data.tgl}</td>
+                      <td className="py-2 hidden md:table-cell">{data.waktu}</td>
+                      <td className="p-4 md:p-2 table-cell md:hidden text-left">{data.tgl} <br /> {data.waktu}</td>
+                      <td className="text-left py-2">
+                        {data.catatan}
+                      </td>
+                      <td className="px-4 py-4 flex flex-row gap-6 flex-wrap ">
+                        <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
+                          <img
+                            src="/iconGoogle/edit.svg"
+                            alt="add"
+                            className="w-4"
+                          />
+                          <a className="self-center font-medium ml-2 cursor-pointer hover:underline">
+                            Edit
+                          </a>
+                        </div>
+                        <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
+                          <img
+                            src="/iconGoogle/delete.svg"
+                            alt="add"
+                            className="w-4"
+                          />
+                          <a className="self-center font-medium ml-2 cursor-pointer hover:underline text-[#A41F12]">
+                            Hapus
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
           {/* END: Update Progress */}
           {/* START: Dokement Client */}
           <div className={`py-6 ${active == 1 ? "block" : "hidden"}`}>
-            <table className="table-auto w-full lg:max-w-7xl">
-              <thead className="border-collapse text-center bg-[#3A57E8] text-white">
-                <tr>
-                  <td className="px-3 py-4">NO</td>
-                  <td className="w-[500px] text-left">Dokumen</td>
-                  <td className="px-3">Status</td>
-                  <td className="px-3">Tanggal Modifikasi</td>
-                  <td className="px-3 text-left">Aksi</td>
-                </tr>
-              </thead>
-              <tbody className="">
-                {sampleData.map((data, index) => (
-                  <tr
-                    key={index}
-                    className={`text-center text-[14px] leading-[24px] text-[#232D42] ${
-                      index % 2 != 0 ? "bg-[#F4FAFF]" : "bg-white"
-                    }`}
-                  >
-                    <td className="py-4">{index + 1}</td>
-                    <td className="text-left">{data.dokumen}</td>
-                    <td className="">{data.status}</td>
-                    <td className="">{data.tgl}</td>
-                    <td className="px-4">
-                      <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                        <img
-                          src="/iconGoogle/download.svg"
-                          alt="add"
-                          className="w-4"
-                        />
-                        <a className="self-center font-medium ml-2 cursor-pointer hover:underline">
-                          Download
-                        </a>
-                      </div>
-                    </td>
+            <div className="overflow-x-auto">
+              <table className="table-auto w-full whitespace-nowrap">
+                <thead className="border-collapse text-center bg-[#3A57E8] text-white">
+                  <tr>
+                    <td className="px-3 py-4">NO</td>
+                    <td className="w-[500px] text-left">Dokumen</td>
+                    <td className="px-3">Status</td>
+                    <td className="px-3">Tanggal Modifikasi</td>
+                    <td className="px-3 text-left">Aksi</td>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="">
+                  {sampleData.map((data, index) => (
+                    <tr
+                      key={index}
+                      className={`text-center text-[14px] leading-[24px] text-[#232D42] ${
+                        index % 2 != 0 ? "bg-[#F4FAFF]" : "bg-white"
+                      }`}
+                    >
+                      <td className="py-4">{index + 1}</td>
+                      <td className="text-left">{data.dokumen}</td>
+                      <td className="">{data.status}</td>
+                      <td className="">{data.tgl}</td>
+                      <td className="px-4">
+                        <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
+                          <img
+                            src="/iconGoogle/download.svg"
+                            alt="add"
+                            className="w-4"
+                          />
+                          <a className="self-center font-medium ml-2 cursor-pointer hover:underline">
+                            Download
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
           {/* END: Dokement Client */}
         </div>

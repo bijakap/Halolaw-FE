@@ -229,7 +229,7 @@ const ManageUsers = () => {
           {/* START: Update Progress */}
           <div className={`py-6 ${active == 0 ? "block" : "hidden"}`}>
             <div className="overflow-x-auto">
-              <table className="table-auto w-full lg:max-w-7xl whitespace-nowrap">
+              <table className="table-auto w-full whitespace-nowrap">
                 <thead className="border-collapse bg-[#3A57E8] text-white">
                   <tr>
                     <td className="px-3 py-4">No</td>
@@ -284,7 +284,7 @@ const ManageUsers = () => {
           {/* START: Dokement Client */}
           <div className={`py-6 ${active == 1 ? "block" : "hidden"}`}>
             <div className="overflow-x-auto">
-              <table className="table-auto w-full lg:max-w-7xl whitespace-nowrap">
+              <table className="table-auto w-full whitespace-nowrap">
                 <thead className="border-collapse text-center bg-[#3A57E8] text-white">
                   <tr>
                     <td className="px-3 py-4">No</td>

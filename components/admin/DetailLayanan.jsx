@@ -114,16 +114,9 @@ function DetailLayanan() {
               gedung yang berdiri di atasnya.
             </p>
           </div>
-          <Link
-            href={"/admin/layanan/properti/tambahLayanan"}
-            className=""
-          >
+          <Link href={"/admin/layanan/properti/tambahLayanan"} className="">
             <button className="flex flex-row gap-2 px-6 py-[10px] rounded-lg border bg-white hover:bg-[#47BF37] text-[#116E1C] hover:text-white text-[14px] leading-[20px] tracking-[0.25px] items-center justify-center mb-4">
-              <img
-                src="/iconGoogle/add_circle.svg"
-                alt="add"
-                className="w-4"
-              />
+              <img src="/iconGoogle/add_circle.svg" alt="add" className="w-4" />
               <span className="self-center font-medium ml-2">
                 Tambah Dokumen
               </span>
@@ -131,76 +124,80 @@ function DetailLayanan() {
           </Link>
           {/* END: Heading */}
           {/* START: Table */}
-          <table className="table-auto w-full lg:max-w-7xl">
-            <thead className="border-collapse text-center bg-[#3A57E8] text-white">
-              <tr>
-                <td className="px-3">No</td>
-                <td className="px-3 text-center hidden md:table-cell">Cover</td>
-                <td className="px-3 md:max-w-[600px] lg:w-[600px] text-left">
-                  Dokumen
-                </td>
-                <td className="px-3">Harga</td>
-                <td className="px-3">Status</td>
-                <td className="px-3 hidden md:table-cell">Modifikasi</td>
-                <td className="px-3 py-4 text-left">Aksi</td>
-              </tr>
-            </thead>
-            <tbody className="  ">
-              {sampleData.map((data, index) => (
-                <tr
-                  key={index}
-                  className={` align-middle text-[14px] leading-[24px] text-[#232D42] ${
-                    index % 2 != 0 ? "bg-[#F4FAFF]" : "bg-white"
-                  }`}
-                >
-                  <td className="py-2 text-center">{index + 1}</td>
-                  <td className="py-2 hidden md:table-cell">
-                    <div className="flex justify-center">
-                      <img
-                        src={"/Dokumen/Properti/" + data.cover}
-                        // /Dokumen/Properti/Tanah.png
-                        alt={data.cover}
-                        className="w-[72px]"
-                      ></img>
-                    </div>
+          <div className="overflow-x-auto">
+            <table className="table-auto w-full whitespace-nowrap">
+              <thead className="border-collapse text-center bg-[#3A57E8] text-white">
+                <tr>
+                  <td className="px-3">No</td>
+                  <td className="px-3 text-center">
+                    Cover
                   </td>
-                  <td className="py-2 px-2 md:px-3 ">{data.dokumen}</td>
-                  <td className="py-2 text-[#1B8920] font-bold">
-                    Rp.{data.harga}
+                  <td className="px-3 md:max-w-[600px] lg:w-[600px] text-left">
+                    Dokumen
                   </td>
-                  <td className="text-center py-2">{data.status}</td>
-                  <td className="text-center py-2 hidden md:table-cell">
-                    {data.modifikasi}
-                  </td>
-                  <td className="px-4 py-4 flex flex-row gap-6 flex-wrap ">
-                    <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                      <img
-                        src="/iconGoogle/edit.svg"
-                        alt="add"
-                        className="w-4"
-                      />
-                      <Link href={"/admin/layanan/detailLayanan"}>
-                        <a className="self-center font-medium ml-2 cursor-pointer hover:underline">
-                          Edit
-                        </a>
-                      </Link>
-                    </div>
-                    <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                      <img
-                        src="/iconGoogle/delete.svg"
-                        alt="add"
-                        className="w-4"
-                      />
-                      <a className="self-center font-medium ml-2 cursor-pointer hover:underline text-[#A41F12]">
-                        Hapus
-                      </a>
-                    </div>
-                  </td>
+                  <td className="px-3">Harga</td>
+                  <td className="px-3">Status</td>
+                  <td className="px-3">Modifikasi</td>
+                  <td className="px-3 py-4 text-left">Aksi</td>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-          {/* END: Table */}
+              </thead>
+              <tbody className="  ">
+                {sampleData.map((data, index) => (
+                  <tr
+                    key={index}
+                    className={` align-middle text-[14px] leading-[24px] text-[#232D42] ${
+                      index % 2 != 0 ? "bg-[#F4FAFF]" : "bg-white"
+                    }`}
+                  >
+                    <td className="py-2 text-center">{index + 1}</td>
+                    <td className="py-2 table-cell">
+                      <div className="flex justify-center">
+                        <img
+                          src={"/Dokumen/Properti/" + data.cover}
+                          // /Dokumen/Properti/Tanah.png
+                          alt={data.cover}
+                          className="w-[72px]"
+                        ></img>
+                      </div>
+                    </td>
+                    <td className="py-2 px-4 ">{data.dokumen}</td>
+                    <td className="py-2 text-[#1B8920] font-bold">
+                      Rp.{data.harga}
+                    </td>
+                    <td className="text-center py-2">{data.status}</td>
+                    <td className="text-center py-2">
+                      {data.modifikasi}
+                    </td>
+                    <td className="pl-4 pr-9 md:pr-4 py-4 flex flex-row gap-6 flex-nowrap ">
+                      <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
+                        <img
+                          src="/iconGoogle/edit.svg"
+                          alt="add"
+                          className="w-4"
+                        />
+                        <Link href={"/admin/layanan/detailLayanan"}>
+                          <a className="self-center font-medium ml-2 cursor-pointer hover:underline">
+                            Edit
+                          </a>
+                        </Link>
+                      </div>
+                      <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
+                        <img
+                          src="/iconGoogle/delete.svg"
+                          alt="add"
+                          className="w-4"
+                        />
+                        <a className="self-center font-medium ml-2 cursor-pointer hover:underline text-[#A41F12]">
+                          Hapus
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            {/* END: Table */}
+          </div>
           <div className="flex justify-between pt-8">
             <div className="flex gap-4">
               <p className="text-[#454D59] text-sm leading-20 tracking-[0.25px] self-center">
