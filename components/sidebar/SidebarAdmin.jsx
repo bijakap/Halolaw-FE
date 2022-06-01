@@ -69,7 +69,7 @@ const SidebarAdmin = ({ActiveNumber, childActiveNumber}) =>{
             {/* </Link> */}
           </div>
           {/* end Child Transaksi */}
-          <div onClick={() => {setActive(3); }} className={`${active === 3 ? "bg-[#3A57E8] text-white py-2" : "py-2 bg-white text-[#8A92A6]"} mx-4 px-6 rounded-lg cursor-pointer`}>
+          <div onClick={() => {setActive(3); router.push("/admin/users");}} className={`${active === 3 ? "bg-[#3A57E8] text-white py-2" : "py-2 bg-white text-[#8A92A6]"} mx-4 px-6 rounded-lg cursor-pointer`}>
             <div className="flex gap-4">
               <div className='self-center'>
                {
@@ -82,7 +82,7 @@ const SidebarAdmin = ({ActiveNumber, childActiveNumber}) =>{
               <p className='text-[16px] font-normal leading-7'>Users</p>
             </div>
           </div>
-          <div onClick={() => {setActive(4); }} className={`${active === 4 ? "bg-[#3A57E8] text-white py-2" : "py-2 bg-white text-[#8A92A6]"} mx-4 px-6 rounded-lg cursor-pointer`}>
+          <div onClick={() => {setActive(4); router.push("/admin/artikel");}} className={`${active === 4 ? "bg-[#3A57E8] text-white py-2" : "py-2 bg-white text-[#8A92A6]"} mx-4 px-6 rounded-lg cursor-pointer`}>
             <div className="flex gap-4">
               <div className='self-center'>
                 {
