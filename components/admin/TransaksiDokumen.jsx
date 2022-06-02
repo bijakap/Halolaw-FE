@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Pagination from "../pagination/Pagination";
 import { useState } from "react";
+import Select from 'react-select'
 
 const TransaksiDokumen = () => {
   const PageName = "Dokumen Hukum";
@@ -16,6 +17,16 @@ const TransaksiDokumen = () => {
     })
   }
 
+  const sampleDataAktif = []
+  for (var i = 0; i < 10; i++){
+    sampleDataAktif.push({
+      dokumen: "Pendirian PT",
+      kategori: "Pendirian Perusahaan",
+      client: "Gema Syihab",
+      praktisi: "",
+    })
+  }
+
   const sampleDataSelesai = []
   for (var i = 0; i < 10; i++){
     sampleDataSelesai.push({
@@ -26,7 +37,36 @@ const TransaksiDokumen = () => {
     })
   }
 
+  const customStyles = {
+    control: (base, state) => ({
+      ...base,
+      background: "white",
+      // Overwrittes the different states of border
+      borderColor: state.isFocused ? "#3A57E8" : "#D1D5DB",
+      // Removes weird border around container
+      boxShadow: state.isFocused ? null : null,
+      borderRadius :'4px',
+      paddingLeft: '10px',
+    }),
+    placeholder: (base) => ({
+        ...base,
+        color: "black",
+        paddingLeft: '10px',
+      }),
+  };
 
+  const optionPraktisi = [
+    {value: 'Aditya Zhafir', label: 'Aditya Zhafir'},
+    {value: 'Randy Fahreza', label: 'Randy Fahreza'},
+    {value: 'Dimas Rizqi Pangestu', label: 'Dimas Rizqi Pangestu'},
+  ]
+
+  const [dataTest, setDataTest] = useState(sampleDataAktif)
+  
+  const handleChange = (event, index) => {
+    console.log(event.value + " index : " + index)
+  }
+  
   return (
     <div className="flex justify-center mx-10 w-auto">
       <div className="w-full">
@@ -180,7 +220,7 @@ const TransaksiDokumen = () => {
                   </td>
                   <td className='px-3 bg-[#3A57E8]'>
                       <div className='flex'>
-                      <p>Client</p>
+                      <p>Dokumen</p>
                       <button className=''>
                         <img src='/updown.svg'/>
                       </button>
@@ -188,7 +228,7 @@ const TransaksiDokumen = () => {
                   </td>
                   <td className='px-3 bg-[#3A57E8]'>
                       <div className='flex'>
-                      <p>Nomor HP</p>
+                      <p>Kategori</p>
                       <button className=''>
                         <img src='/updown.svg'/>
                       </button>
@@ -196,7 +236,7 @@ const TransaksiDokumen = () => {
                   </td>
                   <td className='px-3 bg-[#3A57E8]'>
                     <div className='flex'>
-                      <p>Kategori</p>
+                      <p>Client</p>
                       <button>
                         <img src='/updown.svg'/>
                       </button>
@@ -204,7 +244,7 @@ const TransaksiDokumen = () => {
                   </td>
                   <td className='px-3 bg-[#3A57E8]'>
                     <div className='flex'>
-                      <p>Tanggal</p>
+                      <p>Praktisi</p>
                       <button>
                         <img src='/updown.svg'/>
                       </button>
@@ -221,7 +261,7 @@ const TransaksiDokumen = () => {
                 </tr>
                 </thead>
                 <tbody className="">
-                  {sampleData.map((data, index) => (
+                  {dataTest.map((data, index) => (
                     <tr
                       key={index}
                       className={` align-middle text-[14px] leading-[24px] text-[#101828] ${
@@ -230,13 +270,21 @@ const TransaksiDokumen = () => {
                     >
                       <td className="py-2 text-center">{index + 1}</td>
                       <td className="py-2 px-3 w-auto  md:w-[300px]">
+                        {data.dokumen}
+                      </td>
+                      <td className="py-2 px-2 md:px-3 ">{data.kategori}</td>
+                      <td className="py-2 px-3">
                         {data.client}
                       </td>
-                      <td className="py-2 px-2 md:px-3 ">{data.no_telp}</td>
-                      <td className="py-2 px-3">
-                        {data.katergori}
+                      <td className="text-center py-2 w-[250px]">
+                        <Select 
+                          options={optionPraktisi}
+                          styles={customStyles}
+                          placeholder={'--Pilih--'}
+                          maxMenuHeight={250}
+                          onChange={(e) => {handleChange(e, index)}}
+                        />
                       </td>
-                      <td className="text-center py-2">{data.tgl}</td>
                       <td className="py-2">
                         <div className="flex justify-center">
                           <button className="rounded-lg bg-white border-2 border-[#E0E0E0] py-2 px-6">
