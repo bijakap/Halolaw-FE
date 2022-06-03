@@ -29,15 +29,15 @@ function ProfilPraktisi() {
       boxShadow: state.isFocused ? null : null,
       padding: "2px 8px",
       borderRadius: "8px",
-      marginBottom: "24px"
+      marginBottom: "24px",
     }),
     placeholder: (base) => ({
       ...base,
       color: "black",
       paddingLeft: "10px",
     }),
-    indicatorSeparator: state => ({
-      display: 'none',
+    indicatorSeparator: (state) => ({
+      display: "none",
     }),
   };
 
@@ -177,12 +177,6 @@ function ProfilPraktisi() {
                         isSearchable={false}
                       />
                     </div>
-                    {/* <input
-                      className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6"
-                      type="dropdown"
-                      value={pekerjaan}
-                      onChange={(e) => setPekerjaan(e.target.value)}
-                    ></input> */}
                   </div>
                   <div className="flex flex-col">
                     <label className="text-sm font-medium text-gray-700 tracking-wide">
@@ -215,13 +209,7 @@ function ProfilPraktisi() {
                       <span className="text-[#C4351A]">*</span>{" "}
                       <small>(jpg/png)</small>
                     </label>
-                    {/* <input
-                      class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                      type="file"
-                      id="formFile"
-                    ></input> */}
                     <input
-                      // className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6"
                       className="w-full text-base border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6 file:py-2 file:px-4 file:border-0 file:mr-6"
                       type="file"
                     ></input>
@@ -238,7 +226,7 @@ function ProfilPraktisi() {
           </div>
           {/* END: Form Section */}
           {/* START: Setting Section */}
-          <Link href={'/praktisi/pengaturan/pengaturanAkun'} >
+          <Link href={"/praktisi/pengaturan/pengaturanAkun"}>
             <div className="flex p-4 gap-8 cursor-pointer items-center">
               <img src="/setting 1.svg" />
               <div>

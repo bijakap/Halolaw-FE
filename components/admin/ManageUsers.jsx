@@ -1,6 +1,7 @@
-import Link from "next/link";
+import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 import Pagination from "../pagination/Pagination";
 import { useState } from "react";
+import Link from "next/Link";
 
 const ManageUsers = () => {
   const PageName = "Konsultasi";
@@ -165,43 +166,37 @@ const ManageUsers = () => {
   return (
     <div className="flex justify-center mx-4 md:mx-10 w-auto">
       <div className="w-full">
-        {/* START: breadcrumbs */}
-        <div className="py-8 pb-[10px] text-[#6C757D]">
-          <div className="text-[14px] md:text-[16px] md:leading-[175%]">
-            <p>
-              <Link href="/admin">
-                <a href="#" className="">
-                  Dashboard{" "}
-                </a>
-              </Link>
-              /
-              <Link href="/admin/layanan">
-                <a href="#"> Layanan </a>
-              </Link>
-              / <span className="text-[#2E46BA]">{PageName}</span>
-            </p>
-          </div>
-        </div>
-        {/* END: Breadcrumbs */}
         {/* START: Box Content Table */}
-        <div className="p-8 bg-white shadow-lg rounded-lg mb-6">
+        <div className="p-8 bg-white shadow-lg rounded-lg mb-6 mt-8">
           <h5 className="font-semibold text-[#252A31] text-[33px] leading-10 tracking-[0.25px] mb-6">
             Users
           </h5>
-          {/* START: Search */}
-          <div className="flex gap-4 mb-8">
-            <div className="w-full md:w-auto">
-              <input
-                className="w-full xl:w-[475px] text-base px-4 py-[6px] border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8]"
-                type="search"
-                placeholder="Search...."
-              />
+          <div className="w-full flex flex-col-reverse md:flex-row md:justify-between">
+            {/* START: Search */}
+            <div className="flex gap-4 mb-8">
+              <div className="w-full md:w-auto">
+                <input
+                  className="w-full xl:w-[475px] text-base px-4 py-[6px] border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8]"
+                  type="search"
+                  placeholder="Search...."
+                />
+              </div>
+              <button className="px-6 rounded-lg bg-[#3A57E8] text-white text-[16px] leading-[20px] tracking-[0.15px]">
+                Cari
+              </button>
             </div>
-            <button className="px-6 rounded-lg bg-[#3A57E8] text-white text-[16px] leading-[20px] tracking-[0.15px]">
-              Cari
-            </button>
+            {/* END: Search */}
+            {/* START: Button add */}
+            <div className="mb-4 md:mb-0">
+              <Link href={"..."}>
+                <button className="px-6 py-[10px] flex gap-2 justify-center items-center border border-[#E0E0E0] text-[#116E1C] rounded-lg">
+                  <AddCircleOutlineOutlinedIcon />
+                  Add new
+                </button>
+              </Link>
+            </div>
+            {/* END: Button add */}
           </div>
-          {/* END: Search */}
           {/* START: Tab */}
           <div className="border-b flex gap-2">
             <button
@@ -261,7 +256,9 @@ const ManageUsers = () => {
                       <td className="p-2">{data.email}</td>
                       <td className="p-2 md:px-0">{data.telpon}</td>
                       <td className="py-2 px-4 md:px-0">{data.domisili}</td>
-                      <td className="p-2 md:px-0 font-bold text-[#1B8920]">{data.revenue}</td>
+                      <td className="p-2 md:px-0 font-bold text-[#1B8920]">
+                        {data.revenue}
+                      </td>
                       <td className="px-4 py-4 flex flex-row gap-6 flex-wrap">
                         <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
                           <img
