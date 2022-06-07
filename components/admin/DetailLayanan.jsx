@@ -114,7 +114,7 @@ function DetailLayanan() {
               gedung yang berdiri di atasnya.
             </p>
           </div>
-          <Link href={"/admin/layanan/properti/tambahLayanan"} className="">
+          <Link href={"/admin/layanan/properti/tambahDokumen"} className="">
             <button className="flex flex-row gap-2 px-6 py-[10px] rounded-lg border bg-white hover:bg-[#47BF37] text-[#116E1C] hover:text-white text-[14px] leading-[20px] tracking-[0.25px] items-center justify-center mb-4">
               <img src="/iconGoogle/add_circle.svg" alt="add" className="w-4" />
               <span className="self-center font-medium ml-2">
