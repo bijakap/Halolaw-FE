@@ -112,7 +112,7 @@ const AddArtikel = () => {
             {/* START: SECTION-3 */}
             <div className="w-full flex flex-row justify-end items-center gap-6">
               <input
-                type="submit"
+                type="button"
                 value="Batal"
                 className="w-full md:w-[160px] flex justify-center bg-[#F2F4F7] text-[#475467] py-[10px] rounded-[8px] text-sm tracking-wide font-[500] cursor-pointer mt-12"
               />
