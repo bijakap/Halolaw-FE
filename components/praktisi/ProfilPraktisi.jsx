@@ -218,7 +218,7 @@ function ProfilPraktisi() {
                 <input
                   type="submit"
                   value="Simpan Data Perubahan"
-                  className="w-full flex justify-center bg-[#3A57E8] text-gray-100 py-[10px] rounded-[8px] text-sm tracking-wide font-[500] cursor-pointer mt-12"
+                  className="w-full flex justify-center bg-[#3A57E8] hover:bg-[#2A41C7] text-gray-100 py-[10px] rounded-[8px] text-sm tracking-wide font-[500] cursor-pointer mt-12"
                 />
               </div>
               {/* END: Pekerjaan */}
