@@ -57,16 +57,16 @@ const SidebarAdmin = ({ActiveNumber, childActiveNumber}) =>{
           </div>
           {/* Child Transaksi */}
           <div className={active === 2 ? "block" : "hidden"}>
-            {/* <Link href={"/praktisi/pengaturan/pengaturanAkun"}> */}
+            <Link href={"/admin/transaksi/dokumen"}>
               <div onClick={() => setChildActive(0)} className={`${childActive === 0 ? "text-[#3A57E8] bg-[#F2F4F7]" : ""} mx-4 py-2 bg-white text-[#8A92A6] cursor-pointer hover:text-[#3A57E8] hover:bg-[#F2F4F7]`}>
                 <p className='ml-6'>Dokumen Hukum</p>
               </div>
-            {/* </Link> */}
-            {/* <Link href={"/praktisi/pengaturan/privacyPolicy"}> */}
+            </Link>
+            <Link href={"/admin/transaksi/konsultasi"}>
               <div onClick={() => setChildActive(1)} className={`${childActive === 1 ? "text-[#3A57E8] bg-[#F2F4F7]" : ""} mx-4 py-2 bg-white text-[#8A92A6] cursor-pointer hover:text-[#3A57E8] hover:bg-[#F2F4F7]`}>
                 <p className='ml-6'>Konsultasi</p>
               </div>
-            {/* </Link> */}
+            </Link>
           </div>
           {/* end Child Transaksi */}
           <div onClick={() => {setActive(3); router.push("/admin/users");}} className={`${active === 3 ? "bg-[#3A57E8] text-white py-2" : "py-2 bg-white text-[#8A92A6]"} mx-4 px-6 rounded-lg cursor-pointer`}>

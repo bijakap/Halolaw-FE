@@ -4,16 +4,69 @@ import Pagination from "../pagination/Pagination";
 const TransaksiKonsultasi = () => {
   const PageName = "Konsultasi";
 
-  const sampleData = []
-  for (var i = 0; i < 10; i++){
-    sampleData.push({
+  const sampleData = [
+    {
       client: "Gema Syihab",
       no_telp: "082219542323",
       katergori: "Properti, Pendirian Perusahaan",
-      tgl: "11/03/2022",
-    })
-  }
-
+      tgl: "17/09/2021",
+    },
+    {
+      client: "Albert Flores",
+      no_telp: "082219542323",
+      katergori: "Properti",
+      tgl: "16/09/2021",
+    },
+    {
+      client: "Courtney Henry",
+      no_telp: "082219542323",
+      katergori: "Pendirian Perusahaan",
+      tgl: "15/09/2021",
+    },
+    {
+      client: "Annette Black",
+      no_telp: "082219542323",
+      katergori: "Properti, Kontrak Kerja",
+      tgl: "14/09/2021",
+    },
+    {
+      client: "Darrell Steward",
+      no_telp: "082219542323",
+      katergori: "Properti, Pendirian Perusahaan",
+      tgl: "13/09/2021",
+    },
+    {
+      client: "Theresa Webb",
+      no_telp: "082219542323",
+      katergori: "Pendirian Perusahaan",
+      tgl: "12/09/2021",
+    },
+    {
+      client: "Devon Lane",
+      no_telp: "082219542323",
+      katergori: "Penutupan Perusahaan",
+      tgl: "11/09/2021",
+    },
+    {
+      client: "Marvin McKinney",
+      no_telp: "082219542323",
+      katergori: "Kontrak Kerja",
+      tgl: "10/09/2021",
+    },
+    {
+      client: "Ronald Richards",
+      no_telp: "082219542323",
+      katergori: "Properti, Perizinan usaha",
+      tgl: "09/09/2021",
+    },
+    {
+      client: "Eleanor Pena",
+      no_telp: "082219542323",
+      katergori: "Properti, Pendirian Perusahaan",
+      tgl: "09/09/2021",
+    },
+  ]
+      
 
   return(
     <div className="flex justify-center mx-10 w-auto">
@@ -28,8 +81,8 @@ const TransaksiKonsultasi = () => {
                 </a>
               </Link>
               /
-              <Link href="/admin/layanan">
-                <a href="#"> Layanan </a>
+              <Link href="/admin/transaksi/dokumen">
+                <a href="#"> Transaksi </a>
               </Link>
               / <span className="text-[#2E46BA]">{PageName}</span>
             </p>
@@ -108,7 +161,7 @@ const TransaksiKonsultasi = () => {
                 </td>
               </tr>
               </thead>
-              <tbody className="">
+              <tbody className="whitespace-nowrap">
                 {sampleData.map((data, index) => (
                   <tr
                     key={index}
@@ -124,11 +177,11 @@ const TransaksiKonsultasi = () => {
                     <td className="py-2 px-3">
                       {data.katergori}
                     </td>
-                    <td className="text-center py-2">{data.tgl}</td>
-                    <td className="py-2">
-                      <div className="flex justify-center">
-                        <button className="rounded-lg bg-white border-2 border-[#E0E0E0] py-2 px-6">
-                          <p className="text-[#116E1C] font-medium text-sm tracking-[0.25px]">Detail</p>
+                    <td className="text-left py-2 px-3">{data.tgl}</td>
+                    <td className="py-2 pl-2 pr-6">
+                      <div className="flex justify-start">
+                        <button className="rounded-lg bg-white border-2 border-[#E0E0E0] py-2 px-6 text-[#116E1C]  hover:text-white hover:outline-none hover:bg-[#47BF37]">
+                          <p className="font-medium text-sm tracking-[0.25px]">Detail</p>
                         </button>
                       </div>
                     </td>
@@ -144,8 +197,8 @@ const TransaksiKonsultasi = () => {
                 Rows Per Page
               </p>
               <select className="border p-1 px-2">
-                <option>5</option>
                 <option>10</option>
+                <option>15</option>
               </select>
             </div>
             <div>
