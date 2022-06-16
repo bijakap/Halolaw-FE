@@ -10,7 +10,7 @@ function ArtikelPages() {
       tgl_up: "25 Jan 2022",
       judul: "Legalitas tanda tangan elektronik",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Sejak diundangkannya Undang-Undang Nomor 11 Tahun 2008 tentang Informas ...",
       kategori: ["Perdata"],
       img: "./artikel/artikel1.jpg",
     },

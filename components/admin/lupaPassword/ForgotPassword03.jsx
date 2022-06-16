@@ -82,7 +82,7 @@ function ForgotPassword03(props) {
             <input
               type="submit"
               value="Lanjutkan"
-              className="w-full flex justify-center bg-[#3A57E8] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer"
+              className="w-full flex justify-center bg-[#3A57E8] hover:bg-[#2A41C7] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer"
             />
           </form>
         </div>

@@ -14,12 +14,12 @@ function ForgotPassword04() {
                     <p className="text-[14px] leading-[20px] font-[400] tracking-[0.25px] text-[#475467]">Kata sandi Anda telah berhasil diatur ulang. Klik di bawah ini untuk masuk secara otomatis</p>
                 </div>
                 <div className="text-left">
-                    <button type="submit" className="w-full flex justify-center bg-[#3A57E8] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer" onClick={() => (router.push('/'))}>
+                    <button type="submit" className="w-full flex justify-center bg-[#3A57E8] hover:bg-[#2A41C7] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer" onClick={() => (router.push('/'))}>
                     Lanjutkan
                     </button>
                 </div>
                 
-                <Link href="/masuk"><span className="text-[14px] leading-[20px] tracking-[0.25px] font-[600] text-[#344054] cursor-pointer mt-[32px]">← Kembali ke halaman login</span></Link>
+                <Link href="/masuk"><span className="text-[14px] leading-[20px] tracking-[0.25px] font-[600] text-[#344054] cursor-pointer mt-[32px] hover:text-[#2A41C7]">← Kembali ke halaman login</span></Link>
             </div>
         </div>
     )

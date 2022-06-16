@@ -39,7 +39,7 @@ const SidebarPraktisi = ({ActiveNumber, childActiveNumber}) =>{
                   active === 1 ?
                     <img src='/sidebar/transaksi-active.svg'/> 
                     : 
-                    <img src='/sidebar/transaki.svg'/>
+                    <img src='/sidebar/transaksi.svg'/>
                 }
               </div>
               <p className='text-[16px] font-normal leading-7'>Transaksi</p>

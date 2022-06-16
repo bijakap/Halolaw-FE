@@ -15,13 +15,13 @@ function ForgotPassword02(props) {
                     <p className="text-[14px] leading-[20px] font-[600] tracking-[0.25px] text-[#1D2939]">{email}</p>
                 </div>
                 <div className="text-center">
-                    <button type="submit" className="w-full flex justify-center bg-[#3A57E8] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer mb-[24px]" onClick={() => (console.log("Pencet"))}>
+                    <button type="submit" className="w-full flex justify-center bg-[#3A57E8] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer mb-[24px] hover:bg-[#2A41C7]" onClick={() => (console.log("Pencet"))}>
                     Buka Aplikasi Email
                     </button>
-                    <p className="text-[14px] leading-[20px] font-[500] tracking-[0.25px] text-[#1D2939]">Tidak menerima email? <button className="text-[#2A41C7] font-[700]">Kirim ulang</button></p>
+                    <p className="text-[14px] leading-[20px] font-[500] tracking-[0.25px] text-[#1D2939]">Tidak menerima email? <button className="text-[#2A41C7] hover:underline font-[700]">Kirim ulang</button></p>
                 </div>
                 
-                <Link href="/masuk"><span className="text-[14px] leading-[20px] tracking-[0.25px] font-[600] text-[#344054] cursor-pointer mt-[32px]">← Kembali ke halaman login</span></Link>
+                <Link href="/masuk"><span className="text-[14px] leading-[20px] tracking-[0.25px] font-[600] text-[#344054] cursor-pointer mt-[32px] hover:text-[#2A41C7]">← Kembali ke halaman login</span></Link>
             </div>
         </div>
     )
