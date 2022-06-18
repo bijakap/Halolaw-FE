@@ -44,7 +44,7 @@ function ProfilPraktisi() {
   return (
     <div className="flex justify-center mx-10 my-8 w-auto">
       <div className="w-full">
-        <div className="p-8 bg-white shadow-lg rounded-lg ">
+        <div className="px-4 py-6 md:p-8 bg-white shadow-lg rounded-lg ">
           {/* START: Form Section */}
           <div className="md:flex block gap-8 pb-[56px] border-b">
             {/* START: Head - avatar */}
@@ -77,7 +77,7 @@ function ProfilPraktisi() {
                     className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6"
                     type="name"
                     required
-                    placeholder="mail@gmail.com"
+                    placeholder="nama lengkap"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                   />

@@ -6,36 +6,36 @@ import ArtikelCard from './ArtikelCard';
 function Artikel(){
   const ArtikelDummy = [
     {
-      penulis: "Liliana Melati",
-      tgl_up: "25 Jan 2022",
-      judul: "Legalitas tanda tangan elektronik",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      kategori : ["Perdata"],
-      img: "/artikel1@2x.png"
+        penulis: "Liliana Melati",
+        tgl_up: "25 Jan 2022",
+        judul: "Legalitas tanda tangan elektronik",
+        content: "Sejak diundangkannya Undang-Undang Nomor 11 Tahun 2008 tentang Informas ...",
+        kategori : ["Perdata"],
+        img: "/artikel/artikel1.jpg"
     },
     {
-      penulis: "Liliana Melati",
-      tgl_up: "25 Jan 2022",
-      judul: "Legalitas tanda tangan elektronik",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      kategori : ["Perdata"],
-      img: "/artikel1@2x.png"
+        penulis: "Agustin Rifki",
+        tgl_up: "23 Jan 2022",
+        judul: "Pimpinan pengadilan berkualitas dan berintegritas",
+        content: "Satu persyaratan untuk mewujudkan Court Excellence adalah Pimpinan ...",
+        kategori : ["Pengadilan"],
+        img: "/artikel/artikel2.jpg"
     },
     {
-      penulis: "Liliana Melati",
-      tgl_up: "25 Jan 2022",
-      judul: "Legalitas tanda tangan elektronik",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      kategori : ["Perdata"],
-      img: "/artikel1@2x.png"
+        penulis: "Iqbal Setiawan",
+        tgl_up: "22 Jan 2022",
+        judul: "Gelombang online dalam perkembangan hukum",
+        content: "Sebagai Negara hukum sudah tentu penyelenggaraan Negara dan pemerinta ...",
+        kategori : ["Perdata"],
+        img: "/artikel/artikel3.jpg"
     },
     {
-      penulis: "Liliana Melati",
-      tgl_up: "25 Jan 2022",
-      judul: "Legalitas tanda tangan elektronik",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      kategori : ["Perdata"],
-      img: "/artikel1@2x.png"
+        penulis: "Olivia Ryhe",
+        tgl_up: "19 Jan 2022",
+        judul: "Tafsir iktikad baik dalam sengketa pertanahan",
+        content: "Asas hukum yang satu ini kadang terasa ambigu. Maka, berkaitan dengan huk ...",
+        kategori : ["Perdata", "Tanah"],
+        img: "/artikel/artikel4.jpg"
     },
   ];
   return(

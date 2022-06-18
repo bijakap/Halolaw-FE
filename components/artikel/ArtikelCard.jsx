@@ -1,8 +1,11 @@
+import Link from "next/link";
+
 function ArtikelCard(props){
   const data = props.data;
 
   return(
   <div className="w-full">
+    <Link href={"/artikel/id"}>
     <a href="#">
       <div className="w-full">
         <img src={data.img} className="object-cover w-full h-full"></img>
@@ -35,6 +38,7 @@ function ArtikelCard(props){
         </div>
       </div>
     </a>
+    </Link>
   </div>
       
   )
