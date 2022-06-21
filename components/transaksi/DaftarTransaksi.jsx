@@ -20,7 +20,10 @@ function DaftarTransaski(){
             ...base,
             color: "black",
             paddingLeft: '10px',
-          }),
+        }),
+        indicatorSeparator: (state) => ({
+            display: "none",
+        }),
       };
 
     const optionKategori = [
@@ -115,15 +118,21 @@ function DaftarTransaski(){
                 <div className='inline-block mt-3'>
                     <div className='flex gap-6'>
                         <div className='w-8 h-8 flex items-center justify-center cursor-pointer'>
-                            <NavigateBeforeIcon/>
+                            <NavigateBeforeIcon className='text-[#D0D5DD]' />
                         </div>
-                        <div>
+                        <div className='flex flex-row gap-4'>
                             <div className='bg-[#6982F1] text-white w-8 h-8 flex items-center justify-center cursor-pointer'>
                                 <span className='text-[14px] font-semibold leading-[16px] tracking-[1.25px]'>1</span>
                             </div>
+                            <div className='bg-white text-[#667085] w-8 h-8 flex items-center justify-center cursor-pointer'>
+                                <span className='text-[14px] font-semibold leading-[16px] tracking-[1.25px]'>2</span>
+                            </div>
+                            <div className='bg-white text-[#667085] w-8 h-8 flex items-center justify-center cursor-pointer'>
+                                <span className='text-[14px] font-semibold leading-[16px] tracking-[1.25px]'>3</span>
+                            </div>
                         </div>
                         <div className='w-8 h-8 flex items-center justify-center cursor-pointer'>
-                            <NavigateNextIcon/>
+                            <NavigateNextIcon className='text-[#4A4A68]' />
                         </div>
                     </div>
                 </div>

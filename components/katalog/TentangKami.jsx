@@ -71,7 +71,8 @@ function TentangKami() {
               <li>Terus berinovasi mengikuti perkembangan zaman</li>
             </ul>
           </div>
-          <img src="/aboutUs/btp.jpg" className="h-[577px] flex mx-auto mt-8 md:mt-0" />
+          <img src="/aboutUs/btp.jpg" className="hidden h-[577px] md:flex mx-auto mt-8 md:mt-0" />
+          <img src="/aboutUs/btp-L.jpg" className="md:hidden w-full flex mx-auto mt-8 md:mt-0" />
         </div>
         <div className="mt-12 md:mt-[100px]">
           <h5 className="text-[16px] font-bold leading-[18px] tracking-[0.4px] text-[#121F86] mb-4">
@@ -127,7 +128,12 @@ function TentangKami() {
             <img
               src="/aboutUs/img-contact.jpg"
               alt="img-contact"
-              className="h-[616px] flex mx-auto"
+              className="hidden h-[616px] md:flex mx-auto"
+            />
+            <img
+              src="/aboutUs/contact-L.jpg"
+              alt="img-contact"
+              className="flex mx-auto w-full md:hidden"
             />
             <div className="self-center p-4 w-full">
               <div className="mb-12">
