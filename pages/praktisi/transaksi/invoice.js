@@ -9,7 +9,7 @@ const InvoicePraktisi = () => {
   return(
     <div className="bg-[#F6F7FB]">
     {
-      active ?  <></> : <SidebarPraktisi ActiveNumber={0}/> 
+      active ?  <></> : <SidebarPraktisi ActiveNumber={1}/> 
     }
     <div className={setIsMobile()}>
       <div>

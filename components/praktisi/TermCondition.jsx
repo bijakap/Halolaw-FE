@@ -29,11 +29,11 @@ function TermCondition() {
           </div>
           <div className="flex flex-col gap-4 w-full pb-12">
             <div className="border-b pb-[16px]">
-              <h1 className="text-[33px] font-normal leading-[40px] tracking-[0.25px] m-0">
+              <h1 className="text-[24px] md:text-[33px] font-normal leading-[32px] md:leading-[40px] tracking-[0.25px] m-0">
                 Syarat & Ketentuan
               </h1>
             </div>
-            <div className="w-auto lg:w-[924px] flex flex-col gap-4 text-[16px] leading-[28px] tracking-[0.5px] text-justify">
+            <div className="w-auto lg:w-[924px] flex flex-col gap-4 text-[12px] md:text-[16px] leading-[20px] md:leading-[28px] tracking-[0.5px] text-justify">
               <div className="">
                 <h5 className="font-bold">
                   1. Ketentuan Umum dan Ketentuan Pengguna.

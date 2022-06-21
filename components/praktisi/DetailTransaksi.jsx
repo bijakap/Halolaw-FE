@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import EditIcon from "@mui/icons-material/Edit";
 
 function DetailTransaksi() {
   const [active, setActive] = useState(0);
@@ -78,7 +80,7 @@ function DetailTransaksi() {
                 </a>
               </Link>
               /
-              <Link href="/praktisi/pengaturan">
+              <Link href="/praktisi/transaksi">
                 <a href="/praktisi/transaksi/DaftarTransaksi"> Transaksi </a>
               </Link>
               / <span className="text-[#2E46BA]">{PageName}</span>
@@ -121,8 +123,8 @@ function DetailTransaksi() {
           {/* START: Tab */}
           <div className="border-b flex gap-2">
             <button
-              className={`border-b py-2 translate-y-[1px] ${
-                active === 0 ? "border-green-500" : ""
+              className={`border-b py-2 translate-y-[1px] px-3 rounded-t-lg ${
+                active === 0 ? "border-green-500 bg-gray-100" : ""
               }`}
               onClick={() => {
                 setActive(0);
@@ -131,8 +133,8 @@ function DetailTransaksi() {
               Update Progress
             </button>
             <button
-              className={`border-b py-2 translate-y-[1px] ${
-                active === 1 ? "border-green-500" : ""
+              className={`border-b py-2 translate-y-[1px] px-3 rounded-t-lg ${
+                active === 1 ? "border-green-500 bg-gray-100" : ""
               }`}
               onClick={() => {
                 setActive(1);
@@ -181,33 +183,32 @@ function DetailTransaksi() {
                         index % 2 != 0 ? "bg-[#F4FAFF]" : "bg-white"
                       }`}
                     >
-                      <td className="py-2 hidden md:table-cell">{sampleData2.length - index}</td>
-                      <td className="py-2 hidden md:table-cell">{data.tgl}</td>
-                      <td className="py-2 hidden md:table-cell">{data.waktu}</td>
-                      <td className="p-4 md:p-2 table-cell md:hidden text-left">{data.tgl} <br /> {data.waktu}</td>
-                      <td className="text-left py-2">
-                        {data.catatan}
+                      <td className="py-2 hidden md:table-cell">
+                        {sampleData2.length - index}
                       </td>
-                      <td className="px-4 py-4 flex flex-row gap-6 flex-wrap ">
-                        <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                          <img
-                            src="/iconGoogle/edit.svg"
-                            alt="add"
-                            className="w-4"
-                          />
-                          <a className="self-center font-medium ml-2 cursor-pointer hover:underline">
-                            Edit
-                          </a>
+                      <td className="py-2 hidden md:table-cell">{data.tgl}</td>
+                      <td className="py-2 hidden md:table-cell">
+                        {data.waktu}
+                      </td>
+                      <td className="p-4 md:p-2 table-cell md:hidden text-left">
+                        {data.tgl} <br /> {data.waktu}
+                      </td>
+                      <td className="text-left py-2">{data.catatan}</td>
+                      <td className="px-4 py-4 flex flex-row gap-4 flex-wrap md:flex-nowrap">
+                        <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0 text-[#344054]">
+                          <Link href="...">
+                            <a className="self-center font-medium ml-2 cursor-pointer hover:underline whitespace-nowrap">
+                              <EditIcon className="w-[20px]" /> Edit
+                            </a>
+                          </Link>
                         </div>
-                        <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                          <img
-                            src="/iconGoogle/delete.svg"
-                            alt="add"
-                            className="w-4"
-                          />
-                          <a className="self-center font-medium ml-2 cursor-pointer hover:underline text-[#A41F12]">
-                            Hapus
-                          </a>
+                        <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0 text-[#A41F12]">
+                          <Link href="...">
+                            <a className="self-center font-medium ml-2 cursor-pointer hover:underline whitespace-nowrap">
+                              <DeleteOutlineIcon className="w-[20px]" />
+                              Hapus
+                            </a>
+                          </Link>
                         </div>
                       </td>
                     </tr>
@@ -223,7 +224,7 @@ function DetailTransaksi() {
               <table className="table-auto w-full whitespace-nowrap">
                 <thead className="border-collapse text-center bg-[#3A57E8] text-white">
                   <tr>
-                    <td className="px-3 py-4">NO</td>
+                    <td className="px-3 py-4">No</td>
                     <td className="w-[500px] text-left">Dokumen</td>
                     <td className="px-3">Status</td>
                     <td className="px-3">Tanggal Modifikasi</td>
