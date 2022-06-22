@@ -1,5 +1,8 @@
 import { useState } from "react";
 import Link from "next/link";
+import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import Pagination from "../pagination/Pagination";
 
 function ArtikelAdmin() {
@@ -89,8 +92,8 @@ function ArtikelAdmin() {
           </h4>
           <Link href={"/admin/artikel/tambahArtikel"}>
             <button className="flex flex-row gap-2 px-6 py-[10px] rounded-lg border bg-white hover:bg-[#47BF37] text-[#116E1C] hover:text-white text-[14px] leading-[20px] tracking-[0.25px] items-center justify-center mt-6 mb-4">
-              <img src="/iconGoogle/add_circle.svg" alt="add" className="w-4" />
-              <span className="self-center font-medium ml-2">
+              <AddCircleOutlineRoundedIcon className="w-4" />
+              <span className="self-center font-medium">
                 Tambah Artikel
               </span>
             </button>
@@ -127,7 +130,7 @@ function ArtikelAdmin() {
                       <div className="flex justify-center items-center">
                         <input
                           type="checkbox"
-                          className="appearance checked:bg-blue-500 text-[80px]"
+                          className="appearance checked:bg-blue-500 scale-125"
                         />
                       </div>
                     </td>
@@ -147,30 +150,23 @@ function ArtikelAdmin() {
                     <td className="text-center py-2">
                       {data.modifikasi}
                     </td>
-                    <td className="pl-4 pr-9 md:pr-4 py-4 flex flex-row gap-6 flex-nowrap ">
-                      <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                        <img
-                          src="/iconGoogle/edit.svg"
-                          alt="add"
-                          className="w-4"
-                        />
-                        <Link href={"/admin/layanan/detailLayanan"}>
-                          <a className="self-center font-medium ml-2 cursor-pointer hover:underline">
-                            Edit
-                          </a>
-                        </Link>
-                      </div>
-                      <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                        <img
-                          src="/iconGoogle/delete.svg"
-                          alt="add"
-                          className="w-4"
-                        />
-                        <a className="self-center font-medium ml-2 cursor-pointer hover:underline text-[#A41F12]">
-                          Hapus
-                        </a>
-                      </div>
-                    </td>
+                    <td className="px-4 py-4 flex flex-row gap-4">
+                        <div className="flex text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0 text-[#344054]">
+                          <Link href="/admin/artikel/tambahArtikel">
+                            <a className="self-center font-medium ml-2 cursor-pointer hover:underline whitespace-nowrap">
+                              <EditIcon className="text-[20px]" /> Edit
+                            </a>
+                          </Link>
+                        </div>
+                        <div className="flex text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0 text-[#A41F12]">
+                          <Link href="...">
+                            <a className="self-center font-medium ml-2 cursor-pointer hover:underline whitespace-nowrap">
+                              <DeleteOutlineIcon className="text-[20px]" />
+                              Hapus
+                            </a>
+                          </Link>
+                        </div>
+                      </td>
                   </tr>
                 ))}
               </tbody>
@@ -183,8 +179,8 @@ function ArtikelAdmin() {
                 Rows Per Page
               </p>
               <select className="border p-1 px-2">
-                <option>5</option>
                 <option>10</option>
+                <option>15</option>
               </select>
             </div>
             <div>

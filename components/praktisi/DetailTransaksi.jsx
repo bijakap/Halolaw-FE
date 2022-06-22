@@ -198,14 +198,14 @@ function DetailTransaksi() {
                         <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0 text-[#344054]">
                           <Link href="...">
                             <a className="self-center font-medium ml-2 cursor-pointer hover:underline whitespace-nowrap">
-                              <EditIcon className="w-[20px]" /> Edit
+                              <EditIcon className="text-[20px]" /> Edit
                             </a>
                           </Link>
                         </div>
                         <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0 text-[#A41F12]">
                           <Link href="...">
                             <a className="self-center font-medium ml-2 cursor-pointer hover:underline whitespace-nowrap">
-                              <DeleteOutlineIcon className="w-[20px]" />
+                              <DeleteOutlineIcon className="text-[20px]" />
                               Hapus
                             </a>
                           </Link>

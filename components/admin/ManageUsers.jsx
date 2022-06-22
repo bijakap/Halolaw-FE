@@ -1,4 +1,6 @@
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
+import EditIcon from "@mui/icons-material/Edit";
+
 import Pagination from "../pagination/Pagination";
 import { useState } from "react";
 import Link from "next/Link";
@@ -181,16 +183,16 @@ const ManageUsers = () => {
                   placeholder="Search...."
                 />
               </div>
-              <button className="px-6 rounded-lg bg-[#3A57E8] text-white text-[16px] leading-[20px] tracking-[0.15px]">
+              {/* <button className="px-6 rounded-lg bg-[#3A57E8] text-white text-[16px] leading-[20px] tracking-[0.15px]">
                 Cari
-              </button>
+              </button> */}
             </div>
             {/* END: Search */}
             {/* START: Button add */}
             <div className="mb-4 md:mb-0">
               <Link href={"..."}>
-                <button className="px-6 py-[10px] flex gap-2 justify-center items-center border border-[#E0E0E0] text-[#116E1C] rounded-lg">
-                  <AddCircleOutlineOutlinedIcon />
+                <button className="px-6 py-[10px] flex gap-2 justify-center items-center border border-[#E0E0E0] text-[#116E1C] hover:bg-[#47BF37] hover:text-white rounded-lg">
+                  <AddCircleOutlineOutlinedIcon className="text-[16px]" />
                   Add new
                 </button>
               </Link>
@@ -200,8 +202,8 @@ const ManageUsers = () => {
           {/* START: Tab */}
           <div className="border-b flex gap-2">
             <button
-              className={`border-b py-2 translate-y-[1px] ${
-                active === 0 ? "border-green-500" : ""
+              className={`border-b py-2 translate-y-[1px] px-3 rounded-t-lg ${
+                active === 0 ? "border-green-500 bg-gray-100" : ""
               }`}
               onClick={() => {
                 setActive(0);
@@ -210,8 +212,8 @@ const ManageUsers = () => {
               Praktisi
             </button>
             <button
-              className={`border-b py-2 translate-y-[1px] ${
-                active === 1 ? "border-green-500" : ""
+              className={`border-b py-2 translate-y-[1px] px-3 rounded-t-lg ${
+                active === 1 ? "border-green-500 bg-gray-100" : ""
               }`}
               onClick={() => {
                 setActive(1);
@@ -260,14 +262,9 @@ const ManageUsers = () => {
                         {data.revenue}
                       </td>
                       <td className="px-4 py-4 flex flex-row gap-6 flex-wrap">
-                        <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                          <img
-                            src="/iconGoogle/edit.svg"
-                            alt="add"
-                            className="w-4"
-                          />
+                        <div className="flex text-[#344054] text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
                           <a className="self-center font-medium ml-2 cursor-pointer hover:underline">
-                            Edit
+                          <EditIcon className="text-[20px]"/>Edit
                           </a>
                         </div>
                       </td>
@@ -313,14 +310,9 @@ const ManageUsers = () => {
                       <td className="p-2 md:px-0">{data.telpon}</td>
                       <td className="p-2 md:px-0">{data.domisili}</td>
                       <td className="px-4 py-4 flex flex-row gap-6 flex-wrap ">
-                        <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                          <img
-                            src="/iconGoogle/edit.svg"
-                            alt="add"
-                            className="w-4"
-                          />
+                        <div className="flex text-[#344054] text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
                           <a className="self-center font-medium ml-2 cursor-pointer hover:underline">
-                            Edit
+                          <EditIcon className="text-[20px]"/>Edit
                           </a>
                         </div>
                       </td>
