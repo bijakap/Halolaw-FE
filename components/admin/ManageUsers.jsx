@@ -1,6 +1,5 @@
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 import EditIcon from "@mui/icons-material/Edit";
-
 import Pagination from "../pagination/Pagination";
 import { useState } from "react";
 import Link from "next/Link";

@@ -101,7 +101,7 @@ const TransaksiKonsultasi = () => {
                 placeholder="Search...."
               />
             </div>
-            <button className="px-6 rounded-lg bg-[#3A57E8] text-white text-[16px] leading-[20px] tracking-[0.15px]">
+            <button className="px-6 rounded-lg bg-[#3A57E8] hover:bg-[#2A41C7] text-white text-[16px] leading-[20px] tracking-[0.15px]">
               Cari
             </button>
           </div>
@@ -110,7 +110,7 @@ const TransaksiKonsultasi = () => {
           <div className="overflow-x-auto">
             <table className="table-auto w-full">
               <thead className="border-collapse text-center bg-[#3A57E8] text-white">
-              <tr className=''>
+              <tr className='whitespace-nowrap'>
                 <td className='md:px-5 px-2 py-4 bg-[#3A57E8] rounded-tl-lg'>
                   <div className='flex justify-center'>
                     <p>No</p>

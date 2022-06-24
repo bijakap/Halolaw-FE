@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import Pagination from "../pagination/Pagination";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 
 function Layanan() {
   const [active, setActive] = useState(0);
@@ -82,7 +84,7 @@ function Layanan() {
                 placeholder="Search...."
               />
             </div>
-            <button className="px-6 rounded-lg bg-[#3A57E8] text-white text-[16px] leading-[20px] tracking-[0.15px]">
+            <button className="px-6 rounded-lg bg-[#3A57E8] hover:bg-[#2A41C7] text-white text-[16px] leading-[20px] tracking-[0.15px]">
               Cari
             </button>
           </div>
@@ -93,9 +95,7 @@ function Layanan() {
               <thead className="border-collapse text-center bg-[#3A57E8] text-white">
                 <tr>
                   <td className="px-3">No</td>
-                  <td className="px-3 text-center">
-                    Cover
-                  </td>
+                  <td className="px-3 text-center">Cover</td>
                   <td className="md:max-w-[520px] lg:w-[600px] text-left">
                     Layanan
                   </td>
@@ -127,26 +127,20 @@ function Layanan() {
                     <td className="text-center py-2">{data.modifikasi}</td>
                     <td className="pl-4 pr-9 md:pr-4 py-4 flex flex-row gap-6 flex-nowrap ">
                       <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                        <img
-                          src="/iconGoogle/edit.svg"
-                          alt="add"
-                          className="w-4"
-                        />
                         <Link href={"/admin/layanan/properti"}>
                           <a className="self-center font-medium ml-2 cursor-pointer hover:underline">
+                            <EditIcon className="text-[16px]" />
                             Edit
                           </a>
                         </Link>
                       </div>
                       <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                        <img
-                          src="/iconGoogle/delete.svg"
-                          alt="add"
-                          className="w-4"
-                        />
-                        <a className="self-center font-medium ml-2 cursor-pointer hover:underline text-[#A41F12]">
-                          Hapus
-                        </a>
+                        <Link href={"..."}>
+                          <a className="self-center font-medium ml-2 cursor-pointer hover:underline text-[#A41F12]">
+                            <DeleteOutlineIcon className="text-[16px]" />
+                            Hapus
+                          </a>
+                        </Link>
                       </div>
                     </td>
                   </tr>
@@ -161,8 +155,8 @@ function Layanan() {
                 Rows Per Page
               </p>
               <select className="border p-1 px-2">
-                <option>5</option>
                 <option>10</option>
+                <option>15</option>
               </select>
             </div>
             <div>

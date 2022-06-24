@@ -249,17 +249,17 @@ const TransaksiDokumen = () => {
             Transaksi - Dokumen
           </h5>
           {/* START: Section Table Selection */}
-          <div className="border-b-2 flex gap-4 mb-6">
+          <div className="border-b-2 flex gap-1 mb-6">
             <button
-              className={`border-b-2 py-2 translate-y-[2.5px] ${
-                active === 0 ? "border-green-500" : ""
+              className={`border-b-2 py-2 translate-y-[2.5px] px-3 rounded-t-lg ${
+                active === 0 ? "border-green-500 bg-gray-100" : ""
               }`}
               onClick={() => {
                 setActive(0);
               }}
             >
               <p
-                className={`font-semibold text-[16px] leading-5 tracking-[0.25px]  ${
+                className={`font-semibold text-[16px] leading-5 tracking-[0.25px] ${
                   active === 0 ? "text-[#252A31]" : "text-[#4F5E71]"
                 }`}
               >
@@ -267,8 +267,8 @@ const TransaksiDokumen = () => {
               </p>
             </button>
             <button
-              className={`border-b-2 py-2 translate-y-[2.5px] ${
-                active === 1 ? "border-green-500" : ""
+              className={`border-b-2 py-2 translate-y-[2.5px] px-3 rounded-t-lg ${
+                active === 1 ? "border-green-500 bg-gray-100" : ""
               }`}
               onClick={() => {
                 setActive(1);
@@ -283,8 +283,8 @@ const TransaksiDokumen = () => {
               </p>
             </button>
             <button
-              className={`border-b-2 py-2 translate-y-[2.5px] ${
-                active === 2 ? "border-green-500" : ""
+              className={`border-b-2 py-2 translate-y-[2.5px] px-3 rounded-t-lg ${
+                active === 2 ? "border-green-500 bg-gray-100" : ""
               }`}
               onClick={() => {
                 setActive(2);
@@ -309,7 +309,7 @@ const TransaksiDokumen = () => {
                 placeholder="Search...."
               />
             </div>
-            <button className="px-6 rounded-lg bg-[#3A57E8] text-white text-[16px] leading-[20px] tracking-[0.15px]">
+            <button className="px-6 rounded-lg bg-[#3A57E8] hover:bg-[#2A41C7] text-white text-[16px] leading-[20px] tracking-[0.15px]">
               Cari
             </button>
           </div>

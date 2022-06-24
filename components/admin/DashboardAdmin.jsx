@@ -182,7 +182,7 @@ const DashboardAdmin = () => {
           <table className='table-auto w-full mt-4'>
             <thead className='rounded-xl text-center text-white'>
             <tr className=''>
-              <td className='md:px-5 px-2 py-4 bg-[#3A57E8] rounded-tl-lg'>
+              <td className='md:px-3 px-2 py-4 bg-[#3A57E8] rounded-tl-lg'>
                 <div className='flex justify-center'>
                   <p>No</p>
                   <button>
@@ -191,7 +191,7 @@ const DashboardAdmin = () => {
                 </div>              
               </td>
               <td className='px-3 bg-[#3A57E8]'>
-                  <div className='flex justify-center'>
+                  <div className='flex justify-start'>
                   <p>Invoice</p>
                   <button className=''>
                     <img src='/updown.svg'/>
@@ -199,7 +199,7 @@ const DashboardAdmin = () => {
                 </div>          
               </td>
               <td className='px-3 bg-[#3A57E8]'>
-                  <div className='flex justify-center'>
+                  <div className='flex justify-start'>
                   <p>Tanggal</p>
                   <button className=''>
                     <img src='/updown.svg'/>
@@ -234,8 +234,8 @@ const DashboardAdmin = () => {
             </thead>
             <tbody className='whitespace-nowrap'>
               {sampleData2.map((data, index) => (
-                <tr key={index} className={` align-top text-center text-[14px] leading-[24px] text-[#232D42] ${index % 2 != 0 ? "bg-[#F4FAFF]" : "bg-white"}`}>
-                  <td className='py-2'>{index+1}</td>
+                <tr key={index} className={` align-top text-left text-[14px] leading-[24px] text-[#232D42] ${index % 2 != 0 ? "bg-[#F4FAFF]" : "bg-white"}`}>
+                  <td className='py-2 text-center'>{index+1}</td>
                   <td className='py-2 px-3'>{data.invoice}</td>
                   <td className='py-2 px-3'>{data.tgl}</td>
                   <td className='text-left py-2 md:px-0 px-3'>{data.dokumen}</td>

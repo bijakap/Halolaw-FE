@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import Pagination from "../pagination/Pagination";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
 
 function DetailLayanan() {
   const PageName = "Properti";
@@ -115,8 +118,8 @@ function DetailLayanan() {
             </p>
           </div>
           <Link href={"/admin/layanan/properti/tambahDokumen"} className="">
-            <button className="flex flex-row gap-2 px-6 py-[10px] rounded-lg border bg-white hover:bg-[#47BF37] text-[#116E1C] hover:text-white text-[14px] leading-[20px] tracking-[0.25px] items-center justify-center mb-4">
-              <img src="/iconGoogle/add_circle.svg" alt="add" className="w-4" />
+            <button className="flex flex-row gap-1 md:gap-2 px-6 py-[10px] rounded-lg border bg-white hover:bg-[#47BF37] text-[#116E1C] hover:text-white text-[14px] leading-[20px] tracking-[0.25px] items-center justify-center mb-4">
+              <AddCircleOutlineRoundedIcon className="text-[16px]" />
               <span className="self-center font-medium ml-2">
                 Tambah Dokumen
               </span>
@@ -170,26 +173,20 @@ function DetailLayanan() {
                     </td>
                     <td className="pl-4 pr-9 md:pr-4 py-4 flex flex-row gap-6 flex-nowrap ">
                       <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                        <img
-                          src="/iconGoogle/edit.svg"
-                          alt="add"
-                          className="w-4"
-                        />
-                        <Link href={"/admin/layanan/detailLayanan"}>
+                        <Link href={"/admin/layanan/properti/tambahDokumen"}>
                           <a className="self-center font-medium ml-2 cursor-pointer hover:underline">
+                            <EditIcon className="text-[16px]" />
                             Edit
                           </a>
                         </Link>
                       </div>
                       <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                        <img
-                          src="/iconGoogle/delete.svg"
-                          alt="add"
-                          className="w-4"
-                        />
-                        <a className="self-center font-medium ml-2 cursor-pointer hover:underline text-[#A41F12]">
-                          Hapus
-                        </a>
+                        <Link href={"..."}>
+                          <a className="self-center font-medium ml-2 cursor-pointer hover:underline text-[#A41F12]">
+                            <DeleteOutlineIcon className="text-[16px]" />
+                            Hapus
+                          </a>
+                        </Link>
                       </div>
                     </td>
                   </tr>
@@ -204,8 +201,8 @@ function DetailLayanan() {
                 Rows Per Page
               </p>
               <select className="border p-1 px-2">
-                <option>5</option>
                 <option>10</option>
+                <option>15</option>
               </select>
             </div>
             <div>
