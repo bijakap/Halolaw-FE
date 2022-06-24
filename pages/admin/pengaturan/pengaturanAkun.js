@@ -1,15 +1,17 @@
+import PengaturanAkun from "../../../components/praktisi/pengaturanAkun";
+import SidebarAdmin from "../../../components/sidebar/SidebarAdmin";
 import NavbarPraktisi from "../../../components/header/NavbarPraktisi";
-import SidebarPraktisi from "../../../components/sidebar/SidebarPraktisi";
 import FooterPraktisi from "../../../components/footer/FooterPraktisi";
-import DetailTransaksi from "../../../components/praktisi/DetailTransaksi";
 import useNavbarSidebar from "../../../hooks/useNavbarSidebar";
 
-const TransaksiDetail = () => {
+const PengaturanAkunPage = () => {
+
   const [active, {setIsMobile , setIsActive}] = useNavbarSidebar()
-    return (
+  
+  return (
     <div className="bg-[#F6F7FB]">
       {
-        active ?  <></> : <SidebarPraktisi ActiveNumber={1}/> 
+        active ?  <></> : <SidebarAdmin ActiveNumber={5} childActiveNumber={0}/> 
       }
       <div className={setIsMobile()}>
         <div>
@@ -17,12 +19,13 @@ const TransaksiDetail = () => {
           <div className={active ? "ml-0 -z-10" : "lg:ml-0 ml-[250px]"}>
             <NavbarPraktisi setClose={setIsActive} close={active}/>
           </div>
-          <DetailTransaksi/>
+          <PengaturanAkun/>
         </div>
-        <FooterPraktisi user='praktisi' />
+        <FooterPraktisi user='admin' />
       </div>
     </div>
     );
   };
   
-  export default TransaksiDetail;
+  export default PengaturanAkunPage;
+  

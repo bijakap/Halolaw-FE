@@ -1,15 +1,17 @@
+import SidebarAdmin from "../../../components/sidebar/SidebarAdmin";
 import NavbarPraktisi from "../../../components/header/NavbarPraktisi";
-import SidebarPraktisi from "../../../components/sidebar/SidebarPraktisi";
 import FooterPraktisi from "../../../components/footer/FooterPraktisi";
-import DetailTransaksi from "../../../components/praktisi/DetailTransaksi";
+import PrivacyPolicy from "../../../components/praktisi/PrivacyPolicy";
 import useNavbarSidebar from "../../../hooks/useNavbarSidebar";
 
-const TransaksiDetail = () => {
+const PrivacyPolicyPage = () => {
+
   const [active, {setIsMobile , setIsActive}] = useNavbarSidebar()
-    return (
+
+  return (
     <div className="bg-[#F6F7FB]">
       {
-        active ?  <></> : <SidebarPraktisi ActiveNumber={1}/> 
+        active ?  <></> : <SidebarAdmin ActiveNumber={5} childActiveNumber={1}/> 
       }
       <div className={setIsMobile()}>
         <div>
@@ -17,12 +19,12 @@ const TransaksiDetail = () => {
           <div className={active ? "ml-0 -z-10" : "lg:ml-0 ml-[250px]"}>
             <NavbarPraktisi setClose={setIsActive} close={active}/>
           </div>
-          <DetailTransaksi/>
+          <PrivacyPolicy/>
         </div>
-        <FooterPraktisi user='praktisi' />
+        <FooterPraktisi user='admin' />
       </div>
     </div>
-    );
-  };
-  
-  export default TransaksiDetail;
+  );
+};
+
+export default PrivacyPolicyPage;

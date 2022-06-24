@@ -21,7 +21,7 @@ const TermConditionPage = () => {
           </div>
           <TermCondition/>
         </div>
-        <FooterPraktisi privacy="/praktisi/pengaturan/privacyPolicy" term='/praktisi/pengaturan/termCondition'/>
+        <FooterPraktisi user='praktisi' />
       </div>
     </div>
   );

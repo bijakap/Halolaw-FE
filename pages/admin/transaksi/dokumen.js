@@ -19,7 +19,7 @@ const PageTransaksiDokumen = () => {
           <TransaksiDokumen/>
         </div>
         {/* Footer */}
-        <FooterPraktisi privacy="/admin/pengaturan/privacyPolicy" term='/admin/pengaturan/termCondition'/>
+        <FooterPraktisi user='admin' />
       </div>
     </div>
   )

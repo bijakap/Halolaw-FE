@@ -19,7 +19,7 @@ const TambahArtikel = () => {
             <AddArtikel />
           </div>
           {/* Footer */}
-          <FooterPraktisi privacy="/admin/pengaturan/privacyPolicy" term='/admin/pengaturan/termCondition'/>
+          <FooterPraktisi user='admin' />
         </div>
       </div>
     );
