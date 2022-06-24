@@ -91,8 +91,8 @@ function DetailTransaksi() {
           <div className="bg-[#F2F4F7] rounded-lg inline-block">
             <div className="flex p-6 gap-[32px]">
               <img
-                src="profiledummy.png"
-                className="h-[70px] md:h-[80px] w-[70px] md:w-[80px] object-cover"
+                src="profilPraktisi.jpg"
+                className="h-[70px] md:h-[80px] w-[70px] md:w-[80px] object-cover rounded-lg"
               />
               <div className="flex">
                 <div className="flex gap-4">

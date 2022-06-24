@@ -19,7 +19,7 @@ const SertifikatTanah = () => {
             <DetailDokumen />
           </div>
           {/* Footer */}
-          <FooterPraktisi />
+          <FooterPraktisi privacy="/admin/pengaturan/privacyPolicy" term='/admin/pengaturan/termCondition'/>
         </div>
       </div>
     );

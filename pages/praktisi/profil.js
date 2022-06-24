@@ -17,7 +17,7 @@ const Profil = () => {
           </div>
           <ProfilPraktisi />
         </div>
-        <FooterPraktisi />
+        <FooterPraktisi privacy="/praktisi/pengaturan/privacyPolicy" term='/praktisi/pengaturan/termCondition'/>
       </div>
     </div>
   );

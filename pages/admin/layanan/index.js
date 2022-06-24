@@ -6,6 +6,7 @@ import Layanan from "../../../components/admin/Layanan";
 
 const LayananAdmin = () => {
   const [active, { setIsMobile, setIsActive }] = useNavbarSidebar();
+  
   return (
     <div className="bg-[#F6F7FB]">
       {active ? <></> : <SidebarAdmin ActiveNumber={1} />}
@@ -19,7 +20,7 @@ const LayananAdmin = () => {
           <Layanan />
         </div>
         {/* Footer */}
-        <FooterPraktisi />
+        <FooterPraktisi privacy="/admin/pengaturan/privacyPolicy" term='/admin/pengaturan/termCondition'/>
       </div>
     </div>
   );

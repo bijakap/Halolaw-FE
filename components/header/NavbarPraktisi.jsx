@@ -10,8 +10,8 @@ const NavbarPraktisi = ({close, setClose}) => {
           <div className="flex gap-6 mr-5">
               <img src="/sidebar/lonceng.svg" alt="lonceng" />
               <Link href={"/praktisi/profil"}>
-                <a className="flex gap-6">
-                  <img src='/profiledummy.png' className='rounded-full h-8 w-8 object-cover'/>
+                <a className="flex gap-4">
+                  <img src='/avatarPraktisi.png' className='rounded-full h-8 w-8 object-cover'/>
                   <p className='self-center text-[#232D42] font-semibold text-sm leading-5 tracking-[0.25px]'>Aditya</p>
                 </a>
               </Link>

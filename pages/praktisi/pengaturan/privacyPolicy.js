@@ -21,7 +21,7 @@ const PrivacyPolicyPage = () => {
           </div>
           <PrivacyPolicy/>
         </div>
-        <FooterPraktisi />
+        <FooterPraktisi privacy="/praktisi/pengaturan/privacyPolicy" term='/praktisi/pengaturan/termCondition'/>
       </div>
     </div>
   );
