@@ -21,7 +21,7 @@ const TermConditionPage = () => {
           </div>
           <TermCondition/>
         </div>
-        <FooterPraktisi />
+        <FooterPraktisi user='praktisi' />
       </div>
     </div>
   );

@@ -67,13 +67,13 @@ export default function DetailProduk() {
                         </div>
                         <div className='space-y-[20px]'>
                             <p className='font-[500]'>Anda dapat melakukan konsultasi secara gratis sebelum memesan dokumen legalitas ini.</p>
-                            <Link href={"/ReservasiKonsultasi"}><p><a href='#' className='text-[#3A57E8] font-[600]'>Jadwalkan Kosultasi →</a></p></Link>
+                            <Link href={"/ReservasiKonsultasi"}><p><a href='#' className='text-[#3A57E8] hover:text-[#2A41C7] font-[600]'>Jadwalkan Kosultasi →</a></p></Link>
                             <p>Pesan sekarang untuk dapat mengurus dokumen legalitas ini.</p>
                         </div>
                         
                     </div>
                     <div>
-                    <Link href='/checkout'><a><button className='bg-[#3A57E8] w-full text-white py-6 font-[700]'>Pesan Sekarang</button></a></Link>
+                    <Link href='/checkout'><a><button className='bg-[#3A57E8] hover:bg-[#2A41C7] w-full text-white py-6 font-[700]'>Pesan Sekarang</button></a></Link>
                     </div>
                 </div>
             </div>

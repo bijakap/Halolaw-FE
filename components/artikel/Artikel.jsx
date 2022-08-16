@@ -1,77 +1,84 @@
-import HomeIcon from '@mui/icons-material/Home';
+import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import Link from "next/link"
 import ArtikelCard from './ArtikelCard';
 
 
 function Artikel(){
+  const PageName = "Judul";
   const ArtikelDummy = [
     {
-      penulis: "Liliana Melati",
-      tgl_up: "25 Jan 2022",
-      judul: "Legalitas tanda tangan elektronik",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      kategori : ["Perdata"],
-      img: "/artikel1@2x.png"
+        penulis: "Liliana Melati",
+        tgl_up: "25 Jan 2022",
+        judul: "Legalitas tanda tangan elektronik",
+        content: "Sejak diundangkannya Undang-Undang Nomor 11 Tahun 2008 tentang Informas ...",
+        kategori : ["Perdata"],
+        img: "/artikel/artikel1.jpg"
     },
     {
-      penulis: "Liliana Melati",
-      tgl_up: "25 Jan 2022",
-      judul: "Legalitas tanda tangan elektronik",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      kategori : ["Perdata"],
-      img: "/artikel1@2x.png"
+        penulis: "Agustin Rifki",
+        tgl_up: "23 Jan 2022",
+        judul: "Pimpinan pengadilan berkualitas dan berintegritas",
+        content: "Satu persyaratan untuk mewujudkan Court Excellence adalah Pimpinan ...",
+        kategori : ["Pengadilan"],
+        img: "/artikel/artikel2.jpg"
     },
     {
-      penulis: "Liliana Melati",
-      tgl_up: "25 Jan 2022",
-      judul: "Legalitas tanda tangan elektronik",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      kategori : ["Perdata"],
-      img: "/artikel1@2x.png"
+        penulis: "Iqbal Setiawan",
+        tgl_up: "22 Jan 2022",
+        judul: "Gelombang online dalam perkembangan hukum",
+        content: "Sebagai Negara hukum sudah tentu penyelenggaraan Negara dan pemerinta ...",
+        kategori : ["Perdata"],
+        img: "/artikel/artikel3.jpg"
     },
     {
-      penulis: "Liliana Melati",
-      tgl_up: "25 Jan 2022",
-      judul: "Legalitas tanda tangan elektronik",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      kategori : ["Perdata"],
-      img: "/artikel1@2x.png"
+        penulis: "Olivia Ryhe",
+        tgl_up: "19 Jan 2022",
+        judul: "Tafsir iktikad baik dalam sengketa pertanahan",
+        content: "Asas hukum yang satu ini kadang terasa ambigu. Maka, berkaitan dengan huk ...",
+        kategori : ["Perdata", "Tanah"],
+        img: "/artikel/artikel4.jpg"
     },
   ];
   return(
     <div className="flex justify-center w-auto md:w-[65%] mx-5 md:mx-auto my-8">
       <div className=''>
-        <div className="flex">
-          <p className="font-[400] text-[12px] lg:text-[14px] leading-0 lg:leading-[20px] tracking-[0.25px]">
-          <Link href={"/"}><span className='cursor-pointer'><HomeIcon className="mb-1 scale-[0.7]"/>Home</span></Link>
-          /
-          <Link href={"/artikel"}>Artikel</Link>
-          /<span className='text-[#3A57E8]'>Judul Dari Artikel</span>
-          </p>
+        {/* START: breadcrumbs */}
+        <div className="py-4 md:pt-8 md:pb-6 text-[#6C757D]">
+          <div className="text-[14px] md:text-[16px] md:leading-[175%]">
+            <p>
+            <Link href={"/"}><span className='cursor-pointer'><HomeRoundedIcon className="mb-1 scale-[0.7]"/>Home</span></Link>
+              /
+              <Link href="/artikel">
+                <a href="#"> Artikel </a>
+              </Link>
+              / <span className="text-[#2E46BA]">{PageName}</span>
+            </p>
+          </div>
         </div>
-        <div className='mt-6 mb-8'>
+        {/* END: Breadcrumbs */}
+        <div className='mb-8'>
           <h1 className='text-[#252A31] text-[25px] md:text-[33px] leading-[40px] tracking-[0.25px] font-semibold'>Tafsir Iktikad Baik dalam Sengketa Pertanahan dengan Perjanjian Nominee</h1>
         </div>
         <div className='flex w-full justify-between py-5 border-b border-t'>
           <p className='self-center text-[#4A4A68] text-[12px] md:text-[14px] font-semibold leading-5 tracking-[0.25px]'>Diperbarui 19 Jan 2022 . Olivia Ryhe</p>
           <div className='flex gap-4'>
-            <div className='rounded-lg bg-[#F2F4F7] w-10 h-10 flex justify-center'>
-              <p className='self-center'>F</p>
+            <div className='rounded-lg bg-[#F2F4F7] w-10 h-10 flex justify-center cursor-pointer'>
+              <p className='self-center'><img src="/sosmed/facebook.svg" alt="facebook" /></p>
             </div>
-            <div className='rounded-lg bg-[#F2F4F7] w-10 h-10 flex justify-center'>
-              <p className='self-center'>Twi</p>
+            <div className='rounded-lg bg-[#F2F4F7] w-10 h-10 flex justify-center cursor-pointer'>
+              <p className='self-center'><img src="/sosmed/twitter.svg" alt="twitter" /></p>
             </div>
-            <div className='rounded-lg bg-[#F2F4F7] w-10 h-10 flex justify-center'>
-              <p className='self-center'>WA</p>
+            <div className='rounded-lg bg-[#F2F4F7] w-10 h-10 flex justify-center cursor-pointer'>
+              <p className='self-center'><img src="/sosmed/watsap.svg" alt="watsap" /></p>
             </div>
-            <div className='rounded-lg bg-[#F2F4F7] w-10 h-10 flex justify-center'>
-              <p className='self-center'>Shr</p>
+            <div className='rounded-lg bg-[#F2F4F7] w-10 h-10 flex justify-center cursor-pointer'>
+              <p className='self-center'><img src="/sosmed/copyLink.svg" alt="copyLink" /></p>
             </div>
           </div>
         </div>
         <div className='flex justify-center w-[80%] mx-auto py-8'>
-          <div className='text-justify font-normal text-[16px] tracking-[0.5px] leading-[32px] text-[#252A31]'>
-            <img src='/artikel1@2x.png' className='flex justify-center mx-auto'/>
+          <div className='text-justify font-normal text-[12px] md:text-[16px] tracking-[0.5px] leading-[24px] md:leading-[32px] text-[#252A31]'>
+            <img src='/artikel/ImageArtikel.jpg' className='flex justify-center mx-auto mb-4 md:mb-8'/>
             <p>Asas hukum yang satu ini kadang terasa ambigu. Maka, berkaitan dengan hukum perdata di Indonesia, perlu memperhatikan lebih jauh konsistensi pengadilan dalam menafsirkannya. Misalnya dalam sengketa pertanahan yang timbul akibat adanya perjanjian nominee (pinjam nama/nominee arrangement).</p>
             <p>Persoalan perjanjian nominee perlu dibahas lebih dulu. Praktiknya di Indonesia kerap terjadi dalam kepemilikan tanah karena ada pembatasan kepemilikan oleh pihak tertentu. Hakim Agung I Gusti Agung Sumanatha menyebut larangan Warga Negara Asing (WNA) memiliki tanah dengan status hak milik sebagai salah satu faktor penyebab.</p>
             <p>Sumanatha menjelaskan dalam uraian tertulis kepada Hukumonline, “Karena tidak mungkin mempunyai hak milik, maka lahir perjanjian pinjam nama (nominee arrangement) dalam kepemilikan tanah, yaitu Warga Negara Asing (beneficiary) meminjam nama WNI (nominee) sebagai pihak yang namanya tercatat dalam Sertifikat Hak Milik”. Kasus sengketa terkait tanah digolongkan dalam 3 klasifikasi, diantaranya:</p>
@@ -86,17 +93,17 @@ function Artikel(){
         <div className='flex w-auto justify-between py-5 border-b border-t'>
           <p className='self-center text-[#4A4A68] text-[12px] md:text-[14px] font-semibold leading-5 tracking-[0.25px]'>Bagikan Artikel Ini</p>
           <div className='flex gap-4'>
-            <div className='rounded-lg bg-[#F2F4F7] w-10 h-10 flex justify-center'>
-              <p className='self-center'>F</p>
+            <div className='rounded-lg bg-[#F2F4F7] w-10 h-10 flex justify-center cursor-pointer'>
+              <p className='self-center'><img src="/sosmed/facebook.svg" alt="facebook" /></p>
             </div>
-            <div className='rounded-lg bg-[#F2F4F7] w-10 h-10 flex justify-center'>
-              <p className='self-center'>Twi</p>
+            <div className='rounded-lg bg-[#F2F4F7] w-10 h-10 flex justify-center cursor-pointer'>
+              <p className='self-center'><img src="/sosmed/twitter.svg" alt="twitter" /></p>
             </div>
-            <div className='rounded-lg bg-[#F2F4F7] w-10 h-10 flex justify-center'>
-              <p className='self-center'>WA</p>
+            <div className='rounded-lg bg-[#F2F4F7] w-10 h-10 flex justify-center cursor-pointer'>
+              <p className='self-center'><img src="/sosmed/watsap.svg" alt="watsap" /></p>
             </div>
-            <div className='rounded-lg bg-[#F2F4F7] w-10 h-10 flex justify-center'>
-              <p className='self-center'>Shr</p>
+            <div className='rounded-lg bg-[#F2F4F7] w-10 h-10 flex justify-center cursor-pointer'>
+              <p className='self-center'><img src="/sosmed/copyLink.svg" alt="copyLink" /></p>
             </div>
           </div>
         </div>

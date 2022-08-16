@@ -8,7 +8,7 @@ const Properti = () => {
     const [active, { setIsMobile, setIsActive }] = useNavbarSidebar();
     return (
       <div className="bg-[#F6F7FB]">
-        {active ? <></> : <SidebarAdmin ActiveNumber={0} />}
+        {active ? <></> : <SidebarAdmin ActiveNumber={1} />}
         <div className={setIsMobile()}>
           <div>
             {/* Navbar */}
@@ -19,7 +19,7 @@ const Properti = () => {
             <DetailLayanan />
           </div>
           {/* Footer */}
-          <FooterPraktisi />
+          <FooterPraktisi user='admin' />
         </div>
       </div>
     );

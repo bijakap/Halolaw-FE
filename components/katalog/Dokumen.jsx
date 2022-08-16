@@ -95,10 +95,10 @@ function Dokumen(){
                     {dokumen.map((data,index) => {
                         return (
                             <Link href={`/kategori/${router.query.dokumen}/tanah`} key={index}>
-                                <div className="flex justify-center">
+                                <div className="flex justify-center cursor-pointer">
                                     <div className="rounded-[8px] border hover:border-2 hover:border-blue-600 w-full lg:w-[291px] h-auto lg:h-[304px] bg-white p-[8px] lg:p-[16px] flex flex-col justify-between">
                                         <div className={`w-auto h-[100px] lg:w-[259px] lg:h-[200px] flex justify-center`}>
-                                            <img src={data.img} className="h-full object-cover rounded-[8px]"/>
+                                            <img src={data.img} className="h-full w-full object-cover rounded-[8px]"/>
                                         </div>
                                     
                                         <div className="space-y-[16px]">

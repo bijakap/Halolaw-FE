@@ -19,7 +19,7 @@ const PageTransaksiKonsultasi = () => {
           <TransaksiKonsultasi/>
         </div>
         {/* Footer */}
-        <FooterPraktisi />
+        <FooterPraktisi user='admin' />
       </div>
     </div>
   )

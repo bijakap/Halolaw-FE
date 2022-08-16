@@ -20,7 +20,7 @@ const Admin = () => {
         <DashboardAdmin/>
       </div>
       {/* Footer */}
-      <FooterPraktisi />
+      <FooterPraktisi user='admin' />
     </div>
   </div>
   )

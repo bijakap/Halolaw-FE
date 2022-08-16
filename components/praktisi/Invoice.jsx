@@ -92,7 +92,7 @@ function Invoice() {
         </div>
       </div>
       <div className="flex lg:absolute lg:top-0 lg:right-0 lg:p-8 mt-10 lg:mt-0 w-full md:w-auto justify-center">
-        <button className="py-[10px] px-6 bg-[#47BF37] font-medium text-white rounded-lg w-full md:w-auto">
+        <button className="py-[10px] px-6 bg-[#47BF37] hover:bg-[#2CA428] font-medium text-white rounded-lg w-full md:w-auto">
           Cetak Invoice
         </button>
       </div>

@@ -20,7 +20,7 @@ const Praktisi = () => {
         </div>
         <Dashboard/>
       </div>
-      <FooterPraktisi />
+      <FooterPraktisi user='praktisi'/>
     </div>
   </div>
   )

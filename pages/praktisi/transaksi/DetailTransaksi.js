@@ -19,7 +19,7 @@ const TransaksiDetail = () => {
           </div>
           <DetailTransaksi/>
         </div>
-        <FooterPraktisi />
+        <FooterPraktisi user='praktisi' />
       </div>
     </div>
     );

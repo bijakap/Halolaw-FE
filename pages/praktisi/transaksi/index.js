@@ -20,7 +20,7 @@ const Transaksi = () => {
         </div>
         <TransaksiPraktisi/>
       </div>
-      <FooterPraktisi />
+      <FooterPraktisi user='praktisi' />
     </div>
   </div>
   )

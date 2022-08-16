@@ -8,21 +8,21 @@ function GantiPassword(){
                     <p className="md:block hidden text-[#252A31] text-[23px] font-semibold leading-[32px] pb-2 mb-8">Ganti Password</p>
                     <div className="flex flex-col">
                         <label className="text-sm font-medium text-gray-700 tracking-wide">Email <span className="text-[#C4351A]">*</span></label>
-                        <input type="email" className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6" value={email} disabled/>
+                        <input type="email" className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6 text-[#667085] bg-gray-100" value={email} disabled/>
                     </div>
                     <div className="flex flex-col">
                         <label className="text-sm font-medium text-gray-700 tracking-wide">Password Lama <span className="text-[#C4351A]">*</span></label>
-                        <input className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6" type="password" />
+                        <input className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6 placeholder:text-[14px]" type="password" placeholder="*****************" />
                     </div>
                     <div className="flex flex-col">
                         <label className="text-sm font-medium text-gray-700 tracking-wide">Password Baru <span className="text-[#C4351A]">*</span></label>
-                        <input className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6" type="password" />
+                        <input className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6 placeholder:text-[14px]" type="password" placeholder="Ganti Password Baru" />
                     </div>
                     <div className="flex flex-col">
                         <label className="text-sm font-medium text-gray-700 tracking-wide">Konfirmasi Password Baru <span className="text-[#C4351A]">*</span></label>
-                        <input className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6" type="password" />
+                        <input className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6 placeholder:text-[14px]" type="password" placeholder="Konfirmasi Password baru" />
                     </div>
-                    <input type="submit" value="Ganti Password" className="w-full flex justify-center bg-[#3A57E8] text-gray-100 py-[10px] rounded-[8px] text-sm tracking-wide font-[500] cursor-pointer mt-2"/>
+                    <input type="submit" value="Ganti Password" className="w-full flex justify-center bg-[#3A57E8] hover:bg-[#2A41C7] text-gray-100 py-[10px] rounded-[8px] text-sm tracking-wide font-[500] cursor-pointer mt-2"/>
                 </div>
                 <div className="pt-4 md:pt-16 order-1 md:order-none">
                     <p className="md:hidden block text-[#252A31] text-[23px] font-semibold leading-[32px] pb-2 mb-8">Ganti Password</p>
@@ -38,7 +38,7 @@ function GantiPassword(){
                     <p className="text-[14px] font-normal text-[#667085] tracking-[0.25px] leading-[20px]">Delete your account and account data</p>
                 </div>
                 <div>
-                    <button className="rounded-lg py-[10px] px-6 border text-[#840D0B] font-medium text-[14px] leading-[20px] tracking-[0.25px]">Hapus</button>
+                    <button className="rounded-lg py-[10px] px-6 border text-[#840D0B] hover:text-white hover:bg-[#E55124] hover:outline-none font-medium text-[14px] leading-[20px] tracking-[0.25px]">Hapus</button>
                 </div>
             </div>
         </div>

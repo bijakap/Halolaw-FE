@@ -39,7 +39,7 @@ function PengaturanAkun() {
                 </label>
                 <input
                   type="email"
-                  className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6"
+                  className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6 text-[#667085] bg-gray-100"
                   value={email}
                   disabled
                 />
@@ -49,8 +49,8 @@ function PengaturanAkun() {
                   Password Lama <span className="text-[#C4351A]">*</span>
                 </label>
                 <input
-                  className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6"
-                  type="password"
+                  className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6 placeholder:text-[14px]"
+                  type="password" placeholder="*****************"
                 />
               </div>
               <div className="flex flex-col">
@@ -58,8 +58,8 @@ function PengaturanAkun() {
                   Password Baru <span className="text-[#C4351A]">*</span>
                 </label>
                 <input
-                  className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6"
-                  type="password"
+                  className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6 placeholder:text-[14px]"
+                  type="password" placeholder="Ganti Password Baru"
                 />
               </div>
               <div className="flex flex-col">
@@ -68,14 +68,14 @@ function PengaturanAkun() {
                   <span className="text-[#C4351A]">*</span>
                 </label>
                 <input
-                  className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6"
-                  type="password"
+                  className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6 placeholder:text-[14px]"
+                  type="password" placeholder="Konfirmasi Password baru"
                 />
               </div>
               <input
                 type="submit"
                 value="Ganti Password"
-                className="w-full flex justify-center bg-[#3A57E8] text-gray-100 py-[10px] rounded-[8px] text-sm tracking-wide font-[500] cursor-pointer mt-2"
+                className="w-full flex justify-center bg-[#3A57E8] hover:bg-[#2A41C7] text-gray-100 py-[10px] rounded-[8px] text-sm tracking-wide font-[500] cursor-pointer mt-2"
               />
             </div>
             {/* END: kiri */}
@@ -109,7 +109,7 @@ function PengaturanAkun() {
               </p>
             </div>
             <div>
-              <button className="rounded-lg py-[10px] px-6 border text-[#840D0B] font-medium text-[14px] leading-[20px] tracking-[0.25px]">
+              <button className="rounded-lg py-[10px] px-6 border text-[#840D0B] hover:text-white hover:bg-[#E55124] hover:outline-none font-medium text-[14px] leading-[20px] tracking-[0.25px]">
                 Hapus
               </button>
             </div>

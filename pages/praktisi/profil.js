@@ -17,7 +17,7 @@ const Profil = () => {
           </div>
           <ProfilPraktisi />
         </div>
-        <FooterPraktisi />
+        <FooterPraktisi user='praktisi' />
       </div>
     </div>
   );

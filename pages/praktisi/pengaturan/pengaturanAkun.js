@@ -21,7 +21,7 @@ const PengaturanAkunPage = () => {
           </div>
           <PengaturanAkun/>
         </div>
-        <FooterPraktisi />
+        <FooterPraktisi user='praktisi' />
       </div>
     </div>
     );

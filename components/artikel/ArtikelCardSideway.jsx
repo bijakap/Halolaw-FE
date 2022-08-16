@@ -2,11 +2,11 @@
 
 function ArtikelCardSideway({data}){
   return(
-    <div className="flex justify-between gap-8 h-full lg:h-[220px]">
+    <div className="flex justify-between gap-8 h-full lg:h-[220px] cursor-pointer">
       <img src={data.img} className="object-cover w-1/2 md:w-[313px]"/>
       <div>
         <p className="text-[#121F86] text-[8px] lg:text-[12px] font-bold my-[16px]">{data.penulis} . {data.tgl_up}</p>
-        <h6 className="font-['Inter'] text-[12px] lg:text-[16px] font-semibold mb-[8px] lg:line-clamp-2">{data.judul}</h6>
+        <h6 className="font-['Inter'] text-[12px] lg:text-[16px] font-semibold mb-[8px] lg:line-clamp-2 hover:underline hover:underline-offset-1">{data.judul}</h6>
         <div className="h-[60px] text-[12px] lg:text-[16px] font-sans font-thin mb-0 lg:mb-[24px]">
             <p className="line-clamp-3 lg:line-clamp-2">{data.content}</p>
         </div>

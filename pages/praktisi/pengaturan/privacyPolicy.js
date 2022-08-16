@@ -21,7 +21,7 @@ const PrivacyPolicyPage = () => {
           </div>
           <PrivacyPolicy/>
         </div>
-        <FooterPraktisi />
+        <FooterPraktisi user='praktisi' />
       </div>
     </div>
   );

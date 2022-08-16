@@ -57,19 +57,19 @@ const SidebarAdmin = ({ActiveNumber, childActiveNumber}) =>{
           </div>
           {/* Child Transaksi */}
           <div className={active === 2 ? "block" : "hidden"}>
-            {/* <Link href={"/praktisi/pengaturan/pengaturanAkun"}> */}
+            <Link href={"/admin/transaksi/dokumen"}>
               <div onClick={() => setChildActive(0)} className={`${childActive === 0 ? "text-[#3A57E8] bg-[#F2F4F7]" : ""} mx-4 py-2 bg-white text-[#8A92A6] cursor-pointer hover:text-[#3A57E8] hover:bg-[#F2F4F7]`}>
                 <p className='ml-6'>Dokumen Hukum</p>
               </div>
-            {/* </Link> */}
-            {/* <Link href={"/praktisi/pengaturan/privacyPolicy"}> */}
+            </Link>
+            <Link href={"/admin/transaksi/konsultasi"}>
               <div onClick={() => setChildActive(1)} className={`${childActive === 1 ? "text-[#3A57E8] bg-[#F2F4F7]" : ""} mx-4 py-2 bg-white text-[#8A92A6] cursor-pointer hover:text-[#3A57E8] hover:bg-[#F2F4F7]`}>
                 <p className='ml-6'>Konsultasi</p>
               </div>
-            {/* </Link> */}
+            </Link>
           </div>
           {/* end Child Transaksi */}
-          <div onClick={() => {setActive(3); }} className={`${active === 3 ? "bg-[#3A57E8] text-white py-2" : "py-2 bg-white text-[#8A92A6]"} mx-4 px-6 rounded-lg cursor-pointer`}>
+          <div onClick={() => {setActive(3); router.push("/admin/users");}} className={`${active === 3 ? "bg-[#3A57E8] text-white py-2" : "py-2 bg-white text-[#8A92A6]"} mx-4 px-6 rounded-lg cursor-pointer`}>
             <div className="flex gap-4">
               <div className='self-center'>
                {
@@ -82,7 +82,7 @@ const SidebarAdmin = ({ActiveNumber, childActiveNumber}) =>{
               <p className='text-[16px] font-normal leading-7'>Users</p>
             </div>
           </div>
-          <div onClick={() => {setActive(4); }} className={`${active === 4 ? "bg-[#3A57E8] text-white py-2" : "py-2 bg-white text-[#8A92A6]"} mx-4 px-6 rounded-lg cursor-pointer`}>
+          <div onClick={() => {setActive(4); router.push("/admin/artikel");}} className={`${active === 4 ? "bg-[#3A57E8] text-white py-2" : "py-2 bg-white text-[#8A92A6]"} mx-4 px-6 rounded-lg cursor-pointer`}>
             <div className="flex gap-4">
               <div className='self-center'>
                 {
@@ -110,21 +110,21 @@ const SidebarAdmin = ({ActiveNumber, childActiveNumber}) =>{
           </div>
           {/* Child Pengaturan  */}
           <div className={active === 5 ? "block" : "hidden"}>
-            {/* <Link href={"/praktisi/pengaturan/pengaturanAkun"}> */}
+            <Link href={"/admin/pengaturan/pengaturanAkun"}>
               <div onClick={() => setChildActive(0)} className={`${childActive === 0 ? "text-[#3A57E8] bg-[#F2F4F7]" : ""} mx-4 py-2 bg-white text-[#8A92A6] cursor-pointer hover:text-[#3A57E8] hover:bg-[#F2F4F7]`}>
                 <p className='ml-6'>Pengaturan Akun</p>
               </div>
-            {/* </Link> */}
-            {/* <Link href={"/praktisi/pengaturan/privacyPolicy"}> */}
+            </Link>
+            <Link href={"/admin/pengaturan/privacyPolicy"}>
               <div onClick={() => setChildActive(1)} className={`${childActive === 1 ? "text-[#3A57E8] bg-[#F2F4F7]" : ""} mx-4 py-2 bg-white text-[#8A92A6] cursor-pointer hover:text-[#3A57E8] hover:bg-[#F2F4F7]`}>
                 <p className='ml-6'>Privacy Policy</p>
               </div>
-            {/* </Link> */}
-            {/* <Link href={"/praktisi/pengaturan/termCondition"}> */}
+            </Link>
+            <Link href={"/admin/pengaturan/termCondition"}>
               <div onClick={() => setChildActive(2)} className={`${childActive === 2 ? "text-[#3A57E8] bg-[#F2F4F7]" : ""} mx-4 py-2 bg-white text-[#8A92A6] cursor-pointer hover:text-[#3A57E8] hover:bg-[#F2F4F7]`}>
                 <p className='ml-6'>Term & Condition</p>
               </div>
-            {/* </Link> */}
+            </Link>
           </div>
           {/* end Child Pengaturan  */}
           <div className='mx-4 border-b'>

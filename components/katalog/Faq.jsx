@@ -20,7 +20,7 @@ function Faq(){
             </div>
             <div className="flex flex-col w-full pb-12">  
                 <div className="w-full flex flex-col gap-[2px] text-[#475467] text-[16px] leading-[28px] tracking-[0.5px] text-left md:text-justify">
-                    <div onClick={() => handleActive(0)}>
+                    <div onClick={() => handleActive(0)} className="cursor-pointer">
                         <div className="flex justify-between p-4 gap-6">
                             <h5 className="font-bold">Bagaimana agar saya dapat menggunakan layanan Halo Law?</h5>
                             { isActive[0] ? <RemoveCircleOutlineIcon/> : <AddCircleOutlineIcon/> }
@@ -34,7 +34,7 @@ function Faq(){
                             </ol>
                         </div>
                     </div>
-                    <div onClick={() => handleActive(1)}>
+                    <div onClick={() => handleActive(1)} className="cursor-pointer">
                         <div className="flex justify-between p-4 gap-6">
                             <h5 className="font-bold">Bagaimana jika saya mengalami kendala saat ingin login?</h5>
                             {
@@ -45,7 +45,7 @@ function Faq(){
                             <p>Jika anda mengalami kendala saat ingin login, anda dapat menghubungi kami melalui whatsapp yang tersedia</p>
                         </div>
                     </div>
-                    <div onClick={() => handleActive(2)}>
+                    <div onClick={() => handleActive(2)} className="cursor-pointer">
                         <div className="flex justify-between p-4 gap-6">
                             <h5 className="font-bold">Bagaimana jika saya lupa password?</h5>
                             {
@@ -64,7 +64,7 @@ function Faq(){
                             </ol>
                         </div>
                     </div>
-                    <div onClick={() => handleActive(3)}>
+                    <div onClick={() => handleActive(3)} className="cursor-pointer">
                         <div className="flex justify-between p-4 gap-6">
                             <h5 className="font-bold">Bagaimana cara saya jika ingin mengganti data profil?</h5>
                             {
@@ -75,7 +75,7 @@ function Faq(){
                             <p>Ubah nama, email, foto profil, dan nomor handphone dapat dilakukan melalui menu “Profil Saya”, Jika anda tidak dapat merubah profil, mohon pastikan bahwa email dan nomor handphone yang baru anda masukkan belum pernah terdaftar di kami. Lalu coba lakukan restart. Jika masih mengalami kendala, anda dapat menghubungi kami melalui whatsapp yang tersedia</p>
                         </div>
                     </div>
-                    <div onClick={() => handleActive(4)}>
+                    <div onClick={() => handleActive(4)} className="cursor-pointer">
                         <div className="flex justify-between p-4 gap-6">
                             <h5 className="font-bold">Bagaimana saya mengetahui siapa notaris yang bertanggungjawab atas layanan yang saya pesan?</h5>
                             {
