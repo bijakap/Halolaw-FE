@@ -24,6 +24,7 @@ function AddDokumen() {
   const [show, setShow] = useState([false,false,false])
   const [listKota, setListKota] = useState([null, null])
   const [modal, setModal] = useState(false)
+  const [value, setValue] = useState('');
 
   const handleClick = (index) => {
     const newShow = [...show]
@@ -98,7 +99,7 @@ function AddDokumen() {
   ];
 
   // const [editorState, onEditorStateChange] = useState(null)
-  const [value, setValue] = useState('');
+
 
   const  modules  = {
     toolbar: [

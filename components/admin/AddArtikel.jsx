@@ -94,12 +94,12 @@ const AddArtikel = () => {
             {/* END: SECTION-1 */}
             {/* START: SECTION-2 */}
             <div className="flex gap-4 justifty-start items-center">
-              <label class="relative flex justify-between group items-center">
+              <label className="relative flex justify-between group items-center">
                 <input
                   type="checkbox"
-                  class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
+                  className="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
                 />
-                <span class="w-10 h-6 flex items-center flex-shrink-0 p-1 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-[#3D8DFF] after:w-4 after:h-4 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-4 group-hover:after:translate-x-1"></span>
+                <span className="w-10 h-6 flex items-center flex-shrink-0 p-1 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-[#3D8DFF] after:w-4 after:h-4 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-4 group-hover:after:translate-x-1"></span>
               </label>
               <p className="font-regular tracking-[0.25px] leading-5">
                 Simpan Sebagai Draft{" "}

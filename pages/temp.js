@@ -13,7 +13,7 @@ import TambahLayanaModal from "../components/modal/TambahLayananModal";
 import EditUserModal from "../components/modal/EditUserModal";
 import TransactionModal from "../components/modal/TransactionModal";
 
-const temp = () => {
+const Temp = () => {
     const [active, setActive] = useState(false)
 
     return(
@@ -32,4 +32,4 @@ const temp = () => {
     )
 }
 
-export default temp;
+export default Temp;
