@@ -2,7 +2,7 @@ import useNavbarSidebar from "../../../hooks/useNavbarSidebar";
 import FooterPraktisi from "../../../components/footer/FooterPraktisi";
 import NavbarPraktisi from "../../../components/header/NavbarPraktisi";
 import SidebarAdmin from "../../../components/sidebar/SidebarAdmin";
-import ArtikelAdmin from "../../../components/admin/Artikel";
+import ArtikelAdmin from "../../../components/admin/ArtikelAdmin";
 
 const Artikel = () => {
   const [active, { setIsMobile, setIsActive }] = useNavbarSidebar();
