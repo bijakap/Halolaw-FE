@@ -2,7 +2,7 @@ import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOu
 import EditIcon from "@mui/icons-material/Edit";
 import Pagination from "../pagination/Pagination";
 import { useState } from "react";
-import Link from "next/Link";
+import Link from "next/link";
 import EditUserModal from "../modal/EditUserModal";
 import TextOnlyConfirmationModal from "../modal/TextOnlyConfirmationModal";
 import SuccesModal from "../modal/SuccesModal";

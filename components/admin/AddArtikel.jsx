@@ -1,4 +1,4 @@
-import Link from "next/Link";
+import Link from "next/link";
 import InfoIcon from "@mui/icons-material/Info";
 
 const AddArtikel = () => {
