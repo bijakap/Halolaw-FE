@@ -2,9 +2,14 @@ import { useState } from "react";
 import Link from "next/link";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import EditIcon from "@mui/icons-material/Edit";
+import TextAreaModal from "../modal/TextAreaModal";
+import TextOnlyConfirmationModal from "../modal/TextOnlyConfirmationModal"
 
 function DetailTransaksi() {
   const [active, setActive] = useState(0);
+  const [TextArea, setTextArea] = useState(false)
+  const [emptyTextArea, setEmptyTextArea] = useState(false)
+  const [modalDelete, setModalDelete] = useState(false)
   const PageName = "Sertifikat Tanah";
 
   const sampleData = [
@@ -152,7 +157,9 @@ function DetailTransaksi() {
                 Lakukan perbaruan progres yang telah anda kerjakan secara
                 berkala. Ini akan memberikan kepercayaan client pada anda{" "}
               </p>
-              <button className="flex px-6 py-2 rounded-lg border bg-[#47BF37] hover:bg-[#2CA428] text-white text-[14px] leading-[20px] tracking-[0.25px] items-center justify-center mt-4 sm:mt-0">
+              <button 
+                onClick={() => setEmptyTextArea(!emptyTextArea)}
+                className="flex px-6 py-2 rounded-lg border bg-[#47BF37] hover:bg-[#2CA428] text-white text-[14px] leading-[20px] tracking-[0.25px] items-center justify-center mt-4 sm:mt-0">
                 <img
                   src="/iconGoogle/add_circle.svg"
                   alt="add"
@@ -162,6 +169,13 @@ function DetailTransaksi() {
                   Tambah Progres
                 </span>
               </button>
+              <TextAreaModal
+                active={emptyTextArea}
+                setConfirm={() => setEmptyTextArea(!emptyTextArea)}
+                setCancel={() => setEmptyTextArea(!emptyTextArea)}
+                title="Catatan/progres anda"
+                placeholder={"misal: saya telah menyelesaikan SHGB, besok saya akan menemui anda ..."}
+              />
             </div>
             {/* END: update */}
             <div className="overflow-x-auto">
@@ -196,19 +210,37 @@ function DetailTransaksi() {
                       <td className="text-left py-2">{data.catatan}</td>
                       <td className="px-4 py-4 flex flex-row gap-4 flex-wrap md:flex-nowrap">
                         <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0 text-[#344054]">
-                          <Link href="...">
-                            <a className="self-center font-medium ml-2 cursor-pointer hover:underline whitespace-nowrap">
+                            <button
+                              onClick={() => setTextArea(!TextArea)}
+                              className="self-center font-medium ml-2 cursor-pointer hover:underline whitespace-nowrap">
                               <EditIcon className="text-[20px]" /> Edit
-                            </a>
-                          </Link>
+                            </button>
+                          
+                            <TextAreaModal
+                              active={TextArea}
+                              setConfirm={() => setTextArea(!TextArea)}
+                              setCancel={() => setTextArea(!TextArea)}
+                              title="Catatan/progres anda"
+                              placeholder={"misal: saya telah menyelesaikan SHGB, besok saya akan menemui anda ..."}
+                              value={data.catatan}
+                            />
                         </div>
                         <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0 text-[#A41F12]">
-                          <Link href="...">
-                            <a className="self-center font-medium ml-2 cursor-pointer hover:underline whitespace-nowrap">
+                            <button 
+                              onClick={() => setModalDelete(!modalDelete)}
+                              className="self-center font-medium ml-2 cursor-pointer hover:underline whitespace-nowrap">
                               <DeleteOutlineIcon className="text-[20px]" />
                               Hapus
-                            </a>
-                          </Link>
+                            </button>
+                            <TextOnlyConfirmationModal
+                                active={modalDelete}
+                                setConfirm={() => setModalDelete(!modalDelete)}
+                                setCancel={() => setModalDelete(!modalDelete)}
+                                title="Apakah Anda ingin menghapus catatan ini?"
+                                message="Setelah Anda menghapus catatan ini maka client Anda tidak dapat melihat catatan ini kembali."
+                                confirmText="Hapus"
+                                confirmColor="#E55124"
+                            />
                         </div>
                       </td>
                     </tr>

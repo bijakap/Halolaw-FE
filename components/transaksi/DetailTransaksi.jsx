@@ -1,10 +1,12 @@
 import UploadFileIcon from "@mui/icons-material/UploadFile";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import FileUploadModal from "../modal/FileUploadModal";
 import { useState } from "react";
-import Link from "next/Link";
+import Link from "next/link";
 
 function DetailTransaksi() {
   const [active, setActive] = useState(0);
+  const [modalActive, setModalActive] = useState(false);
   const PageName = "Sertifikat Tanah";
 
   const sampleData = [
@@ -186,12 +188,27 @@ function DetailTransaksi() {
                   <td className="">{data.status}</td>
                   <td className="">{data.tgl}</td>
                   <td className="px-4">
-                    <button className="flex px-6 py-2 rounded-lg border bg-white hover:bg-[#3A57E8] text-[#3A57E8] hover:text-white text-[14px] leading-[20px] tracking-[0.25px]">
+                    <button 
+                      onClick={() => {
+                        setModalActive(!modalActive)
+                      }}
+                      className="flex px-6 py-2 rounded-lg border bg-white hover:bg-[#3A57E8] text-[#3A57E8] hover:text-white text-[14px] leading-[20px] tracking-[0.25px]">
                       <UploadFileIcon className="text-[20px]" />{" "}
                       <span className="self-center font-medium ml-2">
                         Upload
                       </span>
                     </button>
+                    <FileUploadModal
+                      active={modalActive}
+                      setConfirm={() => {
+                        setModalActive(!modalActive)
+                      }}
+                      setCancel={() => {
+                        setModalActive(!modalActive)
+                      }}
+                      title={data.dokumen}
+                      message={"Format file: pdf / jpg / png "}
+                    />
                   </td>
                 </tr>
               ))}

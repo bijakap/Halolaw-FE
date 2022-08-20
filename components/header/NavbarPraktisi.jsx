@@ -1,6 +1,10 @@
 import Link from "next/link";
+import { useRouter } from 'next/router'
 
 const NavbarPraktisi = ({close, setClose}) => {
+  const router = useRouter()
+  // console.log(router.pathname);
+  
   return(
     <div className={`bg-white w-auto p-5 shadow-md`}>
       {/* Desktop */}
@@ -9,12 +13,23 @@ const NavbarPraktisi = ({close, setClose}) => {
         <div className="block">
           <div className="flex gap-6 mr-5">
               <img src="/sidebar/lonceng.svg" alt="lonceng" />
-              <Link href={"/praktisi/profil"}>
-                <a className="flex gap-4">
-                  <img src='/avatarPraktisi.png' className='rounded-full h-8 w-8 object-cover'/>
-                  <p className='self-center text-[#232D42] font-semibold text-sm leading-5 tracking-[0.25px]'>Aditya</p>
-                </a>
-              </Link>
+              {
+                router.pathname.includes("admin") ? 
+                <Link href={"/admin/pengaturan/pengaturanAkun"}>
+                  <a className="flex gap-4">
+                    <img src='/avatarPraktisi.png' className='rounded-full h-8 w-8 object-cover'/>
+                    <p className='self-center text-[#232D42] font-semibold text-sm leading-5 tracking-[0.25px]'>Aditya</p>
+                  </a>
+                </Link>
+                :
+                <Link href={"/praktisi/profil"}>
+                  <a className="flex gap-4">
+                    <img src='/avatarPraktisi.png' className='rounded-full h-8 w-8 object-cover'/>
+                    <p className='self-center text-[#232D42] font-semibold text-sm leading-5 tracking-[0.25px]'>Aditya</p>
+                  </a>
+                </Link>
+              }
+              
             </div>
         </div>
       </div>
@@ -26,12 +41,22 @@ const NavbarPraktisi = ({close, setClose}) => {
           <div className="block">
             <div className="flex gap-6 mr-5">
                 <img src="/sidebar/lonceng.svg" alt="lonceng" />
-                <Link href={"/praktisi/profil"}>
-                  <a className="flex gap-6">
-                    <img src='/profiledummy.png' className='rounded-full h-8 w-8 object-cover'/>
-                    <p className='self-center text-[#232D42] font-semibold text-sm leading-5 tracking-[0.25px]'>Aditya</p>
-                  </a>
-                </Link>
+                {
+                router.pathname.includes("admin") ? 
+                  <Link href={"/admin/pengaturan/pengaturanAkun"}>
+                    <a className="flex gap-4">
+                      <img src='/avatarPraktisi.png' className='rounded-full h-8 w-8 object-cover'/>
+                      <p className='self-center text-[#232D42] font-semibold text-sm leading-5 tracking-[0.25px]'>Aditya</p>
+                    </a>
+                  </Link>
+                  :
+                  <Link href={"/praktisi/profil"}>
+                    <a className="flex gap-4">
+                      <img src='/avatarPraktisi.png' className='rounded-full h-8 w-8 object-cover'/>
+                      <p className='self-center text-[#232D42] font-semibold text-sm leading-5 tracking-[0.25px]'>Aditya</p>
+                    </a>
+                  </Link>
+                }
               </div>
           </div>
         </div>

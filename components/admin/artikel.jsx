@@ -4,10 +4,12 @@ import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRou
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import Pagination from "../pagination/Pagination";
+import TextOnlyConfirmationModal from "../modal/TextOnlyConfirmationModal"
 
-function ArtikelAdmin() {
+const ArtikelAdmin = () => {
   const PageName = "Properti";
   const [active, setActive] = useState(0);
+  const [deleteModal, setDeleteModal] = useState(false);
 
   const sampleData = [
     {
@@ -159,12 +161,12 @@ function ArtikelAdmin() {
                           </Link>
                         </div>
                         <div className="flex text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0 text-[#A41F12]">
-                          <Link href="...">
-                            <a className="self-center font-medium ml-2 cursor-pointer hover:underline whitespace-nowrap">
-                              <DeleteOutlineIcon className="text-[20px]" />
-                              Hapus
-                            </a>
-                          </Link>
+                          <button 
+                            onClick={() => setDeleteModal(!deleteModal)}
+                            className="self-center font-medium ml-2 cursor-pointer hover:underline whitespace-nowrap">
+                            <DeleteOutlineIcon className="text-[20px]" />
+                            Hapus
+                          </button>
                         </div>
                       </td>
                   </tr>
@@ -189,6 +191,17 @@ function ArtikelAdmin() {
           </div>
         </div>
       </div>
+      <TextOnlyConfirmationModal
+        active={deleteModal}
+        title={"Apakah Anda ingin melakukan hapus Artikel?"}
+        message={"Tindakan ini tidak dapat diubah, setelah Anda menghapus artikel ini, artikel tersebut hilang."}
+        setCancel={() => setDeleteModal(!deleteModal)}
+        setConfirm={() => {
+          () => setDeleteModal(!deleteModal)
+        }}
+        confirmColor="#C4351A"
+        confirmText="Hapus"
+      />
     </div>
   );
 }

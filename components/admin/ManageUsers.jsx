@@ -3,10 +3,18 @@ import EditIcon from "@mui/icons-material/Edit";
 import Pagination from "../pagination/Pagination";
 import { useState } from "react";
 import Link from "next/Link";
+import EditUserModal from "../modal/EditUserModal";
+import TextOnlyConfirmationModal from "../modal/TextOnlyConfirmationModal";
+import SuccesModal from "../modal/SuccesModal";
+import TambahUserModal from "../modal/TambahUserModal";
 
 const ManageUsers = () => {
   const PageName = "Konsultasi";
   const [active, setActive] = useState(0);
+  const [editModal, setEditModal] = useState(false)
+  const [ConfirmModal, setConfirmModal] = useState(false)
+  const [succesModal, setSuccessModal] = useState(false)
+  const [addModal, setAddModal] = useState(false)
 
   const sampleData = [
     {
@@ -189,12 +197,12 @@ const ManageUsers = () => {
             {/* END: Search */}
             {/* START: Button add */}
             <div className="mb-4 md:mb-0">
-              <Link href={"..."}>
-                <button className="px-6 py-[10px] flex gap-2 justify-center items-center border border-[#E0E0E0] text-[#116E1C] hover:bg-[#47BF37] hover:text-white rounded-lg">
-                  <AddCircleOutlineOutlinedIcon className="text-[16px]" />
-                  Add new
-                </button>
-              </Link>
+              <button 
+                onClick={() => setAddModal(!addModal)}
+                className="px-6 py-[10px] flex gap-2 justify-center items-center border border-[#E0E0E0] text-[#116E1C] hover:bg-[#47BF37] hover:text-white rounded-lg">
+                <AddCircleOutlineOutlinedIcon className="text-[16px]" />
+                Add new
+              </button>
             </div>
             {/* END: Button add */}
           </div>
@@ -262,9 +270,11 @@ const ManageUsers = () => {
                       </td>
                       <td className="px-4 py-4 flex flex-row gap-6 flex-wrap">
                         <div className="flex text-[#344054] text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                          <a className="self-center font-medium ml-2 cursor-pointer hover:underline">
-                          <EditIcon className="text-[20px]"/>Edit
-                          </a>
+                          <button
+                            onClick={() => setEditModal(!editModal)} 
+                            className="self-center font-medium ml-2 cursor-pointer hover:underline">
+                            <EditIcon className="text-[20px]"/>Edit
+                          </button>
                         </div>
                       </td>
                     </tr>
@@ -310,9 +320,11 @@ const ManageUsers = () => {
                       <td className="p-2 md:px-0">{data.domisili}</td>
                       <td className="px-4 py-4 flex flex-row gap-6 flex-wrap ">
                         <div className="flex text-[#344054] text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                          <a className="self-center font-medium ml-2 cursor-pointer hover:underline">
-                          <EditIcon className="text-[20px]"/>Edit
-                          </a>
+                          <button
+                            onClick={() => setEditModal(!editModal)} 
+                            className="self-center font-medium ml-2 cursor-pointer hover:underline">
+                            <EditIcon className="text-[20px]"/>Edit
+                          </button>
                         </div>
                       </td>
                     </tr>
@@ -338,6 +350,35 @@ const ManageUsers = () => {
           </div>
         </div>
       </div>
+      <EditUserModal
+        active={editModal}
+        setActive={() => setEditModal(!editModal)}
+        setReset={() => {
+          setConfirmModal(!ConfirmModal)
+          setEditModal(!editModal)
+          }
+        }
+      />
+      <TextOnlyConfirmationModal
+        active={ConfirmModal}
+        title={"Apakah Anda ingin melakukan reset password?"}
+        message={"Setelah Anda melakukan reset password pada user ini, maka password berubah menggunakan setelan default yaitu “halolaw123”."}
+        setCancel={() => setConfirmModal(!ConfirmModal)}
+        setConfirm={() => {
+          setSuccessModal(!succesModal)
+          setConfirmModal(!ConfirmModal)
+        }}
+      />
+      <SuccesModal
+        active={succesModal}
+        setActive={() => setSuccessModal(!succesModal)}
+        message="Berhasil Reset Password"
+      />
+      <TambahUserModal
+        active={addModal}
+        setCancel={() => setAddModal(!addModal)}
+        setConfirm={() => setAddModal(!addModal)}
+      />
     </div>
   );
 };

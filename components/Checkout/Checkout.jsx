@@ -1,4 +1,5 @@
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ConfirmationModal from "../modal/ConfirmationModal";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Select from "react-select";
@@ -8,6 +9,7 @@ export default function Checkout() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
+  const [active, setActive] = useState(false)
   const customStyles = {
     control: (base, state) => ({
       ...base,
@@ -202,9 +204,7 @@ export default function Checkout() {
           </div>
           <div
             className="text-center bg-[#3A57E8] hover:bg-[#2A41C7] cursor-pointer"
-            onClick={() => {
-              router.push("/CheckoutSucces");
-            }}
+            onClick={() => setActive(!active)}
           >
             <button className="text-white text-[16px] font-[700] leading-[20px] tracking-[0.15px] py-6">
               Checkout
@@ -212,6 +212,17 @@ export default function Checkout() {
           </div>
         </div>
       </div>
+
+      <ConfirmationModal
+        active={active} 
+        setCancel={() => setActive(!active)}
+        image={"checkpayment.jpg"}
+        message={"Apakan Anda ingin melanjutkan pembayaran?"}
+        confirmText={"Bayar Sekarang"}
+        setConfirm={() => {
+            router.push("/CheckoutSucces");
+          }}
+      />
     </div>
   );
 }

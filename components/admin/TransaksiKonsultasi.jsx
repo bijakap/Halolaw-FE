@@ -1,8 +1,11 @@
 import Link from "next/link";
 import Pagination from "../pagination/Pagination";
+import DetailConsulModal from "../modal/DetailConsulModal";
+import { useState } from "react";
 
 const TransaksiKonsultasi = () => {
   const PageName = "Konsultasi";
+  const [Modal, setModal] = useState(false)
 
   const sampleData = [
     {
@@ -180,7 +183,9 @@ const TransaksiKonsultasi = () => {
                     <td className="text-left py-2 px-3">{data.tgl}</td>
                     <td className="py-2 pl-2 pr-6">
                       <div className="flex justify-start">
-                        <button className="rounded-lg bg-white border-2 border-[#E0E0E0] py-2 px-6 text-[#116E1C]  hover:text-white hover:outline-none hover:bg-[#47BF37]">
+                        <button 
+                          onClick={() => setModal(!Modal)}
+                          className="rounded-lg bg-white border-2 border-[#E0E0E0] py-2 px-6 text-[#116E1C]  hover:text-white hover:outline-none hover:bg-[#47BF37]">
                           <p className="font-medium text-sm tracking-[0.25px]">Detail</p>
                         </button>
                       </div>
@@ -207,8 +212,11 @@ const TransaksiKonsultasi = () => {
           </div>
         </div>
         {/* END: Box Content Table */}
-
       </div>
+      <DetailConsulModal
+        active={Modal}
+        setActive={() => setModal(!Modal)}
+      />
     </div>
   )
 }

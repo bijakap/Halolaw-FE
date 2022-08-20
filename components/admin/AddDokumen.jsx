@@ -1,15 +1,39 @@
-import Link from "next/Link";
+import Link from "next/link";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import AddCircleOutlineRoundedIcon from "@mui/icons-material/AddCircleOutlineRounded";
 import InfoIcon from "@mui/icons-material/Info";
 import Select from "react-select";
+// import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+import dynamic from 'next/dynamic'; 
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
+import { useEffect, useState } from "react";
+import SuccesModal from "../modal/SuccesModal";
+import { useRouter } from "next/router";
 // import { Filter } from "@material-ui/icons";
 
 function AddDokumen() {
+  const router = useRouter()
   const PageName = "Tambah Dokumen";
-  function handleClick(e) {
-    e.preventDefault();
-    console.log("You clicked submit.");
+  // function handleClick(e) {
+  //   e.preventDefault();
+  //   console.log("You clicked submit.");
+  // }
+
+  const [show, setShow] = useState([false,false,false])
+  const [listKota, setListKota] = useState([null, null])
+  const [modal, setModal] = useState(false)
+
+  const handleClick = (index) => {
+    const newShow = [...show]
+    newShow[index] = !newShow[index]
+    setShow(newShow)
+  }
+
+
+  if (typeof window === "undefined") {
+    return null //return nothing on the server-side
   }
 
   const optionKota = [
@@ -73,6 +97,24 @@ function AddDokumen() {
     "Surat Keterangan Domisili ",
   ];
 
+  // const [editorState, onEditorStateChange] = useState(null)
+  const [value, setValue] = useState('');
+
+  const  modules  = {
+    toolbar: [
+          [{ font: [] }],
+          [{ header: [1, 2, 3, 4, 5, 6, false] }],
+          ["bold", "italic", "underline", "strike"],
+          [{ color: [] }, { background: [] }],
+          [{ script:  "sub" }, { script:  "super" }],
+          ["blockquote", "code-block"],
+          [{ list:  "ordered" }, { list:  "bullet" }],
+          [{ indent:  "-1" }, { indent:  "+1" }, { align: [] }],
+          ["link", "image", "video"],
+          ["clean"],
+      ],
+  };
+
   return (
     <div className="flex justify-center mx-4 md:mx-10 w-auto">
       <div className="w-full">
@@ -126,7 +168,19 @@ function AddDokumen() {
               ></input>
             </div>
             {/* START:CK_Editor */}
-
+            {/* <div className="border border-[#98A2B3] rounded-lg min-h-[250px]"> */}
+              <label className="text-sm font-medium text-gray-700 tracking-wide">
+                Deskripsi <span className="text-[#C4351A]">*</span>
+              </label>
+              <div className="app">
+                <ReactQuill 
+                  theme="snow" 
+                  value={value} 
+                  onChange={setValue} 
+                  modules={modules}
+                  />
+              </div>
+            {/* </div> */}
             {/* END:CK_Editor */}
           </div>
           {/* END:Form-group */}
@@ -141,19 +195,24 @@ function AddDokumen() {
           <div className="w-full flex flex-col gap-6">
             {/* START: Umum */}
             <div className="flex flex-col gap-2">
-              <Link href={"..."}>
-                <a
-                  onClick={handleClick}
-                  className="flex flex-row gap-[10px] font-bold text-[#344054]"
+              {/* <Link href={"..."}> */}
+                <p
+                  onClick={() => handleClick(0)}
+                  className="flex flex-row gap-[10px] font-bold text-[#344054] cursor-pointer"
                 >
                   Umum
-                  <KeyboardArrowDownRoundedIcon />
-                </a>
-              </Link>
-              <div className="w-full flex flex-row gap-[10px] flex-wrap whitespace-normal md:whitespace-nowrap">
+                  {
+                    show[0] ? 
+                    <KeyboardArrowUpIcon />
+                    :
+                    <KeyboardArrowDownRoundedIcon />
+                  }
+                </p>
+              {/* </Link> */}
+              <div className={`w-full ${show[0] ? "flex" : "hidden"} flex-row gap-[10px] flex-wrap whitespace-normal md:whitespace-nowrap"`}>
                 {umum.map((data, index) => (
-                  <div className="flex gap-4 items-center w-[230px] md:w-[300px]">
-                    <input type="checkbox" id={index} class="scale-125" />
+                  <div key={index} className="flex gap-4 items-center w-[230px] md:w-[300px]">
+                    <input type="checkbox" id={index} className="scale-125" />
                     <label htmlFor={index}>{data}</label>
                   </div>
                 ))}
@@ -162,19 +221,22 @@ function AddDokumen() {
             {/* END: Umum */}
             {/* START: Properti */}
             <div className="flex flex-col gap-2">
-              <Link href={"..."}>
-                <a
-                  onClick={handleClick}
-                  className="flex flex-row gap-[10px] font-bold text-[#344054]"
+                <p
+                  onClick={() => handleClick(1)}
+                  className="flex flex-row gap-[10px] font-bold text-[#344054] cursor-pointer"
                 >
                   Properti
-                  <KeyboardArrowDownRoundedIcon />
-                </a>
-              </Link>
-              <div className="w-full flex flex-row gap-[10px] flex-wrap whitespace-normal md:whitespace-nowrap">
+                  {
+                    show[1] ? 
+                    <KeyboardArrowUpIcon />
+                    :
+                    <KeyboardArrowDownRoundedIcon />
+                  }
+                </p>
+              <div className={`w-full ${show[1] ? "flex" : "hidden"} flex-row gap-[10px] flex-wrap whitespace-normal md:whitespace-nowrap"`}>
                 {properti.map((data, index) => (
-                  <div className="flex gap-4 items-center w-[230px] md:w-[300px]">
-                    <input type="checkbox" id={index} class="scale-125" />
+                  <div key={index} className="flex gap-4 items-center w-[230px] md:w-[300px]">
+                    <input type="checkbox" id={index} className="scale-125" />
                     <label htmlFor={index}>{data}</label>
                   </div>
                 ))}
@@ -183,19 +245,22 @@ function AddDokumen() {
             {/* END: Properti */}
             {/* START: Perusahaan */}
             <div className="flex flex-col gap-2">
-              <Link href={"..."}>
-                <a
-                  onClick={handleClick}
-                  className="flex flex-row gap-[10px] font-bold text-[#344054]"
+                <p
+                  onClick={() => handleClick(2)}
+                  className="flex flex-row gap-[10px] font-bold text-[#344054] cursor-pointer"
                 >
                   Perusahaan
-                  <KeyboardArrowDownRoundedIcon />
-                </a>
-              </Link>
-              <div className="w-full flex flex-row gap-[10px] flex-wrap whitespace-normal md:whitespace-nowrap">
+                  {
+                    show[2] ? 
+                    <KeyboardArrowUpIcon />
+                    :
+                    <KeyboardArrowDownRoundedIcon />
+                  }
+                </p>
+              <div className={`w-full ${show[2] ? "flex" : "hidden"} flex-row gap-[10px] flex-wrap whitespace-normal md:whitespace-nowrap"`}>
                 {perusahaan.map((data, index) => (
-                  <div className="flex gap-4 items-center w-[230px] md:w-[300px]">
-                    <input type="checkbox" id={index} class="scale-125" />
+                  <div key={index} className="flex gap-4 items-center w-[230px] md:w-[300px]">
+                    <input type="checkbox" id={index} className="scale-125" />
                     <label htmlFor={index}>{data}</label>
                   </div>
                 ))}
@@ -227,7 +292,8 @@ function AddDokumen() {
           </h6>
           {/* START:Form-group */}
           <div className="flex flex-col">
-            <div className="grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-0 w-full lg:w-[840px]">
+
+            {/* <div className="grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-0 w-full lg:w-[840px]">
               <div className="flex flex-col">
                 <label className="text-sm font-medium text-gray-700 tracking-wide">
                   kabupaten/Kota <span className="text-[#C4351A]">*</span>
@@ -247,7 +313,7 @@ function AddDokumen() {
                   Harga <span className="text-[#C4351A]">*</span>
                 </label>
                 <div className="relative flex flex-row border border-gray-300 rounded-lg mt-2 mb-6">
-                  <span class="py-[10px] px-8 flex items-center rounded-l-lg bg-[#E8EDF1] text-[#252A31] font-medium">
+                  <span className="py-[10px] px-8 flex items-center rounded-l-lg bg-[#E8EDF1] text-[#252A31] font-medium">
                     Rp
                   </span>
                   <input
@@ -257,48 +323,56 @@ function AddDokumen() {
                   ></input>
                 </div>
               </div>
-            </div>
-            <div className="grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-0 w-full lg:w-[840px]">
-              <div className="flex flex-col">
-                <label className="text-sm font-medium text-gray-700 tracking-wide">
-                  kabupaten/Kota <span className="text-[#C4351A]">*</span>
-                </label>
-                <div className="w-full mt-2">
-                  <Select
-                    options={optionKota}
-                    styles={customStyles}
-                    placeholder={"--Pilih--"}
-                    // maxMenuHeight={250}
-                    isSearchable={false}
-                  />
+            </div> */}
+            {
+              listKota.map((data, index) => (
+                <div className="grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-0 w-full lg:w-[840px]">
+                  <div className="flex flex-col">
+                    <label className="text-sm font-medium text-gray-700 tracking-wide">
+                      kabupaten/Kota <span className="text-[#C4351A]">*</span>
+                    </label>
+                    <div className="w-full mt-2">
+                      <Select
+                        options={optionKota}
+                        styles={customStyles}
+                        placeholder={"--Pilih--"}
+                        // maxMenuHeight={250}
+                        isSearchable={false}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col">
+                    <label className="text-sm font-medium text-gray-700 tracking-wide">
+                      Harga <span className="text-[#C4351A]">*</span>
+                    </label>
+                    <div className="relative flex flex-row border border-gray-300 rounded-lg mt-2 mb-6">
+                      <span className="py-[10px] px-8 flex items-center rounded-l-lg bg-[#E8EDF1] text-[#252A31] font-medium">
+                        Rp
+                      </span>
+                      <input
+                        className="w-full text-base px-4 py-2 focus:outline-none focus:border-[#3A57E8] rounded-r-lg"
+                        type="number"
+                        placeholder="misal: 3000000"
+                      ></input>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="flex flex-col">
-                <label className="text-sm font-medium text-gray-700 tracking-wide">
-                  Harga <span className="text-[#C4351A]">*</span>
-                </label>
-                <div className="relative flex flex-row border border-gray-300 rounded-lg mt-2 mb-6">
-                  <span class="py-[10px] px-8 flex items-center rounded-l-lg bg-[#E8EDF1] text-[#252A31] font-medium">
-                    Rp
-                  </span>
-                  <input
-                    className="w-full text-base px-4 py-2 focus:outline-none focus:border-[#3A57E8] rounded-r-lg"
-                    type="number"
-                    placeholder="misal: 3000000"
-                  ></input>
-                </div>
-              </div>
-            </div>
+              ))
+            }
 
             <div>
-              <Link href={"..."}>
-                <button className="flex flex-row gap-2 px-6 py-[10px] rounded-lg border bg-white hover:bg-[#2A41C7] text-[#2A41C7] hover:text-white text-[14px] leading-[20px] tracking-[0.25px] items-center justify-center">
-                  <AddCircleOutlineRoundedIcon />
-                  <span className="self-center font-medium ml-2">
-                    Tambah Kota
-                  </span>
-                </button>
-              </Link>
+              <button
+                onClick={() => {
+                  const newList = [...listKota]
+                  newList.push(null)
+                  setListKota(newList)
+                }} 
+                className="flex flex-row gap-2 px-6 py-[10px] rounded-lg border bg-white hover:bg-[#2A41C7] text-[#2A41C7] hover:text-white text-[14px] leading-[20px] tracking-[0.25px] items-center justify-center">
+                <AddCircleOutlineRoundedIcon />
+                <span className="self-center font-medium ml-2">
+                  Tambah Kota
+                </span>
+              </button>
             </div>
           </div>
           {/* END:Form-group */}
@@ -347,12 +421,12 @@ function AddDokumen() {
           {/* START:Main-content */}
           <div className="flex flex-row justify-between flex-wrap lg:flex-nowrap">
             <div className="flex gap-4 justifty-start items-center">
-              <label class="relative flex justify-between group items-center">
+              <label className="relative flex justify-between group items-center">
                 <input
                   type="checkbox"
-                  class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
+                  className="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
                 />
-                <span class="w-10 h-6 flex items-center flex-shrink-0 p-1 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-[#3D8DFF] after:w-4 after:h-4 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-4 group-hover:after:translate-x-1"></span>
+                <span className="w-10 h-6 flex items-center flex-shrink-0 p-1 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-[#3D8DFF] after:w-4 after:h-4 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-4 group-hover:after:translate-x-1"></span>
               </label>
               <p className="font-regular tracking-[0.25px] leading-5 whitespace-nowrap">
                 Simpan Sebagai Draft{" "}
@@ -368,6 +442,7 @@ function AddDokumen() {
                 className="w-full md:w-[160px] flex justify-center bg-[#F2F4F7] text-[#475467] py-[10px] rounded-[8px] text-sm tracking-wide font-[500] cursor-pointer"
               />
               <input
+                onClick={() => setModal(!modal)}
                 type="submit"
                 value="Simpan dan Unggah"
                 className="w-full md:w-[240px] flex justify-center bg-[#3A57E8] text-gray-100 py-[10px] rounded-[8px] text-sm tracking-wide font-[500] cursor-pointer"
@@ -378,6 +453,13 @@ function AddDokumen() {
         </div>
         {/* END: SECTION-5 */}
       </div>
+      <SuccesModal
+        active={modal} 
+        setActive={() => {
+          router.push("/admin/layanan/properti")
+        }} 
+        message="Berhasil menambah dokumen baru"
+      />
     </div>
   );
 }

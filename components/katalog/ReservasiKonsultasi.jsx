@@ -1,7 +1,10 @@
 import HomeIcon from "@mui/icons-material/Home";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import ConfirmationModal from "../modal/ConfirmationModal";
+import SuccesModal from "../modal/SuccesModal";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useState } from "react";
 
 function ReservasiKonsultasi() {
   const router = useRouter();
@@ -14,6 +17,9 @@ function ReservasiKonsultasi() {
     "Pembuatan & Perubahan akta",
     "Perizinan Usaha",
   ];
+
+  const [active, setActive] = useState(false)
+  const [successModal, setSuccessModal] = useState(false)
 
   return (
     <div className="block">
@@ -170,12 +176,30 @@ function ReservasiKonsultasi() {
           </button>
           <button
             className="w-full md:w-[172px] flex justify-center bg-[#3A57E8] hover:bg-[#2A41C7] text-white py-[10px] px-6 rounded-[8px] tracking-wide font-[500] cursor-pointer"
-            onClick={() => {
-              router.back();
-            }}
+            onClick={() => setActive(!active)}
           >
             Simpan
           </button>
+          <ConfirmationModal
+            active={active} 
+            setCancel={() => setActive(!active)}
+            image={"checkpayment.jpg"}
+            message={"Apakan semua data sudah benar?"}
+            confirmText={"Ya, sudah benar"}
+            setConfirm={() => 
+            {
+              setSuccessModal(!successModal); 
+              setActive(!active)
+            }
+            }
+          />
+          <SuccesModal
+            active={successModal}
+            setActive={() => {
+              router.back();
+            }}
+            message={"Berhasil melakukan reservasi konsultasi"}
+          />
         </div>
       </div>
     </div>

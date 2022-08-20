@@ -4,10 +4,17 @@ import { useState } from "react";
 import Select from "react-select";
 import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
 import { textAlign } from "@mui/system";
+import TextOnlyConfirmationModal from "../modal/TextOnlyConfirmationModal";
+import TransactionModal from "../modal/TransactionModal";
 
 const TransaksiDokumen = () => {
   const PageName = "Dokumen Hukum";
   const [active, setActive] = useState(0);
+  const [ConfirmModal, setConfirmModal] = useState(false)
+  const [TransModal, setTransModal] = useState(false)
+  const [TransDoneModal, setTransDoneModal] = useState(false)
+
+
 
   const sampleData = [
     {
@@ -401,7 +408,9 @@ const TransaksiDokumen = () => {
                       </td>
                       <td className="py-2 pl-2 pr-4">
                         <div className="flex justify-center">
-                          <button className="rounded-lg bg-white border-2 border-[#E0E0E0] py-[6px] px-6 text-[#116E1C]  hover:text-white hover:outline-none hover:bg-[#47BF37]">
+                          <button 
+                            onClick={() => setConfirmModal(!ConfirmModal)}
+                            className="rounded-lg bg-white border-2 border-[#E0E0E0] py-[6px] px-6 text-[#116E1C]  hover:text-white hover:outline-none hover:bg-[#47BF37]">
                             <p className="font-medium text-sm tracking-[0.25px]">
                               Konfirmasi
                             </p>
@@ -498,7 +507,9 @@ const TransaksiDokumen = () => {
                       </td>
                       <td className="py-2 pl-2 pr-6">
                         <div className="flex justify-center">
-                          <button className="rounded-lg bg-white border-2 border-[#E0E0E0] py-2 px-6 text-[#116E1C]  hover:text-white hover:outline-none hover:bg-[#47BF37]">
+                          <button 
+                            onClick={() => setTransModal(!TransModal)}
+                            className="rounded-lg bg-white border-2 border-[#E0E0E0] py-2 px-6 text-[#116E1C]  hover:text-white hover:outline-none hover:bg-[#47BF37]">
                             <p className="font-medium text-sm tracking-[0.25px]">
                               Detail
                             </p>
@@ -585,7 +596,9 @@ const TransaksiDokumen = () => {
                       <td className="text-left py-2 px-3">{data.praktisi}</td>
                       <td className="py-2 pl-2 pr-6">
                         <div className="flex justify-start">
-                          <button className="rounded-lg bg-white border-2 border-[#E0E0E0] py-2 px-6 text-[#116E1C]  hover:text-white hover:outline-none hover:bg-[#47BF37]">
+                         <button 
+                            onClick={() => setTransDoneModal(!TransDoneModal)}
+                            className="rounded-lg bg-white border-2 border-[#E0E0E0] py-2 px-6 text-[#116E1C]  hover:text-white hover:outline-none hover:bg-[#47BF37]">
                             <p className="font-medium text-sm tracking-[0.25px]">
                               Detail
                             </p>
@@ -617,6 +630,23 @@ const TransaksiDokumen = () => {
         </div>
         {/* END: Box Content Table */}
       </div>
+      <TextOnlyConfirmationModal
+          active={ConfirmModal}
+          setConfirm={() => setConfirmModal(!ConfirmModal)}
+          setCancel={() => setConfirmModal(!ConfirmModal)}
+          title="Apakah Anda ingin mengkonfirmasi pembayaran?"
+          message="Setelah Anda konfirmasi pembayaran ini, maka transaksi akan berubah status menjadi transaksi aktif."
+          confirmText="Terima"
+      />
+      <TransactionModal
+        active={TransModal}
+        setActive={() => setTransModal(!TransModal)}
+      />
+      <TransactionModal
+        active={TransDoneModal}
+        setActive={() => setTransDoneModal(!TransDoneModal)}
+        done={true}
+      />
     </div>
   );
 };

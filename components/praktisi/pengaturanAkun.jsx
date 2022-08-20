@@ -1,8 +1,16 @@
+import TextOnlyConfirmationModal from "../modal/TextOnlyConfirmationModal"
+import SuccesModal from "../modal/SuccesModal"
+import { useState } from "react"
+import { useRouter } from "next/router"
 import Link from "next/link";
 
 function PengaturanAkun() {
   const PageName = "Pengaturan Akun";
   const email = "testing@gmail.com";
+  const router = useRouter()
+  const [active, setActive] = useState(false)
+  const [activeDelete, setActiveDelete] = useState(false)
+  const [activeSuccess, setActiveSuccess] = useState(false)
   return (
     <div className="flex justify-center mx-10 w-auto">
       {/* START: Content */}
@@ -72,11 +80,11 @@ function PengaturanAkun() {
                   type="password" placeholder="Konfirmasi Password baru"
                 />
               </div>
-              <input
-                type="submit"
-                value="Ganti Password"
-                className="w-full flex justify-center bg-[#3A57E8] hover:bg-[#2A41C7] text-gray-100 py-[10px] rounded-[8px] text-sm tracking-wide font-[500] cursor-pointer mt-2"
-              />
+              <button 
+                  onClick={() => setActive(!active)}
+                  className="w-full flex justify-center bg-[#3A57E8] hover:bg-[#2A41C7] text-gray-100 py-[10px] rounded-[8px] text-sm tracking-wide font-[500] cursor-pointer mt-2">
+                  Ganti Password
+              </button>
             </div>
             {/* END: kiri */}
             {/* START: kanan */}
@@ -109,13 +117,42 @@ function PengaturanAkun() {
               </p>
             </div>
             <div>
-              <button className="rounded-lg py-[10px] px-6 border text-[#840D0B] hover:text-white hover:bg-[#E55124] hover:outline-none font-medium text-[14px] leading-[20px] tracking-[0.25px]">
+            <button
+                onClick={() => setActiveDelete(!activeDelete)}
+                className="rounded-lg py-[10px] px-6 border text-[#840D0B] hover:text-white hover:bg-[#E55124] hover:outline-none font-medium text-[14px] leading-[20px] tracking-[0.25px]">
                 Hapus
-              </button>
+            </button>
             </div>
           </div>
         </div>
       </div>
+      <TextOnlyConfirmationModal
+            active={active}
+            setConfirm={() => {
+                setActive(!active)
+                setActiveSuccess(!activeSuccess)
+                }}
+            setCancel={() => setActive(!active)}
+            title={"Apakah Anda ingin melakukan penggantian password?"}
+            message={"Setelah Anda mengganti password, maka password berubah menggunakan password terbaru."}
+            confirmText="Ganti Password"
+        />
+        <SuccesModal
+            active={activeSuccess}
+            setActive={() => setActiveSuccess(!activeSuccess)}
+            message={"Berhasil mengganti password"}
+        />
+        <TextOnlyConfirmationModal
+            active={activeDelete}
+            setCancel={() => setActive(!activeDelete)}
+            setConfirm={() => {
+                router.push("/")
+            }} 
+            title={"Apakah Anda ingin menghapus akun ini?"}
+            message={"Setelah Anda menghapus akun, seluruh data akan dihapus & akun ini di nonaktifkan untuk melakukan transaksi apapun pada Halo Law."}
+            confirmText="Hapus Akun"
+            confirmColor={"#E55124"}
+        />
     </div>
   );
 }

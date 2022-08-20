@@ -3,8 +3,11 @@ import SearchIcon from "@mui/icons-material/Search";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import CardTransaksi from "./CardTransaksi";
+import InformationModal from "../modal/InformationModal";
+import { useState } from "react";
 
 function DaftarTransaski() {
+  const [active, setActive] = useState(false)
   const customStyles = {
     control: (base, state) => ({
       ...base,
@@ -130,6 +133,8 @@ function DaftarTransaski() {
               props={data}
               key={index}
               href={["/DetailTransaksi", "/invoice"]}
+              setActive={() => setActive(!active)}
+              active={active}
             />
           ))}
         </div>
@@ -161,6 +166,12 @@ function DaftarTransaski() {
           </div>
         </div>
       </div>
+      <InformationModal
+        active={active} 
+        setActive={() => setActive(!active)}
+        message={"Perumahan The Luxury no. B7, Jl. Pangeran Diponegoro, Desa Ancolmekar, Kec. Anjasari,  Kabupaten Bandung, Jawa Barat, Kode pos 40379 "}
+        title="Alamat"
+      />
     </div>
   );
 }

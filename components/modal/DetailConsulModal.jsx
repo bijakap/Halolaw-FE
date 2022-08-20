@@ -1,6 +1,6 @@
 
 
-const TransactionModal = ({active, setActive, title, clientName, date, category, praktisi, invoice, dokumen, done, processingTime}) => {
+const DetailConsulModal = ({active, setActive, title, clientName, date, phoneNumber, category, message}) => {
   return (
     <div className={active === false ? "hidden" : 'fixed z-10 inset-0 overflow-hidden bg-black/30'}>
       <div className="flex items-center justify-center h-screen w-screen">
@@ -14,25 +14,6 @@ const TransactionModal = ({active, setActive, title, clientName, date, category,
             </button>
           </div>
           <div className="flex flex-col px-4 pb-3 pt-2 gap-2">
-            <div className="bg-white p-4 flex flex-col gap-2">
-              <div className="w-full flex justify-between">
-                <p className="text-[#101828] font-normal text-[14px] leading-[20px] tracking-[0.25px] text-justify">Invoice</p>
-                <p className="text-[#116E1C] font-semibold text-[14px] leading-[18px] tracking-[0.4px]">{invoice}</p>
-              </div>
-              <div className="w-full flex justify-between">
-                <p className="text-[#101828] font-normal text-[14px] leading-[20px] tracking-[0.25px] text-justify">Tanggal pembelian</p>
-                <p className="text-[#101828] font-normal text-[14px] leading-[18px] tracking-[0.4px]">{date}</p>
-              </div>
-              {
-                done ?
-                <div className="w-full flex justify-between">
-                  <p className="text-[#101828] font-normal text-[14px] leading-[20px] tracking-[0.25px] text-justify">Waktu pengerjaan</p>
-                  <p className="text-[#101828] font-normal text-[14px] leading-[18px] tracking-[0.4px]">{processingTime}</p>
-                </div>
-                : 
-                <></>
-              }
-            </div>
             <div className="bg-white p-4 flex flex-col gap-5">
               <div className="flex justify-between">
                 <div className="w-1/2">
@@ -40,19 +21,25 @@ const TransactionModal = ({active, setActive, title, clientName, date, category,
                   <p className="text-[#101828] font-normal text-[14px] leading-[20px] tracking-[0.25px]">{clientName}</p>
                 </div>
                 <div className="w-1/2">
-                  <p className="text-[#116E1C] font-semibold text-[12px] leading-[18px] tracking-[0.4px]">Praktisi :</p>
-                  <p className="text-[#101828] font-normal text-[14px] leading-[20px] tracking-[0.25px]">{praktisi}</p>
+                  <p className="text-[#116E1C] font-semibold text-[12px] leading-[18px] tracking-[0.4px]">Tanggal Reservasi :</p>
+                  <p className="text-[#101828] font-normal text-[14px] leading-[20px] tracking-[0.25px]">{date}</p>
                 </div>
               </div>
               <div className="flex justify-between">
                 <div className="w-1/2">
-                  <p className="text-[#116E1C] font-semibold text-[12px] leading-[18px] tracking-[0.4px]">Dokumen :</p>
-                  <p className="text-[#101828] font-normal text-[14px] leading-[20px] tracking-[0.25px]">{dokumen}</p>
+                  <p className="text-[#116E1C] font-semibold text-[12px] leading-[18px] tracking-[0.4px]">Nomor HP :</p>
+                  <p className="text-[#101828] font-normal text-[14px] leading-[20px] tracking-[0.25px]">{phoneNumber}</p>
                 </div>
                 <div className="w-1/2">
                   <p className="text-[#116E1C] font-semibold text-[12px] leading-[18px] tracking-[0.4px]">Kategori :</p>
                   <p className="text-[#101828] font-normal text-[14px] leading-[20px] tracking-[0.25px]">{category}</p>
                 </div>
+              </div>
+            </div>
+            <div className="bg-white ">
+              <div className="w-full p-4">
+                <p className="text-[#116E1C] font-semibold text-[12px] leading-[18px] tracking-[0.4px]">Detail Permasalahan :</p>
+                <p className="text-[#101828] font-normal text-[14px] leading-[20px] tracking-[0.25px] text-justify">{message}</p>
               </div>
             </div>
           </div>
@@ -61,18 +48,14 @@ const TransactionModal = ({active, setActive, title, clientName, date, category,
     </div>
   )
 }
-TransactionModal.defaultProps = {
+DetailConsulModal.defaultProps = {
   active : false,
   title : "Title Modal",
   clientName : "Farizi Andira",
-  praktisi : "Aditya Zhafir Dhiaulhaq",
   date : "11 Maret 2022",
+  phoneNumber : "0822195342323",
   category : "Properti, HAKI",
   message : "Selamat pagi Halo Law, Saya ingin bertanya bolehkah saya memiliki jaminan (hak tanggungan) berupa tanah bila orang yang meminjam uang ke saya tidak mampu membayar utangnya?",
-  invoice : "INV/20220311/PPT/001",
-  dokumen : "Sertifikat Tanah",
-  done : false,
-  processingTime : "11/03/2022 - 18/03/2022"
 }
 
-export default TransactionModal;
+export default DetailConsulModal;

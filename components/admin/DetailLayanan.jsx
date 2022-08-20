@@ -4,10 +4,12 @@ import Pagination from "../pagination/Pagination";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
+import TextOnlyConfirmationModal from "../modal/TextOnlyConfirmationModal"
 
 function DetailLayanan() {
   const PageName = "Properti";
   const [active, setActive] = useState(0);
+  const [modalDelete, setModalDelete] = useState(false)
 
   const sampleData = [
     {
@@ -181,12 +183,12 @@ function DetailLayanan() {
                         </Link>
                       </div>
                       <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                        <Link href={"..."}>
-                          <a className="self-center font-medium ml-2 cursor-pointer hover:underline text-[#A41F12]">
-                            <DeleteOutlineIcon className="text-[16px]" />
-                            Hapus
-                          </a>
-                        </Link>
+                        <button 
+                          onClick={() => setModalDelete(!modalDelete)}
+                          className="self-center font-medium ml-2 cursor-pointer hover:underline text-[#A41F12]">
+                          <DeleteOutlineIcon className="text-[16px]" />
+                          Hapus
+                        </button>
                       </div>
                     </td>
                   </tr>
@@ -211,6 +213,15 @@ function DetailLayanan() {
           </div>
         </div>
       </div>
+      <TextOnlyConfirmationModal
+          active={modalDelete}
+          setConfirm={() => setModalDelete(!modalDelete)}
+          setCancel={() => setModalDelete(!modalDelete)}
+          title="Apakah Anda ingin menghapus Layanan ini?"
+          message="Setelah Anda menghapus Layanan ini maka client Anda tidak dapat melihat layanan ini kembali."
+          confirmText="Hapus"
+          confirmColor="#E55124"
+      />
     </div>
   );
 }

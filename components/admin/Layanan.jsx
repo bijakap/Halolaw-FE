@@ -3,9 +3,13 @@ import Link from "next/link";
 import Pagination from "../pagination/Pagination";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import TambahLayanaModal from "../modal/TambahLayananModal";
+import TextOnlyConfirmationModal from "../modal/TextOnlyConfirmationModal"
 
 function Layanan() {
   const [active, setActive] = useState(0);
+  const [modalTambah, setModalTambah] = useState(false)
+  const [modalDelete, setModalDelete] = useState(false)
 
   const sampleData = [
     {
@@ -56,7 +60,7 @@ function Layanan() {
     <div className="flex justify-center mx-4 md:mx-10 w-auto">
       <div className="w-full pt-8">
         {/* START: Card tambah layanan */}
-        <Link href={"/admin/layanan/tambahLayanan"}>
+        <button onClick={() => setModalTambah(!modalTambah)}>
           <div className="inline-block bg-white border rounded-lg p-6 mb-4 hover:shadow-[0px_4px_10px_rgba(0,0,0,0.05)] hover:cursor-pointer">
             <div className="flex flex-row md:justify-between w-auto gap-8">
               <div className="flex flex-row flex-nowrap gap-4">
@@ -71,7 +75,13 @@ function Layanan() {
               <img src="/layanan-tambah.svg" alt="" />
             </div>
           </div>
-        </Link>
+        </button>
+        <TambahLayanaModal
+          active={modalTambah}
+          setConfirm={() => setModalTambah(!modalTambah)}
+          setCancel={() => setModalTambah(!modalTambah)}
+          
+        />
         {/* END: Card tambah layanan */}
 
         <div className="p-8 bg-white shadow-lg rounded-lg mb-6 ">
@@ -135,12 +145,12 @@ function Layanan() {
                         </Link>
                       </div>
                       <div className="flex text-dark text-[14px] leading-[20px] tracking-[0.25px] items-center mt-4 sm:mt-0">
-                        <Link href={"..."}>
-                          <a className="self-center font-medium ml-2 cursor-pointer hover:underline text-[#A41F12]">
-                            <DeleteOutlineIcon className="text-[16px]" />
-                            Hapus
-                          </a>
-                        </Link>
+                        <button 
+                          onClick={() => setModalDelete(!modalDelete)}
+                          className="self-center font-medium ml-2 cursor-pointer hover:underline text-[#A41F12]">
+                          <DeleteOutlineIcon className="text-[16px]" />
+                          Hapus
+                        </button>
                       </div>
                     </td>
                   </tr>
@@ -165,6 +175,15 @@ function Layanan() {
           </div>
         </div>
       </div>
+      <TextOnlyConfirmationModal
+          active={modalDelete}
+          setConfirm={() => setModalDelete(!modalDelete)}
+          setCancel={() => setModalDelete(!modalDelete)}
+          title="Apakah Anda ingin menghapus Layanan ini?"
+          message="Setelah Anda menghapus Layanan ini maka client Anda tidak dapat melihat layanan ini kembali."
+          confirmText="Hapus"
+          confirmColor="#E55124"
+      />
     </div>
   );
 }

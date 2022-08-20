@@ -2,8 +2,11 @@ import Select from "react-select";
 import CardTransaksi from "../transaksi/CardTransaksi";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import InformationModal from "../modal/InformationModal";
+import { useState } from "react";
 
 const TransaksiPraktisi = () => {
+  const [active, setActive] = useState(false)
   const customStyles = {
     control: (base, state) => ({
       ...base,
@@ -122,6 +125,8 @@ const TransaksiPraktisi = () => {
               "/praktisi/transaksi/DetailTransaksi",
               "/praktisi/transaksi/invoice",
             ]}
+            setActive={() => setActive(!active)}
+            active={active}
           />
         ))}
       </div>
@@ -152,6 +157,12 @@ const TransaksiPraktisi = () => {
           </div>
         </div>
       </div>
+      <InformationModal
+        active={active} 
+        setActive={() => setActive(!active)}
+        message={"Perumahan The Luxury no. B7, Jl. Pangeran Diponegoro, Desa Ancolmekar, Kec. Anjasari,  Kabupaten Bandung, Jawa Barat, Kode pos 40379 "}
+        title="Alamat"
+      />
     </div>
   );
 };
