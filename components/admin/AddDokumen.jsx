@@ -327,7 +327,7 @@ function AddDokumen() {
             </div> */}
             {
               listKota.map((data, index) => (
-                <div className="grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-0 w-full lg:w-[840px]">
+                <div key={index} className="grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-0 w-full lg:w-[840px]">
                   <div className="flex flex-col">
                     <label className="text-sm font-medium text-gray-700 tracking-wide">
                       kabupaten/Kota <span className="text-[#C4351A]">*</span>

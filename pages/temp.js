@@ -21,10 +21,10 @@ const Temp = () => {
             <button onClick={() => setActive(!active)}>
                 openModal {active ? "True" : "False"}
             </button>
-            <TransactionModal 
+            <SuccesModal 
                 active={active} 
                 setActive={() => setActive(!active)}
-                done={true}
+                // done={true}
                 // message={"Format file: pdf / jpg / png "}
                 // title="Scan/Foto SPPT PBB"
                 />    
