@@ -14,12 +14,12 @@ const TransaksiDetail = () => {
       <div className={setIsMobile()}>
         <div>
           {/* content */}
-          <div className={active ? "ml-0 -z-10" : "md:ml-0 ml-[250px]"}>
+          <div className={active ? "ml-0 -z-10" : "lg:ml-0 ml-[250px]"}>
             <NavbarPraktisi setClose={setIsActive} close={active}/>
           </div>
           <DetailTransaksi/>
         </div>
-        <FooterPraktisi />
+        <FooterPraktisi user='praktisi' />
       </div>
     </div>
     );

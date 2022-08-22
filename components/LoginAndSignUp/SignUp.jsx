@@ -28,16 +28,16 @@ function SignUp(){
                             <input className=" w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8]" type="password" placeholder="***********"></input>
                         </div>
                         <div className="flex items-center">
-                            <input id="remember_me" name="remember_me" type="checkbox" className="h-4 w-4 bg-blue-500 focus:ring-blue-400 border-gray-300 rounded"></input>
-                            <label className="ml-2 block text-sm text-gray-800">Saya setuju dengan <a href="#" className="text-[#2A41C7]">syarat & ketentuan</a></label>
+                            <input id="remember_me" name="remember_me" type="checkbox" className="h-4 w-4 bg-blue-500 focus:ring-blue-400 border-gray-300 rounded cursor-pointer"></input>
+                            <label htmlFor="remember_me" className="ml-2 block text-sm text-gray-800 cursor-pointer">Saya setuju dengan <a href="#" className="text-[#2A41C7]">syarat & ketentuan</a></label>
                         </div>
                         <div className="pt-[40px] pb-4">
-                            <button type="submit" className="w-full flex justify-center bg-[#3A57E8] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer" onClick={(e) => (handleDaftar(e))}>
+                            <button type="submit" className="w-full flex justify-center bg-[#3A57E8] hover:bg-[#2A41C7] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer" onClick={(e) => (handleDaftar(e))}>
                             Daftar
                             </button>
                         </div>
                     </form>
-                    <button className="bg-white border-2 rounded-[8px] w-full py-[12px] flex justify-center font-[700] text-[#475467]"><img src="/google.svg" className="flex self-center h-auto pr-2"/>Sign up with Google</button>
+                    <button className="bg-white hover:bg-gray-50 border-2 rounded-[8px] w-full py-[12px] flex justify-center font-[700] text-[#475467]"><img src="/google.svg" className="flex self-center h-auto pr-2"/>Sign up with Google</button>
                     <p className="text-sm mt-[40px]">Sudah memiliki akun? <Link href="/masuk"><span className="text-[#2A41C7] font-[600] cursor-pointer">Login</span></Link></p>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import LoginAdmin from "../../components/admin/LoginPraktisi";
+import LoginAdmin from "../../components/admin/LoginAdmin";
 import Head from "next/head";
 
 function MasukAdmin(){

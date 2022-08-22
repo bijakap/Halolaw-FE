@@ -5,7 +5,7 @@ function Invoice(){
     <div className="bg-[#E4E7EC] w-full h-auto pb-8">
       <div className="bg-white shadow-sm">
         <div className="flex justify-end mx-auto w-[80%] py-3">
-          <button className="py-[10px] px-6 bg-[#47BF37] font-medium text-white rounded-lg">
+          <button className="py-[10px] px-6 bg-[#47BF37] hover:bg-[#2CA428] font-medium text-white rounded-lg">
             Cetak Invoice
           </button>
         </div>

@@ -15,11 +15,11 @@ function ForgotPassword01(props) {
                 <form onSubmit={(e) => {e.preventDefault(); props.setEmailSubmited(true)}}>
                     <label className="text-sm font-medium text-gray-700 tracking-wide">Email <span className="text-[#3A57E8]">*</span></label>
                     <input className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6" value={props.email} onChange={(e) => {props.setEmail(e.target.value)}} type="email" required placeholder="mail@gmail.com"/>
-                    <input type="submit" value="Reset Password" className="w-full flex justify-center bg-[#3A57E8] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer"/>
+                    <input type="submit" value="Reset Password" className="w-full flex justify-center bg-[#3A57E8] hover:bg-[#2A41C7] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer"/>
                 </form>
                 </div>
                 
-                <Link href="/masuk"><span className="text-[14px] leading-[20px] tracking-[0.25px] font-[600] text-[#344054] cursor-pointer mt-[32px]">← Kembali ke halaman login</span></Link>
+                <Link href="/masuk"><span className="text-[14px] leading-[20px] tracking-[0.25px] font-[600] text-[#344054] cursor-pointer mt-[32px] hover:text-[#2A41C7]">← Kembali ke halaman login</span></Link>
             </div>
         </div>
     )

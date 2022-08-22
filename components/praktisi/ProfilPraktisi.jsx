@@ -29,22 +29,22 @@ function ProfilPraktisi() {
       boxShadow: state.isFocused ? null : null,
       padding: "2px 8px",
       borderRadius: "8px",
-      marginBottom: "24px"
+      marginBottom: "24px",
     }),
     placeholder: (base) => ({
       ...base,
       color: "black",
       paddingLeft: "10px",
     }),
-    indicatorSeparator: state => ({
-      display: 'none',
+    indicatorSeparator: (state) => ({
+      display: "none",
     }),
   };
 
   return (
     <div className="flex justify-center mx-10 my-8 w-auto">
       <div className="w-full">
-        <div className="p-8 bg-white shadow-lg rounded-lg ">
+        <div className="px-4 py-6 md:p-8 bg-white shadow-lg rounded-lg ">
           {/* START: Form Section */}
           <div className="md:flex block gap-8 pb-[56px] border-b">
             {/* START: Head - avatar */}
@@ -58,9 +58,9 @@ function ProfilPraktisi() {
                   className="h-full w-full object-cover rounded-lg"
                 />
               </div>
-              <button className="w-[160px] flex justify-center mx-auto border-2 bg-white text-[#2A41C7] p-3 rounded-[8px] tracking-wide font-[500] cursor-pointer">
-                Upload
-              </button>
+              <button className="w-[160px] flex justify-center mx-auto border-2 bg-white hover:bg-[#3A57E8] text-[#2A41C7] hover:text-white py-[10px] px-3 rounded-[8px] tracking-wide font-[500] cursor-pointer text-sm">
+                  Upload
+                </button>
             </div>
             {/* END: Head - avatar */}
             <div className="w-full px-4 md:px-6">
@@ -77,7 +77,7 @@ function ProfilPraktisi() {
                     className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6"
                     type="name"
                     required
-                    placeholder="mail@gmail.com"
+                    placeholder="nama lengkap"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                   />
@@ -177,12 +177,6 @@ function ProfilPraktisi() {
                         isSearchable={false}
                       />
                     </div>
-                    {/* <input
-                      className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6"
-                      type="dropdown"
-                      value={pekerjaan}
-                      onChange={(e) => setPekerjaan(e.target.value)}
-                    ></input> */}
                   </div>
                   <div className="flex flex-col">
                     <label className="text-sm font-medium text-gray-700 tracking-wide">
@@ -215,13 +209,7 @@ function ProfilPraktisi() {
                       <span className="text-[#C4351A]">*</span>{" "}
                       <small>(jpg/png)</small>
                     </label>
-                    {/* <input
-                      class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                      type="file"
-                      id="formFile"
-                    ></input> */}
                     <input
-                      // className="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6"
                       className="w-full text-base border border-gray-300 rounded-lg focus:outline-none focus:border-[#3A57E8] mt-2 mb-6 file:py-2 file:px-4 file:border-0 file:mr-6"
                       type="file"
                     ></input>
@@ -230,7 +218,7 @@ function ProfilPraktisi() {
                 <input
                   type="submit"
                   value="Simpan Data Perubahan"
-                  className="w-full flex justify-center bg-[#3A57E8] text-gray-100 py-[10px] rounded-[8px] text-sm tracking-wide font-[500] cursor-pointer mt-12"
+                  className="w-full flex justify-center bg-[#3A57E8] hover:bg-[#2A41C7] text-gray-100 py-[10px] rounded-[8px] text-sm tracking-wide font-[500] cursor-pointer mt-12"
                 />
               </div>
               {/* END: Pekerjaan */}
@@ -238,7 +226,7 @@ function ProfilPraktisi() {
           </div>
           {/* END: Form Section */}
           {/* START: Setting Section */}
-          <Link href={'/praktisi/pengaturan/pengaturanAkun'} >
+          <Link href={"/praktisi/pengaturan/pengaturanAkun"}>
             <div className="flex p-4 gap-8 cursor-pointer items-center">
               <img src="/setting 1.svg" />
               <div>

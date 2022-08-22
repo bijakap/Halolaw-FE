@@ -1,4 +1,3 @@
-import react from "react";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ArtikelCard from '../artikel/ArtikelCard';
 import Link from 'next/link'
@@ -13,31 +12,31 @@ function Homepage(){
             judul: "Legalitas tanda tangan elektronik",
             content: "Sejak diundangkannya Undang-Undang Nomor 11 Tahun 2008 tentang Informas ...",
             kategori : ["Perdata"],
-            img: "./artikel1@2x.png"
+            img: "./artikel/artikel1.jpg"
         },
         {
-            penulis: "Liliana Melati",
-            tgl_up: "25 Jan 2022",
-            judul: "Legalitas tanda tangan elektronik",
-            content: "Sejak diundangkannya Undang-Undang Nomor 11 Tahun 2008 tentang Informas ...",
-            kategori : ["Perdata"],
-            img: "./artikel1@2x.png"
+            penulis: "Agustin Rifki",
+            tgl_up: "23 Jan 2022",
+            judul: "Pimpinan pengadilan berkualitas dan berintegritas",
+            content: "Satu persyaratan untuk mewujudkan Court Excellence adalah Pimpinan ...",
+            kategori : ["Pengadilan"],
+            img: "./artikel/artikel2.jpg"
         },
         {
-            penulis: "Liliana Melati",
-            tgl_up: "25 Jan 2022",
-            judul: "Legalitas tanda tangan elektronik",
-            content: "Sejak diundangkannya Undang-Undang Nomor 11 Tahun 2008 tentang Informas ...",
+            penulis: "Iqbal Setiawan",
+            tgl_up: "22 Jan 2022",
+            judul: "Gelombang online dalam perkembangan hukum",
+            content: "Sebagai Negara hukum sudah tentu penyelenggaraan Negara dan pemerinta ...",
             kategori : ["Perdata"],
-            img: "./artikel1@2x.png"
+            img: "./artikel/artikel3.jpg"
         },
         {
-            penulis: "Liliana Melati",
-            tgl_up: "25 Jan 2022",
-            judul: "Legalitas tanda tangan elektronik",
-            content: "Sejak diundangkannya Undang-Undang Nomor 11 Tahun 2008 tentang Informas ...",
-            kategori : ["Perdata"],
-            img: "./artikel1@2x.png"
+            penulis: "Olivia Ryhe",
+            tgl_up: "19 Jan 2022",
+            judul: "Tafsir iktikad baik dalam sengketa pertanahan",
+            content: "Asas hukum yang satu ini kadang terasa ambigu. Maka, berkaitan dengan huk ...",
+            kategori : ["Perdata", "Tanah"],
+            img: "./artikel/artikel4.jpg"
         },
       ];
     return(
@@ -52,7 +51,7 @@ function Homepage(){
                         <li><CheckCircleIcon className="text-[#7BD864]"/> Pendamping Hukum</li>
                         <li><CheckCircleIcon className="text-[#7BD864]"/> Tracking Progres Dokumen</li>
                     </ul>
-                    <button className="bg-[#47BF37] px-3 py-2 lg:px-[24px] lg:py-[15px] rounded-[6px] text-[12px] lg:text-[16px]" onClick={() => {router.push('/kategori')}}>Pesan Sekarang</button>
+                    <button className="bg-[#47BF37] hover:bg-[#2CA428] px-3 py-2 lg:px-[24px] lg:py-[15px] rounded-[6px] text-[12px] lg:text-[16px]" onClick={() => {router.push('/kategori')}}>Pesan Sekarang</button>
                 </div>
                 <img src="./home/img-landing.png" className="absolute bottom-0 right-0 h-1/3 lg:h-1/2 xl:h-auto -z-1"></img>
             </div>
@@ -215,7 +214,7 @@ function Homepage(){
                                 <p className="font-[400] text-[12px] lg:text-[16px] leading-5 lg:leading-[24px] tracking-[0.5px] text-[#475467]">Melayani selama 24 jam melalui live chat untuk segala teknis pemesanan ataupun keluhan dalam penggunaan aplikasi</p>
                             </div>
                         </div>
-                        <button className="bg-[#47BF37] px-[24px] py-[15px] rounded-[6px] text-white mt-[32px] w-full lg:w-auto">Mulai Sekarang</button>
+                        <button className="bg-[#47BF37] hover:bg-[#2CA428] px-[24px] py-[15px] rounded-[6px] text-white mt-[32px] w-full lg:w-auto">Mulai Sekarang</button>
                     </div> 
                 </div>
                 <div>
@@ -238,7 +237,7 @@ function Homepage(){
                 <h1 className="text-[20px] lg:text-[40px] font-bold text-center">Awali kesuksesan anda bersama Halo Law!</h1>
                 <p className="font-[200] pt-[16px] text-center">Kini tidak lagi sulit mengurus segala legalitas hukum. Praktisi hukum kredibel, cepat, dan layanan konsultasi gratis.</p>
                 <div className="flex justify-center pt-8 lg:pt-[56px]">
-                    <button className="bg-[#47BF37] px-[24px] py-[15px] rounded-[6px]">Mulai Sekarang</button>   
+                    <button className="bg-[#47BF37] hover:bg-[#2CA428] px-[24px] py-[15px] rounded-[6px]">Mulai Sekarang</button>   
                 </div>   
             </div>
         </div>

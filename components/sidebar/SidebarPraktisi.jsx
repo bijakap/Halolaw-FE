@@ -39,7 +39,7 @@ const SidebarPraktisi = ({ActiveNumber, childActiveNumber}) =>{
                   active === 1 ?
                     <img src='/sidebar/transaksi-active.svg'/> 
                     : 
-                    <img src='/sidebar/transaki.svg'/>
+                    <img src='/sidebar/transaksi.svg'/>
                 }
               </div>
               <p className='text-[16px] font-normal leading-7'>Transaksi</p>
@@ -74,6 +74,14 @@ const SidebarPraktisi = ({ActiveNumber, childActiveNumber}) =>{
                 <p className='ml-6'>Term & Condition</p>
               </div>
             </Link>
+          </div>
+          <div onClick={() => router.push("/praktisi/masuk")} className={`py-2 bg-white text-[#8A92A6] mx-4 px-6 rounded-lg cursor-pointer font-["Inter"]`}>
+            <div className="flex gap-4">
+              <div className='self-center'>
+                <img src='/sidebar/logout.svg'/>
+              </div>
+              <p className='text-[16px] font-normal leading-7'>Logout</p>
+            </div>
           </div>
           <div className='mx-4 border-b'>
           </div>

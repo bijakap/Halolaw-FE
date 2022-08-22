@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 
 function Navbar(){
     const nama = "Farizi"
-    const url_img = "/avatardummy.png"
+    const url_img = "/avatarKlien.png"
     const router = useRouter()
 
 

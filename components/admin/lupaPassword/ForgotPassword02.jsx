@@ -24,7 +24,7 @@ function ForgotPassword02(props) {
           <Link href={"/admin/ResetPassword"}>
             <button
               type="submit"
-              className="w-full flex justify-center bg-[#3A57E8] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer mb-[24px]"
+              className="w-full flex justify-center bg-[#3A57E8] hover:bg-[#2A41C7] text-gray-100 p-3 rounded-[8px] tracking-wide font-semibold cursor-pointer mb-[24px]"
               onClick={() => console.log("Pencet")}
             >
               Buka Aplikasi Email
@@ -32,12 +32,12 @@ function ForgotPassword02(props) {
           </Link>
           <p className="text-[14px] leading-[20px] font-[500] tracking-[0.25px] text-[#1D2939]">
             Tidak menerima email?{" "}
-            <button className="text-[#2A41C7] font-[700]">Kirim ulang</button>
+            <button className="text-[#2A41C7] font-[700] hover:underline">Kirim ulang</button>
           </p>
         </div>
 
         <Link href="/admin/masuk">
-          <span className="text-[14px] leading-[20px] tracking-[0.25px] font-[600] text-[#344054] cursor-pointer mt-[32px]">
+          <span className="text-[14px] leading-[20px] tracking-[0.25px] font-[600] text-[#344054] hover:text-[#2A41C7] cursor-pointer mt-[32px]">
             ← Kembali ke halaman login
           </span>
         </Link>
