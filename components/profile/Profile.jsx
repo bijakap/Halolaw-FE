@@ -62,8 +62,9 @@ function Profile() {
                     className="h-full w-full object-cover rounded-lg"
                   />
                 </div>
-                <button className="w-[160px] flex justify-center mx-auto border-2 bg-white hover:bg-[#3A57E8] text-[#2A41C7] hover:text-white py-[10px] px-3 rounded-[8px] tracking-wide font-[500] cursor-pointer text-sm">
+                <button onClick={() => document.getElementById("uploadImage").click()} className="w-[160px] flex justify-center mx-auto border-2 bg-white hover:bg-[#3A57E8] text-[#2A41C7] hover:text-white py-[10px] px-3 rounded-[8px] tracking-wide font-[500] cursor-pointer text-sm">
                   Upload
+                  <input className="hidden" type="file" id="uploadImage"></input>
                 </button>
               </div>
               <div className="w-full">

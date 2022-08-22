@@ -1,8 +1,37 @@
 import Link from "next/link";
 import InfoIcon from "@mui/icons-material/Info";
+import 'react-quill/dist/quill.snow.css';
+import dynamic from 'next/dynamic'; 
+import { useState } from "react";
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
+import SuccesModal from "../modal/SuccesModal";
+import { useRouter } from "next/router";
 
 const AddArtikel = () => {
+  const router = useRouter()
   const PageName = "Tambah Artikel";
+  const [value, setValue] = useState("")
+  const [active, setActive] = useState(false)
+
+  const  modules  = {
+    toolbar: [
+          [{ font: [] }],
+          [{ header: [1, 2, 3, 4, 5, 6, false] }],
+          ["bold", "italic", "underline", "strike"],
+          [{ color: [] }, { background: [] }],
+          [{ script:  "sub" }, { script:  "super" }],
+          ["blockquote", "code-block"],
+          [{ list:  "ordered" }, { list:  "bullet" }],
+          [{ indent:  "-1" }, { indent:  "+1" }, { align: [] }],
+          ["link", "image", "video"],
+          ["clean"],
+      ],
+  };
+
+  
+  if (typeof window === "undefined") {
+    return null //return nothing on the server-side
+  }
 
   return (
     <div className="flex justify-center mx-4 md:mx-10 w-auto">
@@ -48,7 +77,17 @@ const AddArtikel = () => {
                   />
                 </div>
                 {/* START:CK_Editor */}
-
+                <label className="text-sm font-medium text-gray-700 tracking-wide">
+                  Isi Artikel <span className="text-[#C4351A]">*</span>
+                </label>
+                <div className="app">
+                  <ReactQuill 
+                    theme="snow" 
+                    value={value} 
+                    onChange={setValue} 
+                    modules={modules}
+                    />
+                </div>
                 {/* END:CK_Editor */}
 
                 {/* START:kanan-kiri */}
@@ -112,11 +151,13 @@ const AddArtikel = () => {
             {/* START: SECTION-3 */}
             <div className="w-full flex flex-row justify-end items-center gap-6">
               <input
+                onClick={() => router.push("/admin/artikel")}
                 type="button"
                 value="Batal"
                 className="w-full md:w-[160px] flex justify-center bg-[#F2F4F7] text-[#475467] py-[10px] rounded-[8px] text-sm tracking-wide font-[500] cursor-pointer mt-12"
               />
               <input
+                onClick={() => setActive(!active)}
                 type="submit"
                 value="Simpan dan Unggah"
                 className="w-full md:w-[240px] flex justify-center bg-[#3A57E8] text-gray-100 py-[10px] rounded-[8px] text-sm tracking-wide font-[500] cursor-pointer mt-12"
@@ -128,6 +169,11 @@ const AddArtikel = () => {
         </div>
         {/* STRART: main-content */}
       </div>
+      <SuccesModal
+        active={active}
+        setActive={() => setActive(!active)}
+        message="Berhasil menambahkan artikel baru"
+      />
     </div>
   );
 };

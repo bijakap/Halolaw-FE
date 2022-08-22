@@ -197,7 +197,7 @@ const ArtikelAdmin = () => {
         message={"Tindakan ini tidak dapat diubah, setelah Anda menghapus artikel ini, artikel tersebut hilang."}
         setCancel={() => setDeleteModal(!deleteModal)}
         setConfirm={() => {
-          () => setDeleteModal(!deleteModal)
+          setDeleteModal(!deleteModal)
         }}
         confirmColor="#C4351A"
         confirmText="Hapus"

@@ -378,6 +378,7 @@ const ManageUsers = () => {
         active={addModal}
         setCancel={() => setAddModal(!addModal)}
         setConfirm={() => setAddModal(!addModal)}
+        confirmText="Simpan"
       />
     </div>
   );

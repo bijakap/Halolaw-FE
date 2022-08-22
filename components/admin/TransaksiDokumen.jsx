@@ -641,11 +641,13 @@ const TransaksiDokumen = () => {
       <TransactionModal
         active={TransModal}
         setActive={() => setTransModal(!TransModal)}
+        title="Detail Transaksi"
       />
       <TransactionModal
         active={TransDoneModal}
         setActive={() => setTransDoneModal(!TransDoneModal)}
         done={true}
+        title="Detail Transaksi"
       />
     </div>
   );

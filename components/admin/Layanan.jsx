@@ -80,7 +80,7 @@ function Layanan() {
           active={modalTambah}
           setConfirm={() => setModalTambah(!modalTambah)}
           setCancel={() => setModalTambah(!modalTambah)}
-          
+          confirmText="Simpan"
         />
         {/* END: Card tambah layanan */}
 

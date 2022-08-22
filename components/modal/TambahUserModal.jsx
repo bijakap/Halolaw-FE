@@ -35,6 +35,10 @@ const TambahUserModal = ({active, setCancel, setConfirm, confirmText, cancelText
   ];
 
   const [option, setOption] = useState({ value: "Praktisi Hukum", label: "Praktisi Hukum" })
+  const optionPekerjaan = [
+    {value : "PPAT & Notaris", label : "PPAT & Notaris"},
+    {value : "Notaris", label : "Notaris"}
+  ]
   // const [display, setDisplay] = useState("Praktisi Hukum")
 
   // useEffect(() => {
@@ -87,8 +91,8 @@ const TambahUserModal = ({active, setCancel, setConfirm, confirmText, cancelText
                 <div className="mb-2">
                   <label className="text-sm font-medium text-gray-700 tracking-wide pb-2">Pekerjaan <span className="text-[#C4351A]">*</span></label>
                   <Select
-                    // value={option}
-                    // options={optionUser}
+                    // value={}
+                    options={optionPekerjaan}
                     styles={customStyles}
                     placeholder={"--Pilih--"}
                     maxMenuHeight={250}

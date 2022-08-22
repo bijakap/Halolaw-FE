@@ -144,7 +144,7 @@ function PengaturanAkun() {
         />
         <TextOnlyConfirmationModal
             active={activeDelete}
-            setCancel={() => setActive(!activeDelete)}
+            setCancel={() => setActiveDelete(!activeDelete)}
             setConfirm={() => {
                 router.push("/")
             }} 

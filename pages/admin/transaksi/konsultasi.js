@@ -8,7 +8,7 @@ const PageTransaksiKonsultasi = () => {
   const [active, { setIsMobile, setIsActive }] = useNavbarSidebar();
   return(
     <div className="bg-[#F6F7FB]">
-      {active ? <></> : <SidebarAdmin ActiveNumber={0} />}
+      {active ? <></> : <SidebarAdmin ActiveNumber={2} childActiveNumber={1}/>}
       <div className={setIsMobile()}>
         <div>
           {/* Navbar */}
