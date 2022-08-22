@@ -15,12 +15,10 @@ const NavbarPraktisi = ({close, setClose}) => {
               <img src="/sidebar/lonceng.svg" alt="lonceng" />
               {
                 router.pathname.includes("admin") ? 
-                <Link href={"/admin/pengaturan/pengaturanAkun"}>
-                  <a className="flex gap-4">
-                    <img src='/avatarPraktisi.png' className='rounded-full h-8 w-8 object-cover'/>
-                    <p className='self-center text-[#232D42] font-semibold text-sm leading-5 tracking-[0.25px]'>Aditya</p>
-                  </a>
-                </Link>
+                <a className="flex gap-4">
+                  <img src='/avatarAdmin.png' className='rounded-full h-8 w-8 object-cover'/>
+                  <p className='self-center text-[#232D42] font-semibold text-sm leading-5 tracking-[0.25px]'>Admin</p>
+                </a>
                 :
                 <Link href={"/praktisi/profil"}>
                   <a className="flex gap-4">
