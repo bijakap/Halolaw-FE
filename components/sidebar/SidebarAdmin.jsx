@@ -126,6 +126,14 @@ const SidebarAdmin = ({ActiveNumber, childActiveNumber}) =>{
               </div>
             </Link>
           </div>
+          <div onClick={() => router.push("/admin/masuk")} className={`py-2 bg-white text-[#8A92A6] mx-4 px-6 rounded-lg cursor-pointer font-["Inter"]`}>
+            <div className="flex gap-4">
+              <div className='self-center'>
+                <img src='/sidebar/logout.svg'/>
+              </div>
+              <p className='text-[16px] font-normal leading-7'>Logout</p>
+            </div>
+          </div>
           {/* end Child Pengaturan  */}
           <div className='mx-4 border-b'>
           </div>
